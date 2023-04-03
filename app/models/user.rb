@@ -15,10 +15,10 @@ class User < ApplicationRecord
   validates :username, :email, :session_token, presence: true
   validates :username, length: { in: 3..16 },
                        format: { without: URI::MailTo::EMAIL_REGEXP, message: "can't be an email" }
-  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :password,
             length: { in: 6..24 },
             allow_nil: true
+  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
 
   before_validation :ensure_session_token
 

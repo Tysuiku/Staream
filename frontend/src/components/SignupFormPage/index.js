@@ -42,17 +42,21 @@ function SignupFormPage() {
       <div>
         <div className="signup-page-container">
           <div className="signup-header-div">
+            {errors.length > 0 && (
+              <div className="signUpErrorBox">
+                <ul className="signupFormErrors">
+                  {errors.map((error) => (
+                    <li key={error}>{error}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             <h1 className="signup-header">CREATE YOUR ACCOUNT</h1>
           </div>
 
           <div>
             <form className="signup-form" onSubmit={handleSubmit}>
-              <ul>
-                {errors.map((error) => (
-                  <li key={error}>{error}</li>
-                ))}
-              </ul>
-
               <div className="input-container">
                 <label htmlFor="email">Email Address</label>
                 <input

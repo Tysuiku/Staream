@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import * as sessionActions from "../../store/session";
 import { useDispatch, useSelector } from "react-redux";
+// import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { Redirect } from "react-router-dom";
 import "./LoginForm.css";
 
@@ -10,6 +11,10 @@ function LoginFormPage() {
   const [credential, setCredential] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
+  const [demoClicked, setDemoClicked] = useState(false);
+
+  // Assuming you have an array of error messages called `errors` and
+  // the input boxes are identified by their `id` attributes
 
   if (sessionUser) return <Redirect to="/" />;
 
@@ -24,6 +29,7 @@ function LoginFormPage() {
         } catch {
           data = await res.text();
         }
+        // console.log(data);
         if (data?.errors) {
           setErrors(data.errors);
         } else if (data) {
@@ -33,6 +39,23 @@ function LoginFormPage() {
         }
       }
     );
+  };
+
+  const handleDemoClick = (e) => {
+    e.preventDefault();
+    if (demoClicked) return;
+    setDemoClicked(true);
+    setCredential("");
+    setPassword("");
+    setTimeout(loginDemoUser, 100);
+  };
+
+  let inputCredential = "Demo-User";
+  let inputPassword = "password";
+
+  const loginDemoUser = () => {
+    const demoUser = { credential: inputCredential, password: inputPassword };
+    return dispatch(sessionActions.login(demoUser));
   };
 
   return (
@@ -45,12 +68,6 @@ function LoginFormPage() {
 
           <div className="login-form">
             <form onSubmit={handleSubmit}>
-              <ul>
-                {errors.map((error) => (
-                  <li key={error}>{error}</li>
-                ))}
-              </ul>
-
               <div className="input-container">
                 <label htmlFor="credential">SIGN IN WITH ACCOUNT NAME</label>
                 <input
@@ -73,9 +90,18 @@ function LoginFormPage() {
                 />
               </div>
 
+              <button onClick={handleDemoClick} className="demo-login-button">
+                Demo-Login
+              </button>
               <button type="submit" className="login-button">
                 Sign in
               </button>
+
+              <ul className="loginFormErrors">
+                {errors.map((error) => (
+                  <li key={error}>{error}</li>
+                ))}
+              </ul>
             </form>
           </div>
         </div>

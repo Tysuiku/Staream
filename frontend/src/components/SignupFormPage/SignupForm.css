@@ -8,7 +8,7 @@
     ),
     url('./steamSignupPage_Bg.jpeg');
     background-position: calc(100% - 200px) 5%;
-    height: 75vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,7 +40,7 @@
     padding: 50px;
     width: fit-content;
     font-size: 30px;
-    margin-bottom: -15%;
+    /* margin-bottom: %; */
     font-family: 'Motiva Sans 400', sans-serif;
     font-weight: 150;
     letter-spacing: 2px;
@@ -64,7 +64,7 @@
     border-radius: 2px;
     font-size: 16px;
     padding: 9px;
-    width: 100%;
+    width: 120%;
     margin-left: -40%;
     transition: all 0.3s ease-in;
     cursor: text;
@@ -114,4 +114,25 @@
   .signupBackgroundBody{
     background-color: #171a21;
     height: 180px;
+  }
+
+  .signupFormErrors li {
+    font-family: 'Motiva Sans 500', sans-serif;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    margin-right: 100%;
+    margin-top: 4px;
+  }
+
+  .signUpErrorBox{
+    margin-top: 10%;
+    padding: 8px;
+    background-color: black;
+    border: solid 2px;
+    border-color: #c15755;
+    margin-right: -20px;
+    margin-left: -30px;
   }

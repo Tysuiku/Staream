@@ -1,6 +1,6 @@
 .login-page {
     background: #181a21 url('./steamlogin_background.jpeg') center / 140% no-repeat;
-    height: 85vh;
+    height: 95vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,7 +66,7 @@
   }
   
   .login-button {
-    margin-left: 24%;
+    margin-left: 12%;
     width: 54%;
     height: 52px;
     color: white;
@@ -78,6 +78,23 @@
     background: linear-gradient(90deg, #06BFFF 0%, #2D73FF);
     cursor: pointer;
     transition: all 0.3s ease-in;
+  }
+
+  .demo-login-button {
+    margin-left: 5%;
+    height: 35px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    border-radius: 2.5px;
+    background: linear-gradient(90deg, #06BFFF 0%, #2D73FF);
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+  }
+
+  .demo-login-button:hover {
+    background: linear-gradient(90deg, #06BFFF 30%, #2D73FF 100%);
   }
 
   .login-button:hover {
@@ -106,7 +123,7 @@
     font-weight: 525;
   }
   
-  .login-button {
+  .login-button, .demo-login-button {
     border: none;
   }
   
@@ -119,4 +136,21 @@
     background-color: #181a21;
     height: 190px;
   }
+  
+  .loginFormErrors li {
+    font-family: 'Motiva Sans 500', sans-serif;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #c15755;
+    margin-top: 5%;
+    margin-right: 6%;
+  }
+
+
+  
+  
+  
+
   

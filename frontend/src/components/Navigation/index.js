@@ -27,11 +27,11 @@ const Navigation = () => {
   return (
     <div className="header">
       <div className="headerLinks">
-        <h1 className="appName">
+        <NavLink exact to="/" className="appName">
           <p>
-            STAREAM<span class="supscript">™</span>
+            STAREAM<span className="supscript">™</span>
           </p>
-        </h1>
+        </NavLink>
       </div>
       <div className="navlink">{sessionLinks}</div>
     </div>
