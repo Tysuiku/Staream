@@ -43,10 +43,3 @@ module Staream
     config.railties_order = [:all, :main_app]
   end
 end
-
-# module Backend
-#   class Application < Rails::Application
-#     # ...
-
-#   end
-# end
