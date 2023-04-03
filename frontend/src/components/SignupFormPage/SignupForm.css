@@ -1,0 +1,117 @@
+.signup-page-container {
+    padding-top: 100px;
+    background-image: radial-gradient(
+      30% 50% at right,
+      transparent 0%,
+      rgb(33, 36, 41, 1) 10%,
+      rgba(33, 36, 41, 0.4) 70%
+    ),
+    url('./steamSignupPage_Bg.jpeg');
+    background-position: calc(100% - 200px) 5%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: -9%;
+    transform: scale(1);
+  }
+  
+
+  .signup-form {
+    margin-top: -20%;
+    margin-right: 1%;
+    padding: 30px;
+    width: 300px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .signup-form label {
+    margin-right: 10px;
+  }
+  
+
+  .signup-header {
+    transform: scale(.9) translateX(-20%);
+    text-align: center;
+    padding: 50px;
+    width: fit-content;
+    font-size: 30px;
+    margin-bottom: -15%;
+    font-family: 'Motiva Sans 400', sans-serif;
+    font-weight: 150;
+    letter-spacing: 2px;
+    z-index: 2;
+    white-space: nowrap;
+  }
+  
+
+.signup-form label {
+    margin-left: -44%;
+    transform: scale(.9);
+    font-size: 16px;
+    display: block;
+  }
+
+  .signup-form input[type="text"],
+  .signup-form input[type="password"] {
+    transform: scale(.95);
+    background: #33353c;
+    border: none;
+    border-radius: 2px;
+    font-size: 16px;
+    padding: 9px;
+    width: 100%;
+    margin-left: -40%;
+    transition: all 0.3s ease-in;
+    cursor: text;
+  }
+
+  .signup-form label,
+  .signup-form input[type="text"],
+  .signup-form input[type="password"],
+  .signup-button {
+  color: #999897;
+  
+}
+
+.signup-button {
+    margin-left: -15%;
+    width: 55%;
+    height: 38px;
+    color: white;
+    font-size: 16px;
+    margin-top: 6%;
+    letter-spacing: 0.5px;
+    border-radius: 2.5px;
+    background: linear-gradient(90deg, #06BFFF 0%, #2D73FF);
+    cursor: pointer;
+    font-weight: 150;
+    transition: all 0.3s ease-in;
+  }
+
+  .signup-button:hover {
+    background: linear-gradient(90deg, #06BFFF 30%, #2D73FF 100%);
+  }
+
+  .signup-button {
+    border: none;
+  }
+
+  .signup-form label {
+    display: block;
+    margin-bottom: 0.15rem; 
+  }
+  
+  .signupPage1Container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .signupBackgroundBody{
+    background-color: #171a21;
+    height: 180px;
+  }
