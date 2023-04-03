@@ -1,0 +1,122 @@
+.login-page {
+    background: #181a21 url('./steamlogin_background.jpeg') center / 140% no-repeat;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1);
+  }
+  
+  .login-form {
+    margin-top: 8%;
+    transform: scale(.9);
+    margin-right: 8%;
+    background: #181a21;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 50px;
+    width: 500px;
+    z-index: 1;
+  }
+  
+  .login-header {
+    transform: scale(.9) translateX(138%);
+    display: flex;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 220%;
+    font-family: 'Motiva Sans 400', sans-serif;
+    font-weight: 150;
+    letter-spacing: 2px;
+    z-index: 2;
+}
+
+  
+  
+  .login-form label {
+    margin-left: -5.5%;
+    transform: scale(.9);
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    transform: scale(.95);
+    background: #33353c;
+    border: none;
+    border-radius: 2px;
+    font-size: 16px;
+    padding: 14px;
+    width: 100%;
+    margin-left: -2.8%;
+    color: #fff;
+    transition: all 0.3s ease-in;
+    cursor: text;
+  }
+
+.login-form input[type="text"]:hover,
+.login-form input[type="password"]:hover {
+  background-color: #393c44;
+}
+  
+  .input-container {
+    margin-bottom: 10px;
+  }
+  
+  .login-button {
+    margin-left: 24%;
+    width: 54%;
+    height: 52px;
+    color: white;
+    font-size: 20px;
+    margin-top: 5%;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    border-radius: 2.5px;
+    background: linear-gradient(90deg, #06BFFF 0%, #2D73FF);
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+  }
+
+  .login-button:hover {
+    background: linear-gradient(90deg, #06BFFF 30%, #2D73FF 100%);
+  }
+  
+  h1 {
+    color: white;
+  }
+  
+  label[for="credential"] {
+    position: relative;
+    top: 7px;
+    font-family: 'Motiva Sans 500', sans-serif;
+    color: #1999ff;
+    font-size: 15px;
+    font-weight: 550;
+    letter-spacing: 0.3px;
+  }
+  label[for="password"] {
+    position: relative;
+    top: 8px;
+    font-family: 'Motiva Sans 500', sans-serif;
+    color: #afafaf;
+    font-size: 14px;
+    font-weight: 525;
+  }
+  
+  .login-button {
+    border: none;
+  }
+  
+  .loginPage1Container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .backgroundBody{
+    background-color: #181a21;
+    height: 190px;
+  }
+  

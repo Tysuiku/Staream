@@ -1,0 +1,38 @@
+.navlink {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    padding-right: 9.5%;
+    margin-top: 0.5%;
+    font-size: 12px;
+    transition: all 0.3s ease-in;
+}
+
+.navlink a:hover {
+    color: white;
+}
+  
+.appName {
+    position: absolute;
+    padding-top: 2.4%;
+    margin-left: 20%;
+    font-size: 28px;
+    letter-spacing: 2px;
+    font-family: "Motiva Sans", sans-serif;
+}
+
+.loginSignupLink{
+    color: #b8b6b4;
+}
+
+.loginSignupDivder{
+    color: #b8b6b4;
+    text-decoration: none;
+}
+
+.supscript {
+    font-size: 30%;
+    position: relative;
+    top: -1.8em;
+  }
+  
