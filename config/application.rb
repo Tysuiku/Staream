@@ -46,7 +46,6 @@ module Backend
       key: "_auth_me_session",
       same_site: :lax,
       secure: Rails.env.production?
+    config.railties_order = [:all, :main_app]
   end
-
-  config.railties_order = [:all, :main_app]
 end

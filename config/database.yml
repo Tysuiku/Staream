@@ -84,3 +84,4 @@ production:
   database: Staream_production
   username: Staream
   password: <%= ENV["STAREAM_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
