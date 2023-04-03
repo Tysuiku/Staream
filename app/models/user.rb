@@ -12,22 +12,22 @@
 
 class User < ApplicationRecord
   has_secure_password
-  validates :username,
-    uniqueness: true,
-    length: { in: 3..12 },
-    format: { without: URI::MailTo::EMAIL_REGEXP, message: "can't be an email" }
-  validates :email,
-    uniqueness: true,
-    length: { in: 3..100 },
-    format: { with: URI::MailTo::EMAIL_REGEXP }
-  validates :session_token, presence: true, uniqueness: true
-  validates :password, length: { in: 6..16 }, allow_nil: true
+  validates :username, :email, :session_token, presence: true
+  validates :username, length: { in: 3..16 },
+                       format: { without: URI::MailTo::EMAIL_REGEXP, message: "can't be an email" }
+  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
+  validates :password,
+            length: { in: 6..24 },
+            allow_nil: true
 
   before_validation :ensure_session_token
 
-  def self.find_by_credentials(username, password)
-    user = User.find_by(username: username)
-
+  def self.find_by_credentials(credential, password)
+    if URI::MailTo::EMAIL_REGEXP.match(credential)
+      user = User.find_by(email: credential)
+    else
+      user = User.find_by(username: credential)
+    end
     return user if user && user.authenticate(password)
     false
   end
