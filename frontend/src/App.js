@@ -1,14 +1,20 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import LoginFormPage from "./components/LoginFormPage";
 import SignupFormPage from "./components/SignupFormPage";
 import Navigation from "./components/Navigation";
+import HomePage from "./components/HomePage";
 
 function App() {
   return (
     <>
-      {/* <h1>Staream</h1> */}
       <Navigation />
+      <Route exact path="/">
+        <Redirect to="/home" />
+      </Route>
+      <Route exact path="/home">
+        <HomePage />
+      </Route>
       <Switch>
         <Route path="/login">
           <LoginFormPage />
