@@ -1,0 +1,72 @@
+.homePageGameList {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 618px;
+    margin-right: 14px;
+  }
+  
+  .homePageGameList .game {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 69px;
+    background-color: rgb(0, 0, 0, 0.2);
+    margin-bottom: 5px;
+    padding: 0 14px;
+    transition: background-color 250ms;
+    cursor: pointer;
+    position: relative; /* Add this */
+  }
+  
+  .homePageGameList .game:hover {
+    background-color: #95bcd3;
+  }
+  
+  .homePageGameList .game .game-name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #c7d5e0;
+  }
+  
+  .homePageGameList .game .game-price {
+    color: #acdbf5;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+  }
+  
+  .homePageGameList .game .game-details {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 69px; /* Set the same height as the game item */
+    padding: 10px;
+    background-color: #263645;
+    color: #fff;
+  }
+  
+  .homePageGameList .game:hover .game-details {
+    display: block;
+    right: 100%; /* Position the game details on the right side */
+  }
+  
+  .homePageGameList .game .game-details p {
+    margin: 0;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+  }
+  
+  .homePageGameList .game-hover {
+    background-color: #95bcd3;
+  }
+  
+  .homePageGameList .game-hover .game-name,
+  .homePageGameList .game-hover .game-price {
+    color: #5b81a5;
+  }
+  
+  .game-details{
+    color: white;
+  }

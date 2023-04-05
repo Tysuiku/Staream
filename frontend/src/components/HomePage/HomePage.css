@@ -1,0 +1,13 @@
+.homePageGameList{
+    margin-top: 20%;
+    margin-right: 30%;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.homePageGameList:focus {
+    outline: none;
+}
+  
