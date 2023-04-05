@@ -8,7 +8,7 @@ import HomePage from "./components/HomePage";
 function App() {
   return (
     <>
-      <Navigation />
+      {/* <Navigation /> */}
       <Route exact path="/">
         <Redirect to="/home" />
       </Route>
