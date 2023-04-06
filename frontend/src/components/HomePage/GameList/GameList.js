@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import "./GameList.css";
 
 const GameList = ({ games }) => {
-  const [hoveredGame, setHoveredGame] = useState(null);
+  const [hoveredGame, setHoveredGame] = useState(games[0]);
 
   useEffect(() => {
     if (games.length > 0) {
@@ -15,9 +15,7 @@ const GameList = ({ games }) => {
     setHoveredGame(game);
   };
 
-  const handleGameLeave = () => {};
-
-  const totalHeight = games.reduce((acc, game) => acc + 64, 0);
+  const totalHeight = games.length * 64;
 
   return (
     <div className="homePageGameList">
@@ -25,9 +23,8 @@ const GameList = ({ games }) => {
         {games.map((game) => (
           <div
             key={game.id}
-            className={`game ${hoveredGame === game ? "game-hover" : ""}`}
+            className={"game" + (game === hoveredGame ? " hover" : "")}
             onMouseEnter={() => handleGameHover(game)}
-            onMouseLeave={handleGameLeave}
           >
             <NavLink to={`/games/${game.id}`}>{game.name}</NavLink>
             <span>{game.price ? `$${game.price}` : "Free to Play"}</span>
@@ -40,7 +37,6 @@ const GameList = ({ games }) => {
             <h2>{hoveredGame.name}</h2>
             <p>{hoveredGame.description}</p>
             <p>{`Genre: ${hoveredGame.genre}`}</p>
-            <NavLink to={`/games/${hoveredGame.id}`}>View details</NavLink>
           </div>
         </div>
       )}

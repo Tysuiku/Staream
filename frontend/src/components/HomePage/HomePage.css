@@ -1,6 +1,9 @@
 .homePageGameList{
+    display: flex;
+    position: relative;
+    justify-content: center;
     margin-top: 15%;
-    margin-left: 550px;
+    margin-left: 380px;
 }
 /* 
 .homePageGameList:focus {

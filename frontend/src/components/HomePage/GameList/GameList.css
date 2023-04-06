@@ -20,11 +20,11 @@
   width: calc(100% + 10px);
 }
 
-.homePageGameList .game:hover {
+/* .homePageGameList .game:hover {
   background-color: #95bcd3;
   width: calc(100% + 40px);
   padding-right: 10px;
-}
+} */
 
 .game-details {
   position: absolute;
@@ -59,10 +59,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 5px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   font-size: 14px;
 }
 
@@ -95,6 +95,12 @@
 
 .homePageGameList:hover .game-details-wrapper {
   background-color: #95bcd3;
+}
+
+.game.hover {
+  background-color: #95bcd3;
+  width: calc(100% + 40px);
+  padding-right: 10px;
 }
 
 
