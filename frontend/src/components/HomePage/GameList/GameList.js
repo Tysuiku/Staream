@@ -1,19 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./GameList.css";
 
 const GameList = ({ games }) => {
   const [hoveredGame, setHoveredGame] = useState(null);
 
+  useEffect(() => {
+    if (games.length > 0) {
+      setHoveredGame(games[0]);
+    }
+  }, [games]);
+
   const handleGameHover = (game) => {
     setHoveredGame(game);
   };
 
-  const handleGameLeave = () => {
-    setHoveredGame(null);
-  };
+  const handleGameLeave = () => {};
 
-  const totalHeight = games.reduce((acc, game) => acc + 64, 0); // 64 is the height of each game item
+  const totalHeight = games.reduce((acc, game) => acc + 64, 0);
 
   return (
     <div className="homePageGameList">
@@ -29,13 +33,17 @@ const GameList = ({ games }) => {
             <span>{game.price ? `$${game.price}` : "Free to Play"}</span>
           </div>
         ))}
-        {hoveredGame && (
+      </div>
+      {hoveredGame && (
+        <div className="game-details-wrapper">
           <div className="game-details">
+            <h2>{hoveredGame.name}</h2>
             <p>{hoveredGame.description}</p>
             <p>{`Genre: ${hoveredGame.genre}`}</p>
+            <NavLink to={`/games/${hoveredGame.id}`}>View details</NavLink>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };

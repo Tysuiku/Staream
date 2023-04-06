@@ -1,0 +1,100 @@
+.homePageGameList {
+  display: flex;
+  flex-direction: column;
+  width: 618px;
+  margin-right: 14px;
+  position: relative;
+}
+
+.homePageGameList .game {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px;
+  padding: 0 12px;
+  transition: background-color 250ms;
+  cursor: pointer;
+  position: relative;
+  width: calc(100% + 10px);
+}
+
+.homePageGameList .game:hover {
+  background-color: #95bcd3;
+  width: calc(100% + 40px);
+  padding-right: 10px;
+}
+
+.game-details {
+  position: absolute;
+  background-color: #95bcd3;
+  top: 0;
+  left: 0;
+  width: calc(100% - 40px);
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+
+
+.game-details-wrapper {
+  position: absolute;
+  top: -100px;
+  right: -420px;
+  width: 360px;
+  height: 150%;
+  background-color: #23262d;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.game-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.game-details h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.game-details p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.game-details a {
+  color: #57cbde;
+  text-decoration: none;
+}
+
+.game-details a:hover {
+  text-decoration: underline;
+}
+
+.GameListDropdown {
+  background-color: #171a21;
+  padding: 100px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border: 1px solid #c5c3c2;
+}
+
+.homePageGameList:hover .game-details-wrapper {
+  background-color: #95bcd3;
+}
+
+
