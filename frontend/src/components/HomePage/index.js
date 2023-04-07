@@ -20,10 +20,10 @@ const HomePage = () => {
   }, [dispatch]);
 
   return (
-    <>
-      <GameCarousel />
+    <div className="homePageIndexContainer">
+      <GameCarousel games={games} />
       <GameList games={games} />
-    </>
+    </div>
   );
 };
 

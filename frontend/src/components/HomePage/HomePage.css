@@ -2,9 +2,14 @@
     display: flex;
     position: relative;
     justify-content: center;
-    margin-top: 45%;
-    margin-left: 23%;
+    margin-top: 5%;
+    margin-left: 19%;
 }
+
+.swiper {
+    margin-top: 12%;
+}
+
 /* 
 .homePageGameList:focus {
     outline: none;
