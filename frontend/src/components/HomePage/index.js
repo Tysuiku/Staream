@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchGames } from "../../store/games";
 import GameList from "./GameList/GameList";
 import "./HomePage.css";
+import GameCarousel from "./GameCarousel/GameCarousel";
 
 const HomePage = () => {
   document.title = "Welcome to Staream";
@@ -20,6 +21,7 @@ const HomePage = () => {
 
   return (
     <>
+      <GameCarousel />
       <GameList games={games} />
     </>
   );

@@ -10,7 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 65px;
+  height: 76.1px;
   background-color: rgba(0, 0, 0, 0.2);
   margin-bottom: 5px;
   padding: 0 12px;
@@ -19,12 +19,6 @@
   position: relative;
   width: calc(100% + 10px);
 }
-
-/* .homePageGameList .game:hover {
-  background-color: #95bcd3;
-  width: calc(100% + 40px);
-  padding-right: 10px;
-} */
 
 .game-details {
   position: absolute;
@@ -41,13 +35,12 @@
 }
 
 
-
 .game-details-wrapper {
   position: absolute;
-  top: -100px;
-  right: -420px;
-  width: 360px;
-  height: 150%;
+  top: 0.2px;
+  right: -375px;
+  width: 320px;
+  height: 125.9%;
   background-color: #23262d;
   z-index: 1;
   overflow: hidden;
@@ -66,41 +59,84 @@
   font-size: 14px;
 }
 
-.game-details h2 {
-  margin-top: 0;
-  font-size: 20px;
-}
-
-.game-details p {
-  margin: 0;
-  margin-bottom: 10px;
-}
-
-.game-details a {
-  color: #57cbde;
-  text-decoration: none;
-}
-
 .game-details a:hover {
   text-decoration: underline;
 }
 
-.GameListDropdown {
-  background-color: #171a21;
-  padding: 100px;
-  margin-top: 10px;
-  margin-right: 10px;
-  border: 1px solid #c5c3c2;
-}
-
-.homePageGameList:hover .game-details-wrapper {
-  background-color: #95bcd3;
-}
-
 .game.hover {
-  background-color: #95bcd3;
-  width: calc(100% + 40px);
+  background: linear-gradient( to right, #c6e6f8 5%,#95bcd3 95%);
+  width: calc(100% + 34px);
   padding-right: 10px;
 }
+
+.game-details-wrapper h2 {
+  padding-left: 13px;
+  padding-bottom: 15px;
+  text-transform: none;
+  font-size: 21px;
+  letter-spacing: 0px;
+  color: #263645;
+  height: 30px;
+  padding-right: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.game-details-wrapper img {
+  margin-top: -31px;
+  width: 285px;
+  height: 170px;
+  padding-left: 13px;
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.game-name {
+  padding-top: 5px;
+  flex: 1;
+  color: #c7d5e0;
+  font-size: 1.2em;
+  line-height: 18px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+  transition: color 0.25s;
+}
+
+.game-price {
+  padding-top: 30px;
+  flex-shrink: 0;
+  margin-left: 20px;
+  color: #c7d5e0;
+  font-size: 16px;
+  line-height: 18px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+  transition: color 0.25s;
+}
+
+.game-mainImg {
+  width: 120px;
+  height: 76.2px;
+  padding-right: 64px;
+}
+
+.game-mainImg img {
+  position: relative;
+  right: 12px;
+  width: 150%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 
