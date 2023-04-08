@@ -1,0 +1,73 @@
+.GameShowInfoBox {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 0 2rem;
+    text-overflow: ellipsis;
+    max-width: 25%;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0) ,rgba(0,0,0,0.4) 90%);
+    padding-bottom: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #c6d4df;
+  }
+  
+  .GameShowInfoBox img {
+    max-width: 100%;
+  }
+  
+  @media (min-width: 768px) {
+    .GameShowInfoBox {
+      margin-left: 56%;
+      margin-top: -40.3rem;
+    }
+  }
+
+  .gamesGenreCat p{
+    position: relative;
+    top: 150px;
+    display: inline-block;
+    line-height: 20px;
+    padding: 0 9px;
+    color: #67c1f5;
+    background-color: rgba( 103, 193, 245, 0.2 );
+    box-shadow: none;
+    margin-right: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-bottom: 3px;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.gamesShowInfoDes{
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 14rem;
+    text-overflow: ellipsis;
+    max-width: 55%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #c6d4df;
+    font-size: 16px;
+    padding-bottom: 100px;
+}
+
+.gamesShowInfoDes h1{
+    font-size: 21px;
+}
+.gamesShowInfoDes h1:after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, #3a6e8b 0, transparent);
+    margin-top: 10px;
+  }
+  
+  

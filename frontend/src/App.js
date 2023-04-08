@@ -4,18 +4,22 @@ import LoginFormPage from "./components/LoginFormPage";
 import SignupFormPage from "./components/SignupFormPage";
 import Navigation from "./components/Navigation";
 import HomePage from "./components/HomePage";
+import GameShowPage from "./components/GameShowPage";
 
 function App() {
   return (
     <>
       <Navigation />
-      <Route exact path="/">
-        <Redirect to="/home" />
-      </Route>
-      <Route exact path="/home">
-        <HomePage />
-      </Route>
       <Switch>
+        <Route exact path="/">
+          <Redirect to="/home" />
+        </Route>
+        <Route exact path="/home">
+          <HomePage />
+        </Route>
+        <Route path="/games/:id">
+          <GameShowPage />
+        </Route>
         <Route path="/login">
           <LoginFormPage />
         </Route>

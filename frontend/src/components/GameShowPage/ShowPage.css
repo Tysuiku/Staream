@@ -1,0 +1,14 @@
+.gameNameShowPage{
+    margin-top: 2%;
+    position: relative;
+    text-align: center;
+    top: 145px;
+    right: 250px;
+    font-size: 20px;
+    color: white;
+    font-family: Motiva Sans, Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    text-overflow: ellipsis;
+}
+

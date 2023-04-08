@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -37,48 +37,48 @@ export default function GameCarousel({ games }) {
           {games.map((game) => (
             <SwiperSlide key={game.id}>
               <div className="game-slide">
-                <Link to={`/game/${game.id}`}>
+                <NavLink to={`/games/${game.id}`} key={game.id}>
                   <div className="main-image">
                     <img src={game.mainImage} alt={game.title} />
                   </div>
-                </Link>
+                </NavLink>
                 <div className="game-images">
                   <div className="game-name-carousel">{game.name}</div>
                   <div>
-                    <Link to={`/game/${game.id}`}>
+                    <NavLink to={`/games/${game.id}`}>
                       <div className="game-image">
                         <img
                           src={game.gameImage1}
                           alt={`${game.title} - Game 1`}
                         />
                       </div>
-                    </Link>
-                    <Link to={`/game/${game.id}`}>
+                    </NavLink>
+                    <NavLink to={`/games/${game.id}`}>
                       <div className="game-image">
                         <img
                           src={game.gameImage2}
                           alt={`${game.title} - Game 2`}
                         />
                       </div>
-                    </Link>
+                    </NavLink>
                   </div>
                   <div>
-                    <Link to={`/game/${game.id}`}>
+                    <NavLink to={`/games/${game.id}`}>
                       <div className="game-image">
                         <img
                           src={game.gameImage3}
                           alt={`${game.title} - Game 3`}
                         />
                       </div>
-                    </Link>
-                    <Link to={`/game/${game.id}`}>
+                    </NavLink>
+                    <NavLink to={`/games/${game.id}`}>
                       <div className="game-image">
                         <img
                           src={game.gameImage4}
                           alt={`${game.title} - Game 4`}
                         />
                       </div>
-                    </Link>
+                    </NavLink>
                   </div>
                 </div>
               </div>
