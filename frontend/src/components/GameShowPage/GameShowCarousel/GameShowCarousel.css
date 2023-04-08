@@ -1,0 +1,45 @@
+.game-show-carousel{
+  max-width: 700px;
+  height: 400px;
+}
+
+.game-show-carousel-thumbs{
+  position: relative;
+  max-width: 700px;
+  height: 100px;
+  bottom: 130px;
+}
+
+.game-show-carousel-thumbs img{
+
+    max-width: 700px;
+    height: 92px;
+  }
+
+.gameShowCarouselBox{
+    margin-top: 2%;
+    margin-right: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.game-show-carousel-thumbs .swiper-slide {
+    position: relative;
+  }
+  
+  .thumb-container {
+    position: relative;
+    border: 2px solid transparent;
+    padding: 2px;
+    transition: all 0.2s ease;
+  }
+  
+  .thumb-container:hover {
+    border-color: #fff;
+  }
+  
+
+
+  
+  

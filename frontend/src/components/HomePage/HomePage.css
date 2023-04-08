@@ -1,0 +1,17 @@
+.homePageGameList{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-top: 5%;
+    margin-left: 19%;
+}
+
+.swiper {
+    margin-top: 12%;
+}
+
+/* 
+.homePageGameList:focus {
+    outline: none;
+} */
+  

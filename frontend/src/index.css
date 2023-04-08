@@ -15,7 +15,8 @@
 
 body {
 font-family: "Motiva Sans", Arial, sans-serif;
-background-color: #1b2838;
-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+background: linear-gradient(#2a475e 5%, rgba(42, 71, 94, 0) 70%) top no-repeat #1b2838;
+/* box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); */
 border-radius: 5px;
+height: 100vh;
 }
