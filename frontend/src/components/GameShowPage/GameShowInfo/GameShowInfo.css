@@ -1,17 +1,23 @@
 .GameShowInfoBox {
     display: flex;
     flex-direction: column;
-    gap: 18px;
-    padding: 0 2rem;
+    gap: 25px;
     text-overflow: ellipsis;
     max-width: 25%;
     position: relative;
-    top: 0;
-    left: 0;
+    top: 13.5px;
+    left: 40px;
     background: linear-gradient(to right, rgba(0,0,0,0) ,rgba(0,0,0,0.4) 90%);
-    padding-bottom: 200px;
+    padding-bottom: 60.5px;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 17.5px;
     color: #c6d4df;
+  }
+  
+  @media (max-width: 768px) {
+    .GameShowInfoBox {
+      padding: 0 1rem;
+    }
   }
   
   .GameShowInfoBox img {
@@ -21,18 +27,18 @@
   @media (min-width: 768px) {
     .GameShowInfoBox {
       margin-left: 56%;
-      margin-top: -40.3rem;
+      margin-top: -40.28rem;
     }
   }
-
+  
   .gamesGenreCat p{
     position: relative;
-    top: 150px;
+    top: 25px;
     display: inline-block;
-    line-height: 20px;
-    padding: 0 9px;
+    line-height: 23px;
+    padding: 0 6px;
     color: #67c1f5;
-    background-color: rgba( 103, 193, 245, 0.2 );
+    background-color: rgba( 103, 193, 245, 0.23 );
     box-shadow: none;
     margin-right: 2px;
     border-radius: 2px;
@@ -42,32 +48,81 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
+    font-size: 14.5px;
+  }
 
-.gamesShowInfoDes{
-    margin-top: 120px;
+  .gamesGenreCat p:hover{
+    background: linear-gradient(120deg, #06BFFF 20%, #2D73FF 80%);
+    color: white;
+  }
+  
+  .gamesShowInfoDes{
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 0 14rem;
+    gap: 25px;
+    padding: 0 10rem;
     text-overflow: ellipsis;
     max-width: 55%;
     font-family: Arial, Helvetica, sans-serif;
-    color: #c6d4df;
+    color: #a0a6ae;
     font-size: 16px;
     padding-bottom: 100px;
-}
-
-.gamesShowInfoDes h1{
+  }
+  
+  .gamesShowInfoDes h1{
     font-size: 21px;
-}
-.gamesShowInfoDes h1:after {
+  }
+  
+  .gamesShowInfoDes h1:after {
     content: "";
     display: block;
     height: 2px;
     width: 100%;
     background: linear-gradient(90deg, #3a6e8b 0, transparent);
-    margin-top: 10px;
+    margin-top: 15px;
+  }
+  
+  .gamesDevPubRe {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .info-label-pub {
+    font-size: 12px;
+    font-weight: 200;
+    color: #4a5a66;
+    padding-right: 50px;
+  }
+
+  .info-label-dev {
+    font-size: 12px;
+    font-weight: 200;
+    color: #4a5a66;
+    padding-right: 44px;
+  }
+
+  .info-label-date {
+    font-size: 12px;
+    font-weight: 200;
+    color: #4a5a66;
+    padding-right: 27px;
+  }
+  
+  .game-info-value {
+    color: #60b4e3;
+    font-size: 14.5px;
+    cursor: pointer;
+  }
+
+  .game-info-value:hover{
+    color: white;
+  }
+
+  .game-info-datval {
+    color: #8f98a0;
+    font-size: 14.5px;
   }
   
   

@@ -1,4 +1,4 @@
-json.extract! game, :id, :name, :price, :detail, :description, :genre, :category
+json.extract! game, :id, :name, :price, :detail, :description, :genre, :category, :developer, :publisher, :release_date
 # json.csgoImg game.test_image.attached? ? game.test_image.url : nil
 json.main_image game.main_image.attached? ? game.main_image.url : nil
 json.game_image1 game.game_image1.attached? ? game.game_image1.url : nil

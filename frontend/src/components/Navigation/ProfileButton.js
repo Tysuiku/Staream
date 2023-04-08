@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import * as sessionActions from "../../store/session";
+import badapple from "./touhou badapple.jpeg";
 
 const ProfileButton = ({ user }) => {
   const dispatch = useDispatch();
@@ -12,18 +13,27 @@ const ProfileButton = ({ user }) => {
   };
 
   return (
-    <div className="profileButtonWrapper">
-      <button className="profileButton" onClick={() => setShowMenu(!showMenu)}>
-        {`${user.username} ▾`}
-      </button>
+    <div>
+      <div className="profileButtonWrapper">
+        <button
+          className="profileButton"
+          onClick={() => setShowMenu(!showMenu)}
+        >
+          {`${user.username} ▾`}
+        </button>
 
-      {showMenu && (
-        <div className="profileButtonDropdown">
-          <button className="profileButtonDropdownItem" onClick={logout}>
-            Logout: <span className="logoutUserName">{user.username}</span>
-          </button>
-        </div>
-      )}
+        {showMenu && (
+          <div className="profileButtonDropdown">
+            <button className="profileButtonDropdownItem" onClick={logout}>
+              Logout: <span className="logoutUserName">{user.username}</span>
+            </button>
+          </div>
+        )}
+      </div>
+
+      <div className="profile-border">
+        <img src={badapple} className="temp-profile-pic" />
+      </div>
     </div>
   );
 };
