@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_06_144025) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_08_123707) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -51,7 +51,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_06_144025) do
     t.text "description", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "developer", default: "", null: false
+    t.string "publisher", default: "", null: false
+    t.string "release_date", default: "", null: false
+    t.index ["developer"], name: "index_games_on_developer"
     t.index ["name"], name: "index_games_on_name", unique: true
+    t.index ["publisher"], name: "index_games_on_publisher"
   end
 
   create_table "users", force: :cascade do |t|
