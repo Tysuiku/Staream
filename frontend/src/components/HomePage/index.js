@@ -4,6 +4,7 @@ import { fetchGames } from "../../store/games";
 import GameList from "./GameList/GameList";
 import "./HomePage.css";
 import GameCarousel from "./GameCarousel/GameCarousel";
+import GameNavbar from "./GameNavbar/GameNavbar";
 
 const HomePage = () => {
   document.title = "Welcome to Staream";
@@ -15,12 +16,17 @@ const HomePage = () => {
     return gameArr.slice(0, 10);
   });
 
+  const games2 = useSelector((state) => {
+    return Object.values(state.games);
+  });
+
   useEffect(() => {
     dispatch(fetchGames());
   }, [dispatch]);
 
   return (
     <div className="homePageIndexContainer">
+      <GameNavbar games={games2} />
       <GameCarousel games={games} />
       <GameList games={games} />
     </div>

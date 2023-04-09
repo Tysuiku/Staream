@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ProfileButton from "./ProfileButton";
 import "./Navigation.css";
+import stareamLogo from "./stareamLOGO.jpeg";
 
 const Navigation = () => {
   const sessionUser = useSelector((state) => state.session.user);
@@ -28,9 +29,12 @@ const Navigation = () => {
     <div className="header">
       <div className="headerLinks">
         <NavLink exact to="/" className="appName">
-          <p>
-            STAREAM<span className="supscript">™</span>
-          </p>
+          <div className="stareamTitle">
+            <img src={stareamLogo} />
+            <p>
+              STAREAM<span className="supscript">™</span>
+            </p>
+          </div>
         </NavLink>
       </div>
       <div className="navlink">{sessionLinks}</div>

@@ -15,7 +15,7 @@
 .appName {
     position: absolute;
     padding-top: 2.4%;
-    margin-left: 20%;
+    margin-left: 18%;
     font-size: 28px;
     letter-spacing: 2px;
     font-family: "Motiva Sans", sans-serif;
@@ -120,4 +120,14 @@
   box-shadow: 0 0 8px #d4cece;
 }
 
+.stareamTitle{
+  display: flex;
+  gap: 8px;
+}
 
+.stareamTitle img{
+  position: relative;
+  bottom: 20px;
+  max-width: 70px;
+  height: auto;
+}
