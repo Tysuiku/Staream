@@ -14,7 +14,7 @@ export default function GameNavbar({ games }) {
     <div className="GameNavbarBox">
       <NavLink exact to="/">
         <div className="yourStore">
-          <img src={badapple} className="yourStoreProfile" />
+          {/* <img src={badapple} className="yourStoreProfile" /> */}
           <p>Your Store</p>
         </div>
       </NavLink>

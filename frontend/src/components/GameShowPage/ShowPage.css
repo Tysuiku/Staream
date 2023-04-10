@@ -1,10 +1,8 @@
 .gameNameShowPage{
-    margin-top: 7%;
     position: relative;
     text-align: center;
-    top: 145px;
+    top: 35px;
     right: 250px;
-    font-size: 20px;
     color: white;
     font-family: Motiva Sans, Arial, Helvetica, sans-serif;
     font-size: 24px;
@@ -12,3 +10,19 @@
     text-overflow: ellipsis;
 }
 
+.gameNavBarShowPage{
+    position: relative;
+    top: 20px;
+    right: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .gameNameShowPage {
+      right: 150px;
+    }
+    
+    .gameNavBarShowPage {
+      right: 10px;
+    }
+  }
+  
