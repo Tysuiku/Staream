@@ -6,12 +6,13 @@
     max-width: 25%;
     position: relative;
     top: 96.5px;
-    left: 40px;
+    left: 70px;
     background: linear-gradient(to right, rgba(0,0,0,0) ,rgba(0,0,0,0.4) 90%);
     padding-bottom: 60.5px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17.5px;
     color: #c6d4df;
+    line-height: 1.1;
   }
   
   @media (max-width: 768px) {
@@ -57,18 +58,22 @@
   }
   
   .gamesShowInfoDes{
-    margin-top: 100px;
+    margin-top: 200px;
+    margin-left: 10px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 40px;
     padding: 0 10rem;
     text-overflow: ellipsis;
-    max-width: 55%;
+    max-width: 45%;
     font-family: Arial, Helvetica, sans-serif;
     color: #a0a6ae;
     font-size: 16px;
     padding-bottom: 100px;
+    letter-spacing: 1px;
+    line-height: 1.5;
   }
+
   
   .gamesShowInfoDes h1{
     font-size: 21px;
@@ -125,4 +130,13 @@
     font-size: 14.5px;
   }
   
+  @media (min-width: 14in) and (max-width: 24in) {
+    .GameShowInfoBox {
+      margin-left: 56%;
+      margin-top: -46.5rem;
+    }
+    .gamesShowInfoDes {
+      max-width: 45%;
+    }
+  }
   
