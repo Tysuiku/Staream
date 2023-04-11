@@ -1,46 +1,46 @@
 .homePageGameList {
   display: flex;
   flex-direction: column;
-  width: 618px;
-  margin-right: 14px;
-  position: relative;
+  width: 43vw;
+  right: 3.4vw;
+  /* position: relative; */
 }
 
 .homePageGameList .game {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 76.1px;
+  height: 8.88vh;
   background-color: rgba(0, 0, 0, 0.2);
-  margin-bottom: 5px;
-  padding: 0 12px;
+  margin-bottom: .5vh;
+  padding: 0 0.5vw;
   transition: background-color 250ms;
   cursor: pointer;
   position: relative;
-  width: calc(100% + 10px);
+  width: calc(100% + 0.5vw);
 }
 
 .game-details {
-  position: absolute;
+  /* position: absolute; */
   background-color: #95bcd3;
-  top: 0;
-  left: 0;
-  width: calc(100% - 40px);
-  height: 100%;
+  /* top: 0;
+  left: 0; */
+  /* width: calc(100% - 40px); */
+  /* height: 100%;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-size: 14px;
+  font-size: 14px; */
 }
 
 
 .game-details-wrapper {
   position: absolute;
-  top: 0.2px;
-  right: -375px;
-  width: 320px;
-  height: 125.9%;
+  top: 0vh;
+  right: -24.5vw;
+  width: 21.2vw;
+  height: 93.3vh;
   background-color: #23262d;
   z-index: 1;
   overflow: hidden;
@@ -50,9 +50,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 5px;
+  width: 93.3vw;
+  height: 93.3vh;
+  padding: 0.3vw;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -65,28 +65,26 @@
 
 .game.hover {
   background: linear-gradient( to right, #c6e6f8 5%,#95bcd3 95%);
-  width: calc(100% + 34px);
-  padding-right: 10px;
+  width: 45.3vw;
+  /* padding-right: 10px; */
 }
 
 .game-details-wrapper h2 {
-  padding-left: 13px;
-  padding-bottom: 15px;
+  padding-left: 1.04vw;
   text-transform: none;
   font-size: 21px;
-  letter-spacing: 0px;
+  letter-spacing: 0.01vw;
   color: #263645;
-  height: 30px;
-  padding-right: 8px;
+  height: -0.1vh;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
 .game-details-wrapper img {
-  margin-top: -31px;
-  width: 285px;
-  height: 170px;
+  margin-top: -3vh;
+  width: 18.8vw;
+  height: 20vh;
   padding-left: 13px;
 }
 
@@ -94,11 +92,11 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  width: 100%;
+  width: 100vw;
 }
 
 .game-name {
-  padding-top: 5px;
+  padding-top: 1vh;
   flex: 1;
   color: #c7d5e0;
   font-size: 1.2em;
@@ -111,9 +109,9 @@
 }
 
 .game-price {
-  padding-top: 30px;
+  padding-top: 3vh;
   flex-shrink: 0;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   color: #c7d5e0;
   font-size: 16px;
   line-height: 18px;
@@ -125,16 +123,16 @@
 }
 
 .game-mainImg {
-  width: 120px;
-  height: 76.2px;
-  padding-right: 64px;
+  width: 6.3vw;
+  height: 8.88vh;
+  padding-right: 3vw;
 }
 
 .game-mainImg img {
   position: relative;
-  right: 12px;
-  width: 150%;
-  height: 100%;
+  right: 1vw;
+  width: 9.5vw;
+  height: 8.88vh;
   object-fit: cover;
 }
 

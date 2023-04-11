@@ -1,8 +1,8 @@
 .gameNameShowPage{
     position: relative;
-    text-align: center;
-    top: 35px;
-    right: 250px;
+    bottom: 8vh;
+    margin-left: 12.76vw;
+    /* right: 250px; */
     color: white;
     font-family: Motiva Sans, Arial, Helvetica, sans-serif;
     font-size: 24px;
@@ -12,11 +12,12 @@
 
 .gameNavBarShowPage{
     position: relative;
-    top: 20px;
-    right: 20px;
+    top: -0.1vh;
+    padding-bottom: 3vh;
+    right: 1.313vw;
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+/* @media (min-width: 768px) and (max-width: 1200px) {
     .gameNameShowPage {
       right: 150px;
     }
@@ -24,5 +25,5 @@
     .gameNavBarShowPage {
       right: 10px;
     }
-  }
+  } */
   

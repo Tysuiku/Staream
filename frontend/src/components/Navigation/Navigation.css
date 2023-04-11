@@ -1,8 +1,8 @@
 .navlink {
     display: flex;
     justify-content: end;
-    gap: 10px;
-    padding-right: 9.5%;
+    gap: 0.5vw;
+    padding-right: 3vw;
     margin-top: 0.5%;
     font-size: 12px;
     transition: all 0.3s ease-in;
@@ -15,7 +15,7 @@
 .appName {
     position: absolute;
     padding-top: 2.4%;
-    margin-left: 18%;
+    margin-left: 13.8vw;
     font-size: 28px;
     letter-spacing: 2px;
     font-family: "Motiva Sans", sans-serif;

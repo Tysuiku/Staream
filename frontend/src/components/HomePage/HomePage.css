@@ -2,19 +2,15 @@
     display: flex;
     position: relative;
     justify-content: center;
-    margin-top: 5%;
-    margin-left: 19%;
-}
-
-.swiper {
-    margin-top: 4%;
+    margin-top: 3vw;
+    margin-left: 18vw;
 }
 
 .GameNavbarBox {
     align-items: center;
-    max-width: 956.9px;
+    max-width: 65.4vw;
     padding: 3px;
-    padding-right: 28px;
+    padding-right: 2.25vw;
     background: linear-gradient(
       90deg,
       rgba(108, 174, 249, 0.9) 10%,
@@ -27,16 +23,22 @@
     border-radius: 1px;
     box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.1);
     border: solid 0.5px black;
-    margin-bottom: 80px;
+    margin-bottom: 8.8vh;
   }
   
   @media (min-width: 14in) {
     .GameNavbarBox {
-      margin-top: 12%;
-      margin-left: 15.95%;
+      margin-top: 16vh;
+      margin-left: 14vw;
     }
   }
 
+  /* .homePageIndexContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 2vw;
+  } */
   
 /* 
 .homePageGameList:focus {

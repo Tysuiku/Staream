@@ -1,51 +1,32 @@
 .GameShowInfoBox {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 2vh;
     text-overflow: ellipsis;
-    max-width: 25%;
+    max-width: 21.1vw;
     position: relative;
-    top: 96.5px;
-    left: 70px;
+    top: 15.79vh;
+    left: 4vw;
     background: linear-gradient(to right, rgba(0,0,0,0) ,rgba(0,0,0,0.4) 90%);
-    padding-bottom: 60.5px;
+    padding-bottom: 13.9vh;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 17.5px;
+    font-size: 11x;
     color: #c6d4df;
     line-height: 1.1;
   }
   
-  @media (max-width: 768px) {
-    .GameShowInfoBox {
-      padding: 0 1rem;
-    }
-  }
-  
-  .GameShowInfoBox img {
-    max-width: 100%;
-  }
-  
-  @media (min-width: 768px) {
-    .GameShowInfoBox {
-      margin-left: 56%;
-      margin-top: -40.28rem;
-    }
-  }
-  
   .gamesGenreCat p{
     position: relative;
-    top: 25px;
+    top: 9.5vh;
     display: inline-block;
-    line-height: 23px;
-    padding: 0 6px;
+    line-height: 2.6vh;
+    padding: 0 0.2vw;
     color: #67c1f5;
     background-color: rgba( 103, 193, 245, 0.23 );
     box-shadow: none;
-    margin-right: 2px;
+    margin-right: 0.5vw;
     border-radius: 2px;
     cursor: pointer;
-    margin-bottom: 3px;
-    max-width: 200px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -58,40 +39,40 @@
   }
   
   .gamesShowInfoDes{
-    margin-top: 200px;
-    margin-left: 10px;
+    margin-top: 26vh;
+    margin-left: 2.2vw;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 2vh;
     padding: 0 10rem;
     text-overflow: ellipsis;
-    max-width: 45%;
+    /* max-width: 45%; */
     font-family: Arial, Helvetica, sans-serif;
     color: #a0a6ae;
     font-size: 16px;
-    padding-bottom: 100px;
+    padding-bottom: 8vh;
     letter-spacing: 1px;
     line-height: 1.5;
   }
 
   
   .gamesShowInfoDes h1{
-    font-size: 21px;
+    font-size: 20px;
   }
   
   .gamesShowInfoDes h1:after {
     content: "";
     display: block;
     height: 2px;
-    width: 100%;
+    width: 50vw;
     background: linear-gradient(90deg, #3a6e8b 0, transparent);
-    margin-top: 15px;
+    margin-top: 1vh;
   }
   
   .gamesDevPubRe {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 0.2vh;
   }
   
   .info-label-pub {
@@ -132,11 +113,11 @@
   
   @media (min-width: 14in) and (max-width: 24in) {
     .GameShowInfoBox {
-      margin-left: 56%;
-      margin-top: -46.5rem;
+      margin-left: 55.45vw;
+      margin-top: -86vh;
     }
     .gamesShowInfoDes {
-      max-width: 45%;
+      max-width: 45vw;
     }
   }
   
