@@ -38,16 +38,16 @@ export default function GameShowCarousel({ game }) {
           onSwiper={setSwiper}
         >
           <SwiperSlide>
-            <img src={gameImage1} />
+            <img src={gameImage1} className="main-carousel-img" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={gameImage2} />
+            <img src={gameImage2} className="main-carousel-img" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={gameImage3} />
+            <img src={gameImage3} className="main-carousel-img" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={gameImage4} />
+            <img src={gameImage4} className="main-carousel-img" />
           </SwiperSlide>
         </Swiper>
         <Swiper
