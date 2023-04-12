@@ -1,0 +1,6 @@
+.addToCartButton{
+    position: relative;
+    top: 10vh;
+    z-index: 5;
+    cursor: pointer;
+}

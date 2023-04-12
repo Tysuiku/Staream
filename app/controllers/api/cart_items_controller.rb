@@ -2,11 +2,18 @@ class Api::CartItemsController < ApplicationController
   before_action :require_logged_in
 
   def create
-    @cart_item = CartItem.new(user_id: current_user.id, game_id: params[:game_id])
-    if !(@cart_item.purchased) && @cart_item.save!
-      render "api/cart_items/show"
+    @cart_item = CartItem.new(user_id: current_user.id, game_id: params[:game_id], purchased: false)
+
+    existing_cart_item = CartItem.find_by(user_id: current_user.id, game_id: params[:game_id])
+
+    if existing_cart_item.nil? || !existing_cart_item.purchased
+      if @cart_item.save
+        render "api/cart_items/show"
+      else
+        render json: { errors: @cart_item.errors.full_messages }, status: :unprocessable_entity
+      end
     else
-      render json: { errors: ["ERROR - cart item already purchased"] }, status: :unauthorized
+      render json: { errors: ["ERROR - cart item already purchased"] }, status: :unprocessable_entity
     end
   end
 

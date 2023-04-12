@@ -1,7 +1,7 @@
 import csrfFetch from "./csrf";
 
 const RECEIVE_USER = "session/receiveUser";
-const REMOVE_USER = "session/removeUser";
+export const REMOVE_USER = "session/removeUser";
 
 //action creator
 export const receiveUser = (user) => ({

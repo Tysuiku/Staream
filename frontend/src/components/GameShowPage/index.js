@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import GameShowCarousel from "./GameShowCarousel/GameShowCarousel";
-import GameShowInfo from "./GameShowInfo/GameShowInfo"; // import the component
+import GameShowInfo from "./GameShowInfo/GameShowInfo";
+import AddToCartButton from "./AddToCartButton"; // import the new AddToCartButton component
 import { fetchGame } from "../../store/games";
 import { fetchGames } from "../../store/games";
 import "./ShowPage.css";
@@ -26,7 +27,7 @@ const GameShowPage = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className="allgameshowpageItems">
       <div className="gameNavBarShowPage">
         <GameNavbar games={games2} />
       </div>
@@ -36,6 +37,7 @@ const GameShowPage = () => {
       <div className="ShowPageComponents">
         <GameShowCarousel key={game.id} game={game} />
         <GameShowInfo game={game} />
+        <AddToCartButton game={game} />{" "}
       </div>
     </div>
   );
