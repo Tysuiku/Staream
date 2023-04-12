@@ -37,7 +37,14 @@ const GameShowPage = () => {
       <div className="ShowPageComponents">
         <GameShowCarousel key={game.id} game={game} />
         <GameShowInfo game={game} />
-        <AddToCartButton game={game} />{" "}
+
+        <div className="gameinfobuyBox">
+          <AddToCartButton game={game} />{" "}
+          <div className="gamesShowInfoDes">
+            <h1>ABOUT THIS GAME</h1>
+            <p>{game.description}</p>
+          </div>
+        </div>
       </div>
     </div>
   );

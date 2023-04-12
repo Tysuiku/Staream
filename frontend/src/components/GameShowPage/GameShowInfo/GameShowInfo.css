@@ -6,7 +6,7 @@
     max-width: 21.1vw;
     position: relative;
     top: 15.79vh;
-    left: 4vw;
+    left: 5.34vw;
     background: linear-gradient(to right, rgba(0,0,0,0) ,rgba(0,0,0,0.4) 90%);
     padding-bottom: 13.9vh;
     font-family: Arial, Helvetica, sans-serif;
@@ -37,26 +37,7 @@
     background: linear-gradient(120deg, #06BFFF 20%, #2D73FF 80%);
     color: white;
   }
-  
-  .gamesShowInfoDes{
-    position: relative;
-    top: 38.5vh;
-    left: 1.9vw;
-    display: flex;
-    flex-direction: column;
-    gap: 2vh;
-    padding: 0 10rem;
-    text-overflow: ellipsis;
-    /* max-width: 45%; */
-    font-family: Arial, Helvetica, sans-serif;
-    color: #a0a6ae;
-    font-size: 16px;
-    padding-bottom: 3vh;
-    letter-spacing: 1px;
-    line-height: 1.5;
-  }
 
-  
   .gamesShowInfoDes h1{
     font-size: 20px;
   }

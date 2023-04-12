@@ -10,6 +10,9 @@ const AddToCartButton = ({ game }) => {
   const history = useHistory();
   const user = useSelector((state) => state.session.user);
   const cartItems = useSelector((state) => state.cartItems) || {};
+  const isInCart = Object.values(cartItems).some(
+    (cartItem) => cartItem.userId === user.id && cartItem.gameId === game.id
+  );
 
   useEffect(() => {
     if (user) {
@@ -41,14 +44,23 @@ const AddToCartButton = ({ game }) => {
       cartItem.purchased
   );
 
-  return isPurchased ? (
-    <button className="playButton" disabled>
-      Play
-    </button>
-  ) : (
-    <button onClick={handleAddToCart} className="addToCartButton">
-      Add to Cart
-    </button>
+  return (
+    <div className="playBuyButtonBox">
+      <div className="gameName">{game.name}</div>
+      {isPurchased ? (
+        <button className="playButton" disabled>
+          Play
+        </button>
+      ) : isInCart ? (
+        <button className="inCartButton" disabled>
+          In Cart
+        </button>
+      ) : (
+        <button onClick={handleAddToCart} className="addToCartButton">
+          Add to Cart
+        </button>
+      )}
+    </div>
   );
 };
 

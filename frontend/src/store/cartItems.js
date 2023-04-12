@@ -50,6 +50,7 @@ export const createCartItem = (gameId) => async (dispatch) => {
     dispatch(addCartItem(data));
   } else if (res.status === 422) {
     alert("This game is already in your cart.");
+    return;
   } else {
     console.error("Error adding game to cart:", res.statusText);
   }

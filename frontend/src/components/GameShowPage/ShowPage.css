@@ -1,7 +1,7 @@
 .gameNameShowPage{
     position: relative;
     bottom: 8vh;
-    margin-left: 12.76vw;
+    margin-left: 13.99vw;
     color: white;
     font-family: Motiva Sans, Arial, Helvetica, sans-serif;
     font-size: 24px;
@@ -13,7 +13,6 @@
     position: relative;
     top: -0.1vh;
     padding-bottom: 3vh;
-    right: 1.313vw;
 }
 
 .allgameshowpageItems {
@@ -21,13 +20,27 @@
   flex-direction: column;
 }
 
-/* @media (min-width: 768px) and (max-width: 1200px) {
-    .gameNameShowPage {
-      right: 150px;
-    }
-    
-    .gameNavBarShowPage {
-      right: 10px;
-    }
-  } */
+.gamesShowInfoDes{
+  position: relative;
+  /* top: 45.5vh; */
+  left: 3.2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  padding: 0 10rem;
+  text-overflow: ellipsis;
+  /* max-width: 45%; */
+  font-family: Arial, Helvetica, sans-serif;
+  color: #a0a6ae;
+  font-size: 16px;
+  padding-bottom: 3vh;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.gameinfobuyBox{
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
   
