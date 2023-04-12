@@ -32,4 +32,12 @@ class Api::CartItemsController < ApplicationController
     end
     render json: { message: "successful" }
   end
+
+  def checkout
+    @cart_items = current_user.cart_items.where(purchased: false)
+    @cart_items.each do |cart_item|
+      cart_item.update(purchased: true)
+    end
+    render json: { message: "successful" }
+  end
 end

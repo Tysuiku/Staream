@@ -4,12 +4,15 @@ import {
   fetchCartItems,
   deleteCartItem,
   deleteAllCartItems,
+  checkoutCart,
 } from "../../store/cartItems";
 
+import { useHistory } from "react-router-dom";
 import "./cartpage.css";
 
 const CartPage = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
   const cartItems = useSelector((state) => state.cartItems);
 
   useEffect(() => {
@@ -20,28 +23,40 @@ const CartPage = () => {
     dispatch(deleteCartItem(cartItemId));
   };
 
-  const handleClearCart = () => {
-    dispatch(deleteAllCartItems());
-  };
+  const cartItemsList = Object.values(cartItems).filter(
+    (cartItem) => !cartItem.purchased
+  );
 
-  const cartItemsList = Object.values(cartItems);
+  const totalPrice = cartItemsList.reduce(
+    (total, cartItem) => total + cartItem.game.price,
+    0
+  );
+
+  const handleCheckout = async () => {
+    await dispatch(checkoutCart());
+    history.push("/home");
+  };
 
   return (
     <div className="cartPageBox">
-      <h1>Your Cart</h1>
+      <h2>Your Cart</h2>
       {cartItemsList.length > 0 ? (
         <div>
           <ul>
             {cartItemsList.map((cartItem) => (
               <li key={cartItem.id}>
-                {cartItem.game.name} - ${cartItem.game.price}
+                {cartItem.game.name} - ${cartItem.game.price.toFixed(2)}
                 <button onClick={() => handleRemoveCartItem(cartItem.id)}>
                   Remove
                 </button>
               </li>
             ))}
           </ul>
-          <button onClick={handleClearCart}>Clear Cart</button>
+          <p>Total: ${totalPrice.toFixed(2)}</p>
+          <button onClick={handleCheckout}>Checkout</button>
+          <button onClick={() => dispatch(deleteAllCartItems())}>
+            Remove All Items
+          </button>
         </div>
       ) : (
         <p>Your cart is empty.</p>

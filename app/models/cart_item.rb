@@ -1,5 +1,6 @@
 class CartItem < ApplicationRecord
   validates :user_id, presence: true
+  validates :game_id, uniqueness: { scope: :user_id }
   validate :not_already_purchased
 
   belongs_to :user

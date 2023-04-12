@@ -44,8 +44,15 @@ export const createCartItem = (gameId) => async (dispatch) => {
     method: "POST",
     body: JSON.stringify({ gameId: gameId }),
   });
-  const data = await res.json();
-  dispatch(addCartItem(data));
+
+  if (res.ok) {
+    const data = await res.json();
+    dispatch(addCartItem(data));
+  } else if (res.status === 422) {
+    alert("This game is already in your cart.");
+  } else {
+    console.error("Error adding game to cart:", res.statusText);
+  }
 };
 
 export const deleteCartItem = (cartItemId) => async (dispatch) => {
@@ -60,6 +67,22 @@ export const deleteAllCartItems = () => async (dispatch) => {
     method: "DELETE",
   });
   dispatch(clearCart());
+};
+
+export const CHECKOUT_CART = "cartItems/CHECKOUT_CART";
+
+export const checkoutCart = () => async (dispatch) => {
+  const response = await csrfFetch("/api/cart_items/checkout", {
+    method: "POST",
+  });
+
+  if (response.ok) {
+    // Dispatch the CHECKOUT_CART action instead of fetching the cart items
+    dispatch({ type: CHECKOUT_CART });
+  } else {
+    const errorData = await response.json();
+    console.error("Error checking out:", errorData);
+  }
 };
 
 export default function cartItemsReducer(state = {}, action) {
@@ -81,6 +104,15 @@ export default function cartItemsReducer(state = {}, action) {
       return {};
     case REMOVE_USER:
       return {};
+    case CHECKOUT_CART: {
+      const newState = { ...state };
+      Object.keys(newState).forEach((key) => {
+        if (newState[key].purchased) {
+          delete newState[key];
+        }
+      });
+      return newState;
+    }
     default:
       return state;
   }
