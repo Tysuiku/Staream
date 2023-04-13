@@ -1,0 +1,83 @@
+.addToCartButton {
+  background: linear-gradient(#799905 5%,#536904 95%);
+    border: none;
+    color: #d2efa9;
+    /* padding: 10px 15px; */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    /* margin: 4px 2px; */
+    cursor: pointer;
+    border-radius: 2px;
+    width: 6vw;
+    font-weight: bold;
+    position: relative;
+    left: 38vw;
+    top: 2vh;
+    border: solid 3px rgba(0, 0, 0, 0.799);
+  }
+
+  .inCartButton {
+    background: linear-gradient(#799905 5%,#536904 95%);
+    border: none;
+    color: #d2efa9;
+    /* padding: 10px 15px; */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    padding: 0.7vh;
+    /* margin: 4px 2px; */
+    cursor: pointer;
+    border-radius: 2px;
+    width: 6vw;
+    font-weight: bold;
+    position: relative;
+    left: 38vw;
+    top: 2vh;
+    border: solid 3px rgba(0, 0, 0, 0.799);
+  }
+  
+  .playButton {
+    background: linear-gradient(#799905 5%,#536904 95%);
+    border: none;
+    color: #d2efa9;
+    padding: 0.7vh;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    /* margin: 4px 2px; */
+    cursor: pointer;
+    border-radius: 2px;
+    width: 6vw;
+    font-weight: bold;
+
+    position: relative;
+    left: 38vw;
+    top: 2vh;
+    border: solid 3px rgba(0, 0, 0, 0.799);
+  }
+
+  .addToCartButton:hover, .inCartButton:hover, .playButton:hover {
+    background: #d3e885;;
+  }
+
+  .gameName {
+    margin-left: 1vw;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 2vh;
+  }
+  
+  .playBuyButtonBox{
+    background: linear-gradient(to right, rgba(188, 187, 187, 0.235)20% ,rgba(84,107,115,.3) 90%);
+    border-radius: 4px;
+    margin-top: 26.5vh;
+    margin-left: 13.7vw;
+    width: 45.2vw;
+    height: 8vh;
+    border: solid 0.1px rgba(0, 0, 0, 0.812);
+  }

@@ -14,6 +14,8 @@
 }
 
 .game-image {
+  position: relative;
+  left: 0.55vw;
   width: 10vw;
   height: 14vh;
   margin-right: 3.2vw;
@@ -93,9 +95,8 @@
 
 .featured{
   position: absolute;
-  top: 27vh;
+  top: 29.3vh;
   left: 14.2vw;
-
   font-family: "Motiva Sans", Sans-serif;
   font-weight: 300;
   font-size: 14px;
@@ -104,5 +105,4 @@
   /* margin: 0 0 10px; */
   letter-spacing: 0.03em;
   font-weight: normal;
-  padding-top: 0.2vh;
 }

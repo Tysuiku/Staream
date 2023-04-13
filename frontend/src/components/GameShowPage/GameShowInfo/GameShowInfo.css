@@ -6,7 +6,7 @@
     max-width: 21.1vw;
     position: relative;
     top: 15.79vh;
-    left: 4vw;
+    left: 5.34vw;
     background: linear-gradient(to right, rgba(0,0,0,0) ,rgba(0,0,0,0.4) 90%);
     padding-bottom: 13.9vh;
     font-family: Arial, Helvetica, sans-serif;
@@ -26,7 +26,7 @@
     box-shadow: none;
     margin-right: 0.5vw;
     border-radius: 2px;
-    cursor: pointer;
+    cursor: not-allowed;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -37,25 +37,7 @@
     background: linear-gradient(120deg, #06BFFF 20%, #2D73FF 80%);
     color: white;
   }
-  
-  .gamesShowInfoDes{
-    margin-top: 26vh;
-    margin-left: 2.2vw;
-    display: flex;
-    flex-direction: column;
-    gap: 2vh;
-    padding: 0 10rem;
-    text-overflow: ellipsis;
-    /* max-width: 45%; */
-    font-family: Arial, Helvetica, sans-serif;
-    color: #a0a6ae;
-    font-size: 16px;
-    padding-bottom: 8vh;
-    letter-spacing: 1px;
-    line-height: 1.5;
-  }
 
-  
   .gamesShowInfoDes h1{
     font-size: 20px;
   }
@@ -99,7 +81,7 @@
   .game-info-value {
     color: #60b4e3;
     font-size: 14.5px;
-    cursor: pointer;
+    cursor: not-allowed;
   }
 
   .game-info-value:hover{

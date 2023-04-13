@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resource :session, only: [:show, :create, :destroy]
     resources :games, only: [:index, :show]
     resources :cart_items, only: [:create, :index, :destroy]
+    post "/cart_items/checkout", to: "cart_items#checkout"
   end
 
   #config/routes.rb

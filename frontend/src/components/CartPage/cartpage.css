@@ -1,0 +1,182 @@
+  .cartPageBox {
+    max-width: 44vw;
+    margin-left: 14vw;
+    font-family: Arial, sans-serif;
+    background-color: #1b2838;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 2vh;
+    color: #c7d5e0;
+    font-family: 'Motiva Sans', sans-serif;
+  }
+  
+  .cartItem {
+    position: relative;
+    bottom: 16.1vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 0.4vh;
+    padding: 1vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+  
+  .cartItemImage {
+    width: 7vw;
+    height: auto;
+    margin-right: 1vw;
+  }
+  
+  .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #c7d5e0;
+  }
+  
+  .purchaseButton {
+    position: relative;
+    background: linear-gradient(#799905 5%,#536904 95%);
+    color: #d2efa9;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    bottom: 17.4vh;
+    left: 24vw;
+    margin-right: 1vw;
+    text-decoration: none;
+    font-family: 'Motiva Sans', sans-serif;
+  }
+
+  .purchaseButton:hover{
+    background: #d3e885;
+    color: #f7fdf4;;
+  }
+
+  
+  .removeItemButton {
+    background-color: transparent;
+    /* color: #0e1b46; */
+    border: none;
+    padding: 0;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #56707f;
+  }
+  
+  .removeItemButton:hover {
+    color: #67c1f5;
+  }
+  
+  .gameNameCart {
+    margin-right: 50vw;
+    color: #c7d5e0;
+    text-decoration: none;
+  }
+  
+  /* .cartPageItemsBox {
+    display: flex;
+    flex-direction: column;
+  }
+   */
+  .youShopCart {
+    color: white;
+    position: relative;
+    width: 43.5vw;
+    height: 9.5vh;
+    left: 14vw;
+    padding-left: 0.5vw;
+    padding-top: 1vh;
+    z-index: 1;
+    bottom: 5vh;
+  }
+
+  .cartVisualEffect{
+    position: relative;
+    bottom: 12vh;
+    padding: 1vh;
+    padding-bottom: 3vh;
+    width: 43vw;
+    left: 14vw;
+    z-index: 2;
+    background: url(https://store.akamai.steamstatic.com/public/images//v6/temp/cluster_bg_2.png) bottom center no-repeat;
+  }
+  
+  .totalCartPrice {
+    position: relative;
+    bottom: 13.5vh;
+    left: 36.2vw;
+    font-size: 16px;
+    color: #c7d5e0;
+    font-weight: bold;
+    margin-bottom: 1vh;
+  }
+
+  .continueShoppingButton {
+    position: relative;
+    background-color: rgba(103,193,245,.2);
+    color: #67c1f5;
+    border: none;
+    padding: 1vh 1vw;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 12.3vw;
+    right: 12.4vw;
+    text-decoration: none;
+}
+
+  .continueShoppingButton:hover {
+    background: linear-gradient(120deg, #06BFFF 20%, #2D73FF 80%);
+    color: white;
+  }
+
+  .cartItemInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35vw;
+    position: relative;
+  }
+  
+  .price {
+    margin-top: 1vh;
+    position: absolute;
+    top: -1.2vh;
+    right: 0;
+  }
+  
+  .removeItemButton {
+    margin-top: 1vh;
+    position: absolute;
+    top: 1vh;
+    right: 0;
+  }
+
+  .removeAllItems {
+    color: #56707f;
+    font-size: 14px;
+    cursor: pointer;
+    /* margin-left: 1vw; */
+    text-decoration: underline;
+  }
+  
+  .removeAllItems:hover {
+    color: #67c1f5;
+  }
+
+  .salesTax{
+    position: relative;
+    font-size: 14.5px;
+ 
+    color: #c7d5e0;
+    margin-left: 14vw;
+    bottom: 10vh;
+  }
+
+  .cartPageFooter{
+    margin-top: 36.5vh;
+  }

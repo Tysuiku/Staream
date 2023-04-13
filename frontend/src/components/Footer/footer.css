@@ -1,0 +1,80 @@
+.stareamFooter-wrapper {
+    width: 99vw;
+    height: 25vh;
+    background-color: #171a21;
+    box-sizing: border-box;
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stareamFooter-sandwich {
+    border-top: 1px solid #363c44;
+    border-bottom: 1px solid #363c44;
+    width: 68vw;
+    height: 9vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    color: #8F98A0;
+    padding: 1vh 0;
+    margin-bottom: 1vh;
+    margin-right: 3.2vw;
+  }
+  
+  .stareamHoshi-logo {
+    background-color: #969eab;
+    width: 5.5vw;
+    height: 3vh;
+    color: #171a21;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    letter-spacing: 0.1em;
+    font-family: 'Motiva Sans 700', sans-serif;
+    font-size: 20px;
+    padding-top: 0.5vh;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  
+  .stareamHoshi-logo span {
+    font-family: 'Motiva Sans 700', sans-serif;
+    font-size: 14px;
+  }
+  
+  .stareamLegal-text-wrapper {
+    margin: 0 1vw;
+    width: 100vw;
+  }
+
+  .stareamFooter-links{
+    color: white;
+    display: flex;
+    gap: 31.5vw;
+    margin-right: 3.2vw;
+  }
+
+  .stareamFooter-star-logo{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+  }
+
+  .starLogoFoot{
+    position: relative;
+    width: 2.15vw;
+    left: 0.85vw;
+    height: 3.5vh;
+  }
+
+  .titleTextFoot{
+    padding-bottom: 0.5vh;
+    text-decoration: underline;
+  }
+
+  .plainText {
+    color: #8F98A0;
+    text-decoration: none;
+  }

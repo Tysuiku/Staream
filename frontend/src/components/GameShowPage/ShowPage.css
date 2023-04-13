@@ -1,8 +1,7 @@
 .gameNameShowPage{
     position: relative;
     bottom: 8vh;
-    margin-left: 12.76vw;
-    /* right: 250px; */
+    margin-left: 13.99vw;
     color: white;
     font-family: Motiva Sans, Arial, Helvetica, sans-serif;
     font-size: 24px;
@@ -14,16 +13,61 @@
     position: relative;
     top: -0.1vh;
     padding-bottom: 3vh;
-    right: 1.313vw;
 }
 
-/* @media (min-width: 768px) and (max-width: 1200px) {
-    .gameNameShowPage {
-      right: 150px;
-    }
-    
-    .gameNavBarShowPage {
-      right: 10px;
-    }
-  } */
+.allgameshowpageItems {
+  display: flex;
+  flex-direction: column;
+}
+
+.gamesShowInfoDes{
+  position: relative;
+  /* top: 45.5vh; */
+  left: 3.2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  padding: 0 10rem;
+  text-overflow: ellipsis;
+  /* max-width: 45%; */
+  font-family: Arial, Helvetica, sans-serif;
+  color: #a0a6ae;
+  font-size: 16px;
+  padding-bottom: 3vh;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.gameinfobuyBox{
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+
+.showCart{
+  position: relative;
+  top: 15.7vh;
+  left: 75.4vw;
+  font-size: 14px;
+  text-align: center;
+  background: linear-gradient(#799905 5%,#536904 95%);
+  color: #d2efa9;
+  border: none;
+  width: 6vw;
+  padding: 0.35vh;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Motiva Sans', sans-serif;
+  border: solid 0.5px black;
+  box-shadow: 0 0 2px #020000;;
+  z-index: 3;
+}
+
+.showCart:hover{
+  background: #d3e885;
+  color: #f7fdf4;;
+}
   
+.showPageFooter{
+  margin-top: 10vh;
+}

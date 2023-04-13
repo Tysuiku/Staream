@@ -5,6 +5,8 @@ import GameList from "./GameList/GameList";
 import "./HomePage.css";
 import GameCarousel from "./GameCarousel/GameCarousel";
 import GameNavbar from "./GameNavbar/GameNavbar";
+import { NavLink } from "react-router-dom";
+import Footer from "../Footer";
 
 const HomePage = () => {
   document.title = "Welcome to Staream";
@@ -25,10 +27,22 @@ const HomePage = () => {
   }, [dispatch]);
 
   return (
-    <div className="homePageIndexContainer">
-      <GameNavbar games={games2} />
-      <GameCarousel games={games} />
-      <GameList games={games} />
+    <div>
+      <div>
+        <NavLink to={"/cart"}>
+          <p className="indexCart">Cart</p>
+        </NavLink>
+
+        <div className="homePageIndexContainer">
+          <GameNavbar games={games2} />
+          <GameCarousel games={games} />
+          <GameList games={games} />
+        </div>
+      </div>
+      <div className="homepageFooter">
+        {" "}
+        <Footer />{" "}
+      </div>
     </div>
   );
 };

@@ -5,8 +5,12 @@ import SignupFormPage from "./components/SignupFormPage";
 import Navigation from "./components/Navigation";
 import HomePage from "./components/HomePage";
 import GameShowPage from "./components/GameShowPage";
+import CartPage from "./components/CartPage";
+import useScrollToTop from "./hooks/useScrollToTop"; // custom hook
 
 function App() {
+  useScrollToTop(); // Use the custom hook
+
   return (
     <>
       <Navigation />
@@ -17,6 +21,9 @@ function App() {
         <Route exact path="/home">
           <HomePage />
         </Route>
+        <Route path="/cart">
+          <CartPage />
+        </Route>
         <Route path="/games/:id">
           <GameShowPage />
         </Route>
@@ -25,6 +32,9 @@ function App() {
         </Route>
         <Route path="/signup">
           <SignupFormPage />
+        </Route>
+        <Route path="*">
+          <Redirect to="/home" />
         </Route>
       </Switch>
     </>

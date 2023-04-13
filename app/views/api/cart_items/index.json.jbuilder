@@ -1,18 +1,15 @@
-if @cart_items.length > 0
-  @cart_items.each do |cart_item|
-    json.cart_items do
-      json.set! cart_item.id do
-        json.partial! "cart_item", cart_item: cart_item
-      end
-    end
+json.array! @cart_items do |cart_item|
+  json.id cart_item.id
+  json.user_id cart_item.user_id
+  json.game_id cart_item.game_id
+  json.purchased cart_item.purchased
+  json.created_at cart_item.created_at
+  json.updated_at cart_item.updated_at
 
-    json.games do
-      json.set! cart_item.game.id do
-        json.partial! "api/games/game", game: cart_item.game
-      end
-    end
+  json.game do
+    json.id cart_item.game.id
+    json.name cart_item.game.name
+    json.price cart_item.game.price
+    json.main_image cart_item.game.main_image.url
   end
-else
-  json.cart_items({})
-  json.games({})
 end

@@ -26,10 +26,6 @@ const GameShowInfo = ({ game }) => {
           <p>{game.category}</p>
         </div>
       </div>
-      <div className="gamesShowInfoDes">
-        <h1>ABOUT THIS GAME</h1>
-        <p>{game.description}</p>
-      </div>
     </>
   );
 };

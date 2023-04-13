@@ -1,7 +1,7 @@
 import csrfFetch from "./csrf";
 
 const RECEIVE_USER = "session/receiveUser";
-const REMOVE_USER = "session/removeUser";
+export const REMOVE_USER = "session/removeUser";
 
 //action creator
 export const receiveUser = (user) => ({
@@ -27,7 +27,7 @@ const storeCurrentUser = (user) => {
 
 //thunk action creator
 export const restoreSession = () => async (dispatch) => {
-  const res = await csrfFetch("api/session");
+  const res = await csrfFetch("/api/session");
   storeCSRFToken(res);
   const data = await res.json();
   storeCurrentUser(data.user);
