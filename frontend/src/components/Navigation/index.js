@@ -37,7 +37,7 @@ const Navigation = () => {
           </div>
         </NavLink>
       </div>
-      <div class="githubLinkedin-links">
+      <div className="githubLinkedin-links">
         <a
           href="https://github.com/Tysuiku/Staream"
           target="_blank"

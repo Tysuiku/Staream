@@ -9,6 +9,7 @@ import { fetchGames } from "../../store/games";
 import "./ShowPage.css";
 import GameNavbar from "../HomePage/GameNavbar/GameNavbar";
 import { NavLink } from "react-router-dom";
+import Footer from "../Footer";
 
 const GameShowPage = () => {
   const { id } = useParams();
@@ -29,28 +30,34 @@ const GameShowPage = () => {
 
   return (
     <div>
-      <NavLink to={"/cart"}>
-        <p className="showCart">Cart</p>
-      </NavLink>
-      <div className="allgameshowpageItems">
-        <div className="gameNavBarShowPage">
-          <GameNavbar games={games2} />
-        </div>
+      <div>
+        <NavLink to={"/cart"}>
+          <p className="showCart">Cart</p>
+        </NavLink>
+        <div className="allgameshowpageItems">
+          <div className="gameNavBarShowPage">
+            <GameNavbar games={games2} />
+          </div>
 
-        <h1 className="gameNameShowPage">{game.name}</h1>
+          <h1 className="gameNameShowPage">{game.name}</h1>
 
-        <div className="ShowPageComponents">
-          <GameShowCarousel key={game.id} game={game} />
-          <GameShowInfo game={game} />
+          <div className="ShowPageComponents">
+            <GameShowCarousel key={game.id} game={game} />
+            <GameShowInfo game={game} />
 
-          <div className="gameinfobuyBox">
-            <AddToCartButton game={game} />{" "}
-            <div className="gamesShowInfoDes">
-              <h1>ABOUT THIS GAME</h1>
-              <p>{game.description}</p>
+            <div className="gameinfobuyBox">
+              <AddToCartButton game={game} />{" "}
+              <div className="gamesShowInfoDes">
+                <h1>ABOUT THIS GAME</h1>
+                <p>{game.description}</p>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+      <div className="showPageFooter">
+        {" "}
+        <Footer />
       </div>
     </div>
   );

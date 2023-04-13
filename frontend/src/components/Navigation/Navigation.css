@@ -2,9 +2,10 @@
     display: flex;
     justify-content: end;
     gap: 0.5vw;
-    padding-right: 3vw;
-    margin-top: 0.5%;
-    font-size: 12px;
+    padding-right: 17.35vw;
+    margin-top: 2.4vh;
+    font-size: 15px;
+    z-index: 5;
     transition: all 0.3s ease-in;
 }
 
@@ -141,7 +142,7 @@
   top: 4.9vh;
   display: flex;
   gap: 2vw;
-  margin-left: 35vw;
+  margin-left: 32vw;
 }
 
 #gitHUBB:hover{

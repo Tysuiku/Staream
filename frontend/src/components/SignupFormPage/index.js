@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import * as sessionActions from "../../store/session";
 import "./SignupForm.css";
+import Footer from "../Footer";
 
 function SignupFormPage() {
   const dispatch = useDispatch();
@@ -111,7 +112,10 @@ function SignupFormPage() {
         </div>
       </div>
 
-      <div className="signupBackgroundBody"></div>
+      <div>
+        {" "}
+        <Footer />{" "}
+      </div>
     </div>
   );
 }

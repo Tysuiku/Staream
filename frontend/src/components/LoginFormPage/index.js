@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 // import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { Redirect } from "react-router-dom";
 import "./LoginForm.css";
+import Footer from "../Footer";
 
 function LoginFormPage() {
   const dispatch = useDispatch();
@@ -107,7 +108,10 @@ function LoginFormPage() {
         </div>
       </div>
 
-      <div className="backgroundBody"></div>
+      <div>
+        {" "}
+        <Footer />
+      </div>
     </div>
   );
 }
