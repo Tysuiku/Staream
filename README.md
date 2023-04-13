@@ -12,7 +12,7 @@ Staream can be viewd from https://staream.onrender.com
 ![Screenshot](screenshots/second.png)
 ![Screenshot](screenshots/third.png)
 ![Screenshot](screenshots/fourth.png)
-![Screenshot](screenshots/fifth.png)
+![Screenshot](screenshots/fifths.png)
 
 ## Technologies & Libaries Used
 
@@ -39,7 +39,8 @@ Staream can be viewd from https://staream.onrender.com
 navigate to `localhost:5000`
 
 ## Sample Action and Reducer Using React-Redux
-``` javascript
+
+````javascript
 
 ```import csrfFetch from "./csrf.js";
 
@@ -67,7 +68,7 @@ const gamesReducer = (state = {}, action) => {
       return state;
   }
 };
-```
+````
 
 ```
 
@@ -76,3 +77,4 @@ const gamesReducer = (state = {}, action) => {
     Users should have userpage
     Users can edit profile picture and background picture
     Users can write reviews per game and games should have many reviews
+```
