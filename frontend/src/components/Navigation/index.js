@@ -37,6 +37,23 @@ const Navigation = () => {
           </div>
         </NavLink>
       </div>
+      <div class="githubLinkedin-links">
+        <a
+          href="https://github.com/Tysuiku/Staream"
+          target="_blank"
+          id="gitHUBB"
+        >
+          GitHub
+        </a>
+        <a
+          href="https://www.linkedin.com/in/timothy-dong-19a700254/"
+          target="_blank"
+          id="linkedINN"
+        >
+          LinkedIn
+        </a>
+      </div>
+
       <div className="navlink">{sessionLinks}</div>
     </div>
   );

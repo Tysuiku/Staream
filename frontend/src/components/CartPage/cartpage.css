@@ -39,7 +39,7 @@
   .purchaseButton {
     position: relative;
     background: linear-gradient(#799905 5%,#536904 95%);
-    color: #fff;
+    color: #d2efa9;
     border: none;
     padding: 8px 16px;
     font-size: 16px;
@@ -143,14 +143,16 @@
   }
   
   .price {
+    margin-top: 1vh;
     position: absolute;
-    top: 0;
+    top: -1.2vh;
     right: 0;
   }
   
   .removeItemButton {
+    margin-top: 1vh;
     position: absolute;
-    bottom: 0;
+    top: 1vh;
     right: 0;
   }
 

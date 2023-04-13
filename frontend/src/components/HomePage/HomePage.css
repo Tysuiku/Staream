@@ -51,7 +51,7 @@
     font-size: 14px;
     text-align: center;
     background: linear-gradient(#799905 5%,#536904 95%);
-    color: #ffffff;
+    color: #d2efa9;
     border: none;
     width: 6vw;
     padding: 0.35vh;
@@ -63,6 +63,7 @@
   }
 
   .indexCart:hover{
-    background: #d3e885;
-    color: #f7fdf4;;
+    background: #c5d0a1d4;
+    text-shadow: #020000;
+    color: rgba(22, 21, 21, 0.834);;
   }

@@ -1,7 +1,7 @@
 .addToCartButton {
-    background-color: #61c13b;
+  background: linear-gradient(#799905 5%,#536904 95%);
     border: none;
-    color: white;
+    color: #d2efa9;
     /* padding: 10px 15px; */
     text-align: center;
     text-decoration: none;
@@ -19,9 +19,9 @@
   }
 
   .inCartButton {
-    background-color: #61c13b;
+    background: linear-gradient(#799905 5%,#536904 95%);
     border: none;
-    color: white;
+    color: #d2efa9;
     /* padding: 10px 15px; */
     text-align: center;
     text-decoration: none;
@@ -40,9 +40,9 @@
   }
   
   .playButton {
-    background-color: #61c13b;
+    background: linear-gradient(#799905 5%,#536904 95%);
     border: none;
-    color: white;
+    color: #d2efa9;
     padding: 0.7vh;
     text-align: center;
     text-decoration: none;
@@ -61,7 +61,7 @@
   }
 
   .addToCartButton:hover, .inCartButton:hover, .playButton:hover {
-    background-color: #d3e885;;
+    background: #d3e885;;
   }
 
   .gameName {

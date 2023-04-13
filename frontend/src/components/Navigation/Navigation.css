@@ -14,6 +14,7 @@
   
 .appName {
     position: absolute;
+    color: #c5c3bf;
     padding-top: 2.4%;
     margin-left: 13.8vw;
     font-size: 28px;
@@ -32,6 +33,7 @@
 
 .supscript {
     font-size: 30%;
+    color: #c5c3bf;
     position: relative;
     top: -1.8em;
   }
@@ -130,4 +132,22 @@
   bottom: 20px;
   max-width: 70px;
   height: auto;
+}
+
+.githubLinkedin-links{
+  color: #b8b6b4;
+  font-size: 17.5px;
+  position: relative;
+  top: 4.9vh;
+  display: flex;
+  gap: 2vw;
+  margin-left: 35vw;
+}
+
+#gitHUBB:hover{
+  color: white;
+}
+
+#linkedINN:hover{
+  color: white;
 }
