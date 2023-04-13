@@ -4,7 +4,7 @@ Hi! Welcome to Staream, my clone of steam.
 
 To create Staream(star-powered), I utilized React for the frontend and Ruby on Rails for the backend. With this application, users have the ability to browse for different types of games, search for them based on games title, and even add games to cart and purchase them.
 
-# Screenshots
+## Screenshots
 
 ![Screenshot](screenshots/first.png)
 ![Screenshot](screenshots/second.png)
@@ -12,7 +12,7 @@ To create Staream(star-powered), I utilized React for the frontend and Ruby on R
 ![Screenshot](screenshots/fourth.png)
 ![Screenshot](screenshots/fifth.png)
 
-# Technologies & Libaries Used
+## Technologies & Libaries Used
 
     React
     Redux
@@ -28,7 +28,7 @@ To create Staream(star-powered), I utilized React for the frontend and Ruby on R
     Swiper
     Webpack
 
-# Setup
+## Setup
 
 `npm install --prefix frontend && npm run build --prefix frontend` in root
 
@@ -36,7 +36,7 @@ To create Staream(star-powered), I utilized React for the frontend and Ruby on R
 
 navigate to `localhost:5000`
 
-# Sample Action and Reducer Using React-Redux
+## Sample Action and Reducer Using React-Redux
 ``` javascript
 
 ```import csrfFetch from "./csrf.js";
@@ -69,7 +69,7 @@ const gamesReducer = (state = {}, action) => {
 
 ```
 
-# Future Implementations
+## Future Implementations
 
     Users should have userpage
     Users can edit profile picture and background picture
