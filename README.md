@@ -37,6 +37,7 @@ To create Staream(star-powered), I utilized React for the frontend and Ruby on R
 navigate to `localhost:5000`
 
 # Sample Action and Reducer Using React-Redux
+``` javascript
 
 ```import csrfFetch from "./csrf.js";
 
@@ -64,7 +65,7 @@ const gamesReducer = (state = {}, action) => {
       return state;
   }
 };
-
+```
 
 ```
 
