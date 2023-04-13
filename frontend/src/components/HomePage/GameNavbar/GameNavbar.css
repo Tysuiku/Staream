@@ -22,7 +22,7 @@
     position: absolute;
     z-index: 2;
     top: 2.6vh;
-    left: 0;
+    right: 12.8vw;
     width: 28vw;
     border-bottom: 1px solid black;
   }
@@ -113,3 +113,4 @@
   border: solid 1px;
   box-shadow: 0 0 8px #d4cece;
 }
+

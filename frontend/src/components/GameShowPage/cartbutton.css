@@ -27,6 +27,7 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    padding: 0.7vh;
     /* margin: 4px 2px; */
     cursor: pointer;
     border-radius: 2px;
@@ -42,7 +43,7 @@
     background-color: #61c13b;
     border: none;
     color: white;
-    /* padding: 10px 15px; */
+    padding: 0.7vh;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -59,6 +60,10 @@
     border: solid 3px rgba(0, 0, 0, 0.799);
   }
 
+  .addToCartButton:hover, .inCartButton:hover, .playButton:hover {
+    background-color: #d3e885;;
+  }
+
   .gameName {
     margin-left: 1vw;
     color: #ffffff;
@@ -68,7 +73,7 @@
   }
   
   .playBuyButtonBox{
-    background: linear-gradient(to right, rgba(188, 187, 187, 0.235)20% ,#a5b0b7 90%);
+    background: linear-gradient(to right, rgba(188, 187, 187, 0.235)20% ,rgba(84,107,115,.3) 90%);
     border-radius: 4px;
     margin-top: 26.5vh;
     margin-left: 13.7vw;

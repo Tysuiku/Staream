@@ -9,4 +9,5 @@ json.game do
   json.id @cart_item.game.id
   json.title @cart_item.game.name
   json.price @cart_item.game.price
+  json.main_image @cart_item.game.main_image.url
 end

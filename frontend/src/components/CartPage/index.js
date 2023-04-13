@@ -1,3 +1,4 @@
+// CartPage.js
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -9,6 +10,8 @@ import {
 
 import { useHistory } from "react-router-dom";
 import "./cartpage.css";
+import GameNavbar from "../HomePage/GameNavbar/GameNavbar";
+import { fetchGames } from "../../store/games";
 
 const CartPage = () => {
   const dispatch = useDispatch();
@@ -17,7 +20,12 @@ const CartPage = () => {
 
   useEffect(() => {
     dispatch(fetchCartItems());
+    dispatch(fetchGames());
   }, [dispatch]);
+
+  const games2 = useSelector((state) => {
+    return Object.values(state.games);
+  });
 
   const handleRemoveCartItem = (cartItemId) => {
     dispatch(deleteCartItem(cartItemId));
@@ -37,30 +45,68 @@ const CartPage = () => {
     history.push("/home");
   };
 
+  const handleContinueShopping = () => {
+    history.push("/home");
+  };
+
   return (
-    <div className="cartPageBox">
-      <h2>Your Cart</h2>
-      {cartItemsList.length > 0 ? (
+    <div className="cartPageItemsBox">
+      <div>
+        <GameNavbar games={games2} />
+      </div>
+      <h2 className="youShopCart">YOUR SHOPPING CART</h2>
+      <div className="cartVisualEffect"></div>
+
+      <div className="cartPageBox">
         <div>
-          <ul>
+          <ul className="cartItemList">
             {cartItemsList.map((cartItem) => (
-              <li key={cartItem.id}>
-                {cartItem.game.name} - ${cartItem.game.price.toFixed(2)}
-                <button onClick={() => handleRemoveCartItem(cartItem.id)}>
-                  Remove
-                </button>
+              <li key={cartItem.id} className="cartItem">
+                <img
+                  src={cartItem.game.mainImage}
+                  alt={cartItem.game.name}
+                  className="cartItemImage"
+                />
+                <div className="cartItemInfo">
+                  <div>
+                    <span className="gameNameCart">{cartItem.game.name}</span>
+                  </div>
+                  <div className="priceAndRemove">
+                    <span className="price">
+                      ${cartItem.game.price.toFixed(2)}
+                    </span>
+                    <button
+                      onClick={() => handleRemoveCartItem(cartItem.id)}
+                      className="removeItemButton"
+                    >
+                      Remove
+                    </button>
+                  </div>
+                </div>
               </li>
             ))}
           </ul>
-          <p>Total: ${totalPrice.toFixed(2)}</p>
-          <button onClick={handleCheckout}>Checkout</button>
-          <button onClick={() => dispatch(deleteAllCartItems())}>
-            Remove All Items
+          <p className="totalCartPrice">Total: ${totalPrice.toFixed(2)}</p>
+          <button onClick={handleCheckout} className="purchaseButton">
+            Purchase for myself
           </button>
+          <button
+            onClick={handleContinueShopping}
+            className="continueShoppingButton"
+          >
+            Continue Shopping
+          </button>
+          <span
+            onClick={() => dispatch(deleteAllCartItems())}
+            className="removeAllItems"
+          >
+            Remove All Items
+          </span>
         </div>
-      ) : (
-        <p>Your cart is empty.</p>
-      )}
+      </div>
+      <p className="salesTax">
+        Sales tax will be calculated during checkout where applicable
+      </p>
     </div>
   );
 };

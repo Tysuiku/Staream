@@ -10,5 +10,6 @@ json.array! @cart_items do |cart_item|
     json.id cart_item.game.id
     json.name cart_item.game.name
     json.price cart_item.game.price
+    json.main_image cart_item.game.main_image.url
   end
 end
