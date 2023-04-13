@@ -39,7 +39,7 @@ export default function Footer() {
             target="_blank"
           >
             <i className="fa-brands fa-linkedin" />
-            LinkedIn
+            LinkedIn |
           </a>{" "}
           <a href="https://github.com/Tysuiku/Staream" target="_blank">
             <i className="fa-brands fa-square-github" />

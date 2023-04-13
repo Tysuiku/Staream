@@ -28,7 +28,7 @@
   
   @media (min-width: 14in) {
     .GameNavbarBox {
-      margin-top: 16vh;
+      margin-top: 13vh;
       margin-left: 14vw;
     }
   }
@@ -46,7 +46,7 @@
 } */
   .indexCart{
     position: relative;
-    top: 15.7vh;
+    top: 12.7vh;
     left: 75.4vw;
     font-size: 14px;
     text-align: center;
