@@ -95,6 +95,7 @@
     cursor: pointer;
     transition: all 0.3s ease-in;
   }
+  /* fixing merge issues */
 
   .demo-login-button:hover {
     background: linear-gradient(90deg, #06BFFF 30%, #2D73FF 100%);
