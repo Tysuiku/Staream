@@ -186,15 +186,14 @@
   }
 
   .cartPageFooter{
-    margin-top: 10.5vw;
+    margin-top: 14.8vw;
   }
 
-  .styleBackgroudCartpage{
+  /* .styleBackgroudCartpage{
     position: relative;
-    bottom: 6vw;
     background-color: #1b2838;
     box-shadow: 0 0 1px #02000085;;
     width: 44vw;
-    height: 8vw;
+    height: 15vw;
     overflow: hidden;
-  }
+  } */
