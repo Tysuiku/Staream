@@ -4,7 +4,7 @@
   background-color: #101a23;
   border: solid 1.5px;
   box-shadow: 0 0 5px 3px rgba(255, 255, 255, 0.1);
-  margin-right: 17.1vw;
+  margin-right: 17.99vw;
 }
 
 .game-slide .game-images .game-image img {
@@ -82,7 +82,7 @@
 .game-name-carousel {
   font-size: 20px;
   position: absolute;
-  top: 2vh;
+  top: 1vw;
   right: 0;
   left: 0;
   bottom: 0;

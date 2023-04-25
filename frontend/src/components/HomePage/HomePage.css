@@ -71,3 +71,8 @@
   .homepageFooter{
     margin-top: 30vh;
   }
+
+  .homePageShowPageBox{
+    display: flex;
+    flex-direction: column;
+  }

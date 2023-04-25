@@ -88,31 +88,34 @@ const CartPage = () => {
                 </li>
               ))}
             </ul>
+
             <p className="totalCartPrice">Total: ${totalPrice.toFixed(2)}</p>
             <button onClick={handleCheckout} className="purchaseButton">
               Purchase for myself
             </button>
-            <button
-              onClick={handleContinueShopping}
-              className="continueShoppingButton"
-            >
-              Continue Shopping
-            </button>
-            <span
-              onClick={() => dispatch(deleteAllCartItems())}
-              className="removeAllItems"
-            >
-              Remove All Items
-            </span>
+            <div className="styleBackgroudCartpage">
+              <button
+                onClick={handleContinueShopping}
+                className="continueShoppingButton"
+              >
+                Continue Shopping
+              </button>
+              <span
+                onClick={() => dispatch(deleteAllCartItems())}
+                className="removeAllItems"
+              >
+                Remove All Items
+              </span>
+            </div>
           </div>
+          <p className="salesTax">
+            Sales tax will be calculated during checkout where applicable
+          </p>
         </div>
-        <p className="salesTax">
-          Sales tax will be calculated during checkout where applicable
-        </p>
-      </div>
-      <div className="cartPageFooter">
-        {" "}
-        <Footer />
+        <div className="cartPageFooter">
+          {" "}
+          <Footer />
+        </div>
       </div>
     </div>
   );

@@ -27,7 +27,7 @@ const HomePage = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className="homePageShowPageBox">
       <div>
         <NavLink to={"/cart"}>
           <p className="indexCart">Cart</p>
@@ -39,6 +39,7 @@ const HomePage = () => {
           <GameList games={games} />
         </div>
       </div>
+
       <div className="homepageFooter">
         {" "}
         <Footer />{" "}
