@@ -1,9 +1,15 @@
   .cartPageBox {
+    margin-top: 2vw;
     max-width: 44vw;
     margin-left: 14vw;
     font-family: Arial, sans-serif;
     /* background-color: #1b2838; */
     /* overflow: hidden; */
+  }
+
+  .cartPageNavbar{
+    position: relative;
+    top: 1vw;
   }
   
   h2 {
@@ -94,14 +100,14 @@
     height: 9.5vh;
     left: 14vw;
     padding-left: 0.5vw;
-    padding-top: 1vh;
+    padding-top: 5vh;
     z-index: 1;
     bottom: 5vh;
   }
 
   .cartVisualEffect{
     position: relative;
-    bottom: 12vh;
+    bottom: 9vh;
     padding: 1vh;
     padding-bottom: 3vh;
     width: 43vw;

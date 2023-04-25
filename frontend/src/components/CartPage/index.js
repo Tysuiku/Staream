@@ -57,7 +57,7 @@ const CartPage = () => {
   return (
     <div>
       <div className="cartPageItemsBox">
-        <div>
+        <div className="cartPageNavbar">
           <GameNavbar games={games2} />
         </div>
         <h2 className="youShopCart">YOUR SHOPPING CART</h2>
