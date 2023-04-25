@@ -23,7 +23,6 @@
     padding: 1vh;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    cursor: pointer;
     
   }
   
@@ -186,14 +185,15 @@
   }
 
   .cartPageFooter{
-    margin-top: 14.8vw;
+    margin-top: 10.5vw;
   }
 
-  /* .styleBackgroudCartpage{
+  .styleBackgroudCartpage{
     position: relative;
+    bottom: 6vw;
     background-color: #1b2838;
     box-shadow: 0 0 1px #02000085;;
     width: 44vw;
-    height: 15vw;
+    height: 8vw;
     overflow: hidden;
-  } */
+  }
