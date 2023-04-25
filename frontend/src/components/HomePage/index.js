@@ -32,13 +32,13 @@ const HomePage = () => {
         <NavLink to={"/cart"}>
           <p className="indexCart">Cart</p>
         </NavLink>
-
-        <div className="homePageIndexContainer">
-          <GameNavbar games={games2} />
-          <GameCarousel games={games} />
-          <GameList games={games} />
-        </div>
       </div>
+
+      {/* <div className="homePageIndexContainer"> */}
+      <GameNavbar games={games2} />
+      <GameCarousel games={games} />
+      <GameList games={games} />
+      {/* </div> */}
 
       <div className="homepageFooter">
         {" "}
