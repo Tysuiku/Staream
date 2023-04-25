@@ -50,6 +50,10 @@ const CartPage = () => {
     history.push("/home");
   };
 
+  const handleGameClick = (gameId) => {
+    history.push(`/games/${gameId}`);
+  };
+
   return (
     <div>
       <div className="cartPageItemsBox">
@@ -68,10 +72,16 @@ const CartPage = () => {
                     src={cartItem.game.mainImage}
                     alt={cartItem.game.name}
                     className="cartItemImage"
+                    onClick={() => handleGameClick(cartItem.game.id)}
                   />
                   <div className="cartItemInfo">
                     <div>
-                      <span className="gameNameCart">{cartItem.game.name}</span>
+                      <span
+                        className="gameNameCart"
+                        onClick={() => handleGameClick(cartItem.game.id)}
+                      >
+                        {cartItem.game.name}
+                      </span>
                     </div>
                     <div className="priceAndRemove">
                       <span className="price">
