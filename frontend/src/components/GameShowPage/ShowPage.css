@@ -23,17 +23,17 @@
 .gamesShowInfoDes{
   position: relative;
   /* top: 45.5vh; */
-  left: 3.2vw;
+  left: 13.8vw;
   display: flex;
   flex-direction: column;
-  gap: 2vh;
-  padding: 0 10rem;
+  gap: 1vw;
+  /* padding: 0 10rem; */
   text-overflow: ellipsis;
   /* max-width: 45%; */
   font-family: Arial, Helvetica, sans-serif;
   color: #a0a6ae;
   font-size: 16px;
-  padding-bottom: 3vh;
+  padding-bottom: 3vw;
   letter-spacing: 1px;
   line-height: 1.5;
 }
