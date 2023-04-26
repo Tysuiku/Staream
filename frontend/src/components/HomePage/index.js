@@ -28,14 +28,11 @@ const HomePage = () => {
 
   return (
     <div className="homePageShowPageBox">
-      <div>
-        <NavLink to={"/cart"}>
-          <p className="indexCart">Cart</p>
-        </NavLink>
-      </div>
-
       <div className="homePageIndexContainer">
         <div id="GameNavBarHome">
+          <NavLink to={"/cart"}>
+            <p className="indexCart">Cart</p>
+          </NavLink>
           <GameNavbar games={games2} />
         </div>
         <div id="GameCarouselHome">
