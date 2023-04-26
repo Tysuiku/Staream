@@ -72,11 +72,11 @@
     margin-top: 30vh;
   }
 
-  /* .homePageShowPageBox{
+  .homePageShowPageBox{
     display: flex;
     flex-direction: column;
     align-items: center;
-  } */
+  }
 
   .homePageIndexContainer{
     display: flex;
