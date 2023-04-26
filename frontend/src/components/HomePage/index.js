@@ -34,11 +34,17 @@ const HomePage = () => {
         </NavLink>
       </div>
 
-      {/* <div className="homePageIndexContainer"> */}
-      <GameNavbar games={games2} />
-      <GameCarousel games={games} />
-      <GameList games={games} />
-      {/* </div> */}
+      <div className="homePageIndexContainer">
+        <div id="GameNavBarHome">
+          <GameNavbar games={games2} />
+        </div>
+        <div id="GameCarouselHome">
+          <GameCarousel games={games} />
+        </div>
+        <div id="GameListHome">
+          <GameList games={games} />
+        </div>
+      </div>
 
       <div className="homepageFooter">
         {" "}

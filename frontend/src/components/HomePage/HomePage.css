@@ -3,7 +3,7 @@
     position: relative;
     justify-content: center;
     margin-top: 3vw;
-    margin-left: 18vw;
+    /* margin-left: 18vw; */
 }
 
 .GameNavbarBox {
@@ -23,12 +23,12 @@
     border-radius: 1px;
     box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.1);
     border: solid 0.5px black;
-    margin-bottom: 8.8vh;
+    margin-bottom: 4.8vw;
   }
   
   @media (min-width: 14in) {
     .GameNavbarBox {
-      margin-top: 13vh;
+      margin-top: 7.5vw;
       margin-left: 14vw;
     }
   }
@@ -47,7 +47,7 @@
   .indexCart{
     position: relative;
     top: 12.7vh;
-    left: 75.4vw;
+    left: 76.7vw;
     font-size: 14px;
     text-align: center;
     background: linear-gradient(#799905 5%,#536904 95%);
@@ -72,7 +72,24 @@
     margin-top: 30vh;
   }
 
-  .homePageShowPageBox{
+  /* .homePageShowPageBox{
     display: flex;
     flex-direction: column;
+    align-items: center;
+  } */
+
+  .homePageIndexContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 18.5vw;
+  }
+
+  #GameNavBarHome{
+    /* margin-right: 10vw; */
+    margin-left: 21vw;
+    width: 100vw;
+  }
+  #GameCarouselHome{
+    margin-left: 35.1vw;
   }
