@@ -91,12 +91,14 @@ function LoginFormPage() {
                 />
               </div>
 
-              <button onClick={handleDemoClick} className="demo-login-button">
-                Demo-Login
-              </button>
-              <button type="submit" className="login-button">
-                Sign in
-              </button>
+              <div className="Demo-Login-Regular-Login">
+                <button onClick={handleDemoClick} className="demo-login-button">
+                  Demo-Login
+                </button>
+                <button type="submit" className="login-button">
+                  Sign in
+                </button>
+              </div>
 
               <ul className="loginFormErrors">
                 {errors.map((error) => (
