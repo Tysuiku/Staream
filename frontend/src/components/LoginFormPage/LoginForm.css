@@ -131,7 +131,7 @@
     border: none;
   }
   
-  .loginPage1Container{
+  /* .loginPage1Container{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -140,7 +140,7 @@
   .backgroundBody{
     background-color: #181a21;
     height: 190px;
-  }
+  } */
   
   .loginFormErrors li {
     font-family: 'Motiva Sans 500', sans-serif;
@@ -153,7 +153,9 @@
     margin-right: 6%;
   }
 
-
+.Demo-Login-Regular-Login{
+  display: flex;
+}
   
   
   

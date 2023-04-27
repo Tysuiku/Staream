@@ -20,4 +20,6 @@ background: linear-gradient(#2a475e 5%, rgba(42, 71, 94, 0) 70%) top no-repeat #
 border-radius: 5px;
 /* height: 100vh; */
 width: 100%;
+
+overflow-x: hidden;
 }
