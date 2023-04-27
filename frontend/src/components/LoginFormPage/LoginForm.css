@@ -134,6 +134,7 @@
   .loginPage1Container{
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 
   .backgroundBody{
