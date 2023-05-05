@@ -7,7 +7,7 @@ import HomePage from "./components/HomePage";
 import GameShowPage from "./components/GameShowPage";
 import CartPage from "./components/CartPage";
 import useScrollToTop from "./hooks/useScrollToTop"; // custom hook
-
+import GameShowRoute from "./GameShowRoute";
 function App() {
   useScrollToTop(); // Use the custom hook
 
@@ -24,9 +24,8 @@ function App() {
         <Route path="/cart">
           <CartPage />
         </Route>
-        <Route path="/games/:id">
-          <GameShowPage />
-        </Route>
+        <GameShowRoute path="/games/:id" component={GameShowPage} />{" "}
+        {/* Use the custom route component */}
         <Route path="/login">
           <LoginFormPage />
         </Route>
