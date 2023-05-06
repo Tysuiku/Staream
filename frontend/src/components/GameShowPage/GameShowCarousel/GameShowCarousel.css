@@ -25,7 +25,9 @@
     }
   
     .gameShowCarouselBox {
-      margin-right: 22.8vw;
+      position: relative;
+      right: 21.9vw;
+      /* margin-right: 22.8vw; */
     }
   
     .game-show-carousel-thumbs img {

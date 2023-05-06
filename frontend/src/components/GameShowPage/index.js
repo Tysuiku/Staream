@@ -29,7 +29,7 @@ const GameShowPage = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className="showPageMainBox">
       <div>
         <NavLink to={"/cart"}>
           <p className="showCart">Cart</p>

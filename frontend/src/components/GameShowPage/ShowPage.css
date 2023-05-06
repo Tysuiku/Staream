@@ -71,3 +71,10 @@
 .showPageFooter{
   margin-top: 10vh;
 }
+
+.showPageMainBox{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* margin-right: 1vw; */
+}
