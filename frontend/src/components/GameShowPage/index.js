@@ -3,13 +3,14 @@ import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import GameShowCarousel from "./GameShowCarousel/GameShowCarousel";
 import GameShowInfo from "./GameShowInfo/GameShowInfo";
-import AddToCartButton from "./AddToCartButton"; // import the new AddToCartButton component
+import AddToCartButton from "./AddToCartButton";
 import { fetchGame } from "../../store/games";
 import { fetchGames } from "../../store/games";
 import "./ShowPage.css";
 import GameNavbar from "../HomePage/GameNavbar/GameNavbar";
 import { NavLink } from "react-router-dom";
 import Footer from "../Footer";
+import Reviews from "./reviews";
 
 const GameShowPage = () => {
   const { id } = useParams();
@@ -52,6 +53,8 @@ const GameShowPage = () => {
                 <p>{game.description}</p>
               </div>
             </div>
+            {/* Add the Reviews component below the description */}
+            <Reviews gameId={id} />
           </div>
         </div>
       </div>

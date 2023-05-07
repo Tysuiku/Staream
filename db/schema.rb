@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_10_123456) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_06_194345) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -70,6 +70,29 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_10_123456) do
     t.index ["publisher"], name: "index_games_on_publisher"
   end
 
+  create_table "review_votes", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "review_id", null: false
+    t.string "value", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["review_id"], name: "index_review_votes_on_review_id"
+    t.index ["user_id", "review_id"], name: "index_review_votes_on_user_id_and_review_id", unique: true
+    t.index ["user_id"], name: "index_review_votes_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.bigint "author_id", null: false
+    t.bigint "game_id", null: false
+    t.text "body", null: false
+    t.boolean "recommended", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id", "game_id"], name: "index_reviews_on_author_id_and_game_id", unique: true
+    t.index ["author_id"], name: "index_reviews_on_author_id"
+    t.index ["game_id"], name: "index_reviews_on_game_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "username", null: false
@@ -86,4 +109,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_10_123456) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "cart_items", "games"
   add_foreign_key "cart_items", "users"
+  add_foreign_key "review_votes", "reviews"
+  add_foreign_key "review_votes", "users"
+  add_foreign_key "reviews", "games"
+  add_foreign_key "reviews", "users", column: "author_id"
 end
