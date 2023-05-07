@@ -1,11 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  fetchReviews,
-  createReview,
-  updateReview,
-  deleteReview,
-} from "../../store/reviews";
+import { fetchReviews } from "../../store/reviews";
 import {
   createReviewVote,
   updateReviewVote,
@@ -18,57 +13,51 @@ const Reviews = ({ gameId }) => {
   const reviewVotes = useSelector((state) => state.reviewVotes);
   const currentUserId = useSelector((state) => state.session.user.id);
 
-  const [reviewText, setReviewText] = useState("");
-  const [recommended, setRecommended] = useState(false);
-
   useEffect(() => {
     dispatch(fetchReviews(gameId));
   }, [dispatch, gameId]);
 
   const handleVote = (reviewId, value) => {
-    // ... (same as before)
+    const existingVote = Object.values(reviewVotes).find(
+      (vote) => vote.user_id === currentUserId && vote.review_id === reviewId
+    );
+
+    if (existingVote) {
+      if (existingVote.value === value) {
+        dispatch(deleteReviewVote(existingVote.id));
+      } else {
+        dispatch(updateReviewVote({ ...existingVote, value }));
+      }
+    } else {
+      dispatch(createReviewVote({ review_id: reviewId, value }));
+    }
   };
 
   const renderReview = (review) => {
-    // ... (same as before)
-  };
+    const reviewVote = reviewVotes[review.id];
+    const voteCount = reviewVote ? reviewVote.value : 0;
 
-  const handleSubmitReview = async (e) => {
-    e.preventDefault();
-    const newReview = {
-      gameId: gameId,
-      userId: currentUserId,
-      body: reviewText,
-      recommended: recommended,
-    };
-    await dispatch(createReview(newReview));
-    setReviewText("");
-    setRecommended(false);
+    return (
+      <div key={review.id} className="review">
+        <h4>{review.author.display_name}</h4>
+        <p>{review.body}</p>
+        <p>{review.recommended ? "Recommended" : "Not Recommended"}</p>
+        <div className="review-votes">
+          <button onClick={() => handleVote(review.id, "yes")}>
+            Helpful ({voteCount})
+          </button>
+          <button onClick={() => handleVote(review.id, "no")}>
+            Not Helpful ({voteCount})
+          </button>
+        </div>
+      </div>
+    );
   };
 
   return (
     <div className="reviews">
       <h3>Reviews</h3>
       {Object.values(reviews).map(renderReview)}
-
-      <form onSubmit={handleSubmitReview}>
-        <h4>Write a review:</h4>
-        <textarea
-          value={reviewText}
-          onChange={(e) => setReviewText(e.target.value)}
-          placeholder="Your review here..."
-        />
-        <div>
-          <input
-            type="checkbox"
-            id="recommended"
-            checked={recommended}
-            onChange={(e) => setRecommended(e.target.checked)}
-          />
-          <label htmlFor="recommended">Recommended</label>
-        </div>
-        <button type="submit">Submit Review</button>
-      </form>
     </div>
   );
 };

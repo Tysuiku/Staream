@@ -10,15 +10,24 @@ class Api::ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.game_id = params[:game_id]
     @review.author_id = current_user.id
+
+    # Add debugging statements
+    puts "Review before save: #{@review.inspect}"
+
     if @review.author.owns?(@review.game)
-      if @review.save!
-        render "api/reviews/show"
+      if @review.save
+        render :show
       else
-        render json: { errors: @review.errors.full_messages }, status: :unauthorized
+        # Add debugging statement for save errors
+        puts "Review save errors: #{@review.errors.full_messages}"
+        render json: @review.errors.full_messages, status: 422
       end
     else
-      render json: { errors: ["You must own a game to review it."] }, status: :unauthorized
+      render json: ["You must own the game to write a review."], status: 401
     end
+
+    # Add debugging statement for the review after save attempt
+    puts "Review after save attempt: #{@review.inspect}"
   end
 
   def update

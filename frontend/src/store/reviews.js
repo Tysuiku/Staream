@@ -32,7 +32,7 @@ export const fetchReviews = (gameId) => async (dispatch) => {
 };
 
 export const createReview = (review) => async (dispatch) => {
-  const res = await csrfFetch(`/api/games/${review.gameId}/reviews`, {
+  const res = await csrfFetch(`/api/games/${review.game_id}/reviews`, {
     method: "POST",
     body: JSON.stringify(review),
   });
@@ -61,7 +61,7 @@ export default function reviewsReducer(state = {}, action) {
     case SET_REVIEWS:
       return action.payload.reviews;
     case ADD_REVIEW:
-      return { ...state, ...action.payload.review };
+      return { ...state, [action.payload.review.id]: action.payload.review };
     case REMOVE_REVIEW:
       const newState = { ...state };
       delete newState[action.payload];

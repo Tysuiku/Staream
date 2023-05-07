@@ -24,6 +24,10 @@ class User < ApplicationRecord
 
   has_many :cart_items
 
+  def owns?(game)
+    cart_items.exists?(game_id: game.id, purchased: true)
+  end
+
   def self.find_by_credentials(credential, password)
     if URI::MailTo::EMAIL_REGEXP.match(credential)
       user = User.find_by(email: credential)

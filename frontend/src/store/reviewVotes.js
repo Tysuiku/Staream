@@ -20,7 +20,7 @@ const removeReviewVote = (reviewVoteId) => {
 
 export const createReviewVote = (reviewVote) => async (dispatch) => {
   const res = await csrfFetch(
-    `/api/reviews/${reviewVote.reviewId}/review_votes`,
+    `/api/reviews/${reviewVote.review_id}/review_votes`,
     {
       method: "POST",
       body: JSON.stringify(reviewVote),
@@ -54,7 +54,7 @@ export default function reviewVotesReducer(state = {}, action) {
     case ADD_REVIEW:
       return { ...state, ...action.payload.reviewVotes };
     case ADD_REVIEW_VOTE:
-      return { ...state, ...action.payload };
+      return { ...state, [action.payload.id]: action.payload };
     case REMOVE_REVIEW_VOTE:
       const newState = { ...state };
       delete newState[action.payload];
