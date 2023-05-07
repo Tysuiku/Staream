@@ -12,10 +12,7 @@ Rails.application.routes.draw do
     resources :cart_items, only: [:create, :index, :destroy]
     post "/cart_items/checkout", to: "cart_items#checkout"
 
-    resources :reviews, only: [:update, :destroy] do
-      resources :review_votes, only: [:create]
-    end
-    resources :review_votes, only: [:update, :destroy]
+    resources :reviews, only: [:update, :destroy]
   end
 
   # config/routes.rb

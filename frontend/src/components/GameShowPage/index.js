@@ -10,8 +10,6 @@ import "./ShowPage.css";
 import GameNavbar from "../HomePage/GameNavbar/GameNavbar";
 import { NavLink } from "react-router-dom";
 import Footer from "../Footer";
-import Reviews from "./reviews";
-import ReviewForm from "./reviewsform";
 
 const GameShowPage = () => {
   const { id } = useParams();
@@ -54,10 +52,6 @@ const GameShowPage = () => {
                 <p>{game.description}</p>
               </div>
             </div>
-            {/* Add the Reviews component below the description */}
-            <Reviews gameId={id} />
-            {/* Add the ReviewForm component below the Reviews */}
-            <ReviewForm gameId={id} />
           </div>
         </div>
       </div>
