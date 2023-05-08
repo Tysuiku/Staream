@@ -10,13 +10,17 @@ class Api::ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-    @review.game_id = params[:game_id]
     @review.author_id = current_user.id
+    @review.game_id = params[:game_id]
 
-    if @review.save
-      render :show
+    if current_user.owns?(Game.find(@review.game_id))
+      if @review.save
+        render :show
+      else
+        render json: @review.errors.full_messages, status: 422
+      end
     else
-      render json: @review.errors.full_messages, status: 422
+      render json: { message: "User does not own this game" }, status: 403
     end
   end
 

@@ -23,6 +23,8 @@ class User < ApplicationRecord
   before_validation :ensure_session_token
 
   has_many :cart_items
+  has_many :owned_games, -> { where(cart_items: { purchased: true }) }, through: :cart_items, source: :game
+  has_many :reviews, foreign_key: :author_id
 
   def owns?(game)
     cart_items.exists?(game_id: game.id, purchased: true)

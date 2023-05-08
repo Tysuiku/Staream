@@ -21,7 +21,7 @@ export const addGames = (games) => {
 const addGame = (game) => {
   return {
     type: ADD_GAME,
-    payload: game,
+    game,
   };
 };
 
@@ -44,8 +44,7 @@ const gamesReducer = (state = {}, action) => {
     case ADD_GAMES:
       return { ...state, ...action.payload };
     case ADD_GAME:
-      const game = action.payload;
-      return { ...state, ...game };
+      return { ...state, [action.game.id]: action.game };
     default:
       return state;
   }

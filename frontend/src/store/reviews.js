@@ -15,8 +15,10 @@ export const removeReview = (reviewId) => ({ type: REMOVE_REVIEW, reviewId });
 // Thunk action creators
 export const fetchReviews = (gameId) => async (dispatch) => {
   const response = await csrfFetch(`/api/games/${gameId}/reviews`);
-  const reviews = await response.json();
-  dispatch(setReviews(reviews));
+  const data = await response.json();
+  console.log("Fetched reviews:", data);
+
+  dispatch(setReviews(data.reviews)); // Access the array using the key 'reviews'
 };
 
 export const createReview = (review, gameId) => async (dispatch) => {
@@ -24,7 +26,7 @@ export const createReview = (review, gameId) => async (dispatch) => {
     method: "POST",
     body: JSON.stringify({ review }),
   });
-  if (response.ok) {
+  if (response.status === 200 || response.status === 201) {
     const newReview = await response.json();
     dispatch(addReview(newReview));
   }
