@@ -5,12 +5,16 @@ const SET_REVIEWS = "reviews/SET_REVIEWS";
 const ADD_REVIEW = "reviews/ADD_REVIEW";
 const UPDATE_REVIEW = "reviews/UPDATE_REVIEW";
 const REMOVE_REVIEW = "reviews/REMOVE_REVIEW";
+const CLEAR_REVIEWS = "reviews/CLEAR_REVIEWS";
 
 // Action creators
 export const setReviews = (reviews) => ({ type: SET_REVIEWS, reviews });
 export const addReview = (review) => ({ type: ADD_REVIEW, review });
 export const updateReview = (review) => ({ type: UPDATE_REVIEW, review });
 export const removeReview = (reviewId) => ({ type: REMOVE_REVIEW, reviewId });
+export const clearReviews = () => ({
+  type: CLEAR_REVIEWS,
+});
 
 // Thunk action creators
 export const fetchReviews = (gameId) => async (dispatch) => {
@@ -72,6 +76,8 @@ const reviewsReducer = (state = {}, action) => {
       newState = { ...state };
       delete newState[action.reviewId];
       return newState;
+    case CLEAR_REVIEWS:
+      return {};
     default:
       return state;
   }

@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { createReview } from "../../../store/reviews";
 
-const ReviewForm = ({ gameId, onSubmit }) => {
+const ReviewForm = ({ gameId, onSubmit, user }) => {
   const dispatch = useDispatch();
   const [body, setBody] = useState("");
   const [recommended, setRecommended] = useState(true);
+
+  const reviews = useSelector((state) => Object.values(state.reviews));
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,6 +17,17 @@ const ReviewForm = ({ gameId, onSubmit }) => {
       onSubmit();
     });
   };
+
+  const userHasWrittenReview = () => {
+    if (!user || !reviews) return false;
+    return reviews.some(
+      (review) => review.userId === user.id && review.gameId === gameId
+    );
+  };
+
+  if (userHasWrittenReview()) {
+    return <p>You have already written a review for this game.</p>;
+  }
 
   return (
     <form className="review-form" onSubmit={handleSubmit}>

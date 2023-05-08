@@ -1,29 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchReviews } from "../../../store/reviews";
+import { fetchReviews, clearReviews } from "../../../store/reviews";
 import Review from "./Review";
-import ReviewForm from "./ReviewForm";
 
-const ReviewList = ({ gameId }) => {
+const ReviewList = ({ gameId, currentUserId }) => {
   const dispatch = useDispatch();
   const reviews = useSelector((state) => Object.values(state.reviews));
 
-  const currentUserId = useSelector((state) => state.session.user.id);
-
-  const [userHasReviewed, setUserHasReviewed] = useState(false);
-
   useEffect(() => {
-    dispatch(fetchReviews(gameId)).then(() => {
-      const userReview = reviews.find(
-        (review) => review.author.id === currentUserId
-      );
-      setUserHasReviewed(Boolean(userReview));
-    });
-  }, [dispatch, gameId, currentUserId]);
+    if (gameId) {
+      dispatch(fetchReviews(gameId));
+    }
 
-  const handleNewReview = () => {
-    setUserHasReviewed(true);
-  };
+    // Clear reviews when the component unmounts
+    return () => {
+      dispatch(clearReviews());
+    };
+  }, [dispatch, gameId]);
 
   return (
     <div className="review-list">
@@ -37,10 +30,6 @@ const ReviewList = ({ gameId }) => {
           />
         ))}
       </div>
-      {!userHasReviewed && (
-        <ReviewForm gameId={gameId} onSubmit={handleNewReview} />
-      )}
-      {userHasReviewed && <p>You have already written a review.</p>}
     </div>
   );
 };
