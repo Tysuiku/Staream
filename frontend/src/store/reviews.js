@@ -25,16 +25,21 @@ export const fetchReviews = (gameId) => async (dispatch) => {
   dispatch(setReviews(data.reviews)); // Access the array using the key 'reviews'
 };
 
-export const createReview = (review, gameId) => async (dispatch) => {
-  const response = await csrfFetch(`/api/games/${gameId}/reviews`, {
-    method: "POST",
-    body: JSON.stringify({ review }),
-  });
-  if (response.status === 200 || response.status === 201) {
-    const newReview = await response.json();
-    dispatch(addReview(newReview));
-  }
-};
+export const createReview =
+  (gameId, body, recommended, userId) => async (dispatch) => {
+    const review = { body, recommended, userId }; // Construct the review object
+    const response = await csrfFetch(`/api/games/${gameId}/reviews`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(review),
+    });
+    if (response.status === 200 || response.status === 201) {
+      const newReview = await response.json();
+      dispatch(addReview(newReview));
+    }
+  };
 
 export const editReview = (review, reviewId) => async (dispatch) => {
   const response = await csrfFetch(`/api/reviews/${reviewId}`, {

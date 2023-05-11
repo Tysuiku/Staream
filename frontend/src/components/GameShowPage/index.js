@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import GameShowCarousel from "./GameShowCarousel/GameShowCarousel";
@@ -19,45 +19,17 @@ const GameShowPage = () => {
   const user = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
 
-  const [isGameLoading, setIsGameLoading] = useState(true);
-  const [isReviewsLoading, setIsReviewsLoading] = useState(true);
-
-  useEffect(() => {
-    dispatch(fetchGame(id)).then(() => {
-      setIsGameLoading(false);
-      setIsReviewsLoading(false);
-    });
-  }, [dispatch, id]);
-
   const games2 = useSelector((state) => {
     return Object.values(state.games);
   });
 
   useEffect(() => {
+    dispatch(fetchGame(id));
+  }, [dispatch, id]);
+
+  useEffect(() => {
     dispatch(fetchGames());
   }, [dispatch]);
-
-  const userOwnsGame = () => {
-    if (!user || !user.purchasedGames) {
-      console.log("User or purchasedGames is not available:", user);
-      return false;
-    }
-
-    const userOwns = user.purchasedGames.some(
-      (purchasedGame) => purchasedGame.gameId === parseInt(id)
-    );
-
-    console.log("User:", user);
-    console.log("Purchased Games:", user.purchasedGames);
-    console.log("Game ID:", parseInt(id));
-    console.log("User Owns Game:", userOwns);
-
-    return userOwns;
-  };
-
-  if (isGameLoading) {
-    return <div>Loading...</div>;
-  }
 
   return (
     <div className="showPageMainBox">
@@ -77,7 +49,7 @@ const GameShowPage = () => {
             <GameShowInfo game={game} />
 
             <div className="gameinfobuyBox">
-              <AddToCartButton game={game} />{" "}
+              <AddToCartButton game={game} />
               <div className="gamesShowInfoDes">
                 <h1>ABOUT THIS GAME</h1>
                 <p>{game.description}</p>
@@ -85,14 +57,10 @@ const GameShowPage = () => {
             </div>
 
             {/* Add the Review components below */}
-            {!isReviewsLoading && (
+            {game.id && (
               <div className="game-reviews">
                 <ReviewList gameId={game.id} currentUserId={user && user.id} />
-                {userOwnsGame() ? (
-                  <ReviewForm gameId={game.id} user={user} />
-                ) : (
-                  <p>Please purchase the game to write a review.</p>
-                )}
+                <ReviewForm gameId={game.id} user={user} />
               </div>
             )}
           </div>

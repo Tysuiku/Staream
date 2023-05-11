@@ -18,16 +18,14 @@ const ReviewList = ({ gameId, currentUserId }) => {
     };
   }, [dispatch, gameId]);
 
+  console.log("reviews", reviews);
+
   return (
     <div className="review-list">
       <h2>Customer Reviews</h2>
       <div className="reviews">
-        {reviews.map((review) => (
-          <Review
-            key={review.id}
-            review={review}
-            currentUserId={currentUserId}
-          />
+        {reviews.map((review, index) => (
+          <Review key={index} review={review} currentUserId={currentUserId} />
         ))}
       </div>
     </div>

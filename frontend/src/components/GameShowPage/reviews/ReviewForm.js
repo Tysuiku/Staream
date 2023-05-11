@@ -1,32 +1,60 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { createReview } from "../../../store/reviews";
 
-const ReviewForm = ({ gameId, onSubmit, user }) => {
+const ReviewForm = ({ gameId, user }) => {
   const dispatch = useDispatch();
   const [body, setBody] = useState("");
   const [recommended, setRecommended] = useState(true);
+  const [userOwns, setUserOwns] = useState(false);
 
+  const cartItems = useSelector((state) => Object.values(state.cartItems));
   const reviews = useSelector((state) => Object.values(state.reviews));
 
-  const handleSubmit = (e) => {
+  const userHasReviewed = () => {
+    if (user && reviews.length > 0) {
+      const userReview = reviews.find(
+        (review) => review.author && review.author.id === user.id
+      );
+      return userReview !== undefined;
+    }
+    return false;
+  };
+
+  useEffect(() => {
+    const userOwnsGame = () => {
+      if (!user || !cartItems) {
+        return false;
+      }
+      return cartItems.some(
+        (cartItem) =>
+          cartItem.userId === user.id &&
+          cartItem.gameId === gameId &&
+          cartItem.purchased === true
+      );
+    };
+
+    const newOwnsGame = userOwnsGame();
+    if (newOwnsGame !== userOwns) {
+      setUserOwns(newOwnsGame);
+    }
+  }, [user, gameId, cartItems, userOwns]);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const review = { body, recommended };
-    dispatch(createReview(review, gameId)).then(() => {
+    if (user) {
+      await dispatch(createReview(gameId, body, recommended, user.id));
       setBody("");
-      onSubmit();
-    });
+      setRecommended(true);
+    }
   };
 
-  const userHasWrittenReview = () => {
-    if (!user || !reviews) return false;
-    return reviews.some(
-      (review) => review.userId === user.id && review.gameId === gameId
-    );
-  };
+  if (!userOwns) {
+    return <p>You need to own this game to write a review.</p>;
+  }
 
-  if (userHasWrittenReview()) {
-    return <p>You have already written a review for this game.</p>;
+  if (userHasReviewed()) {
+    return <div>You have already reviewed this game.</div>;
   }
 
   return (
