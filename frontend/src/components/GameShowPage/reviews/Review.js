@@ -1,12 +1,20 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { deleteReview } from "../../../store/reviews";
 import EditReviewForm from "./EditReviewForm";
 
 const Review = ({ review, currentUserId }) => {
+  const dispatch = useDispatch();
   const [editing, setEditing] = useState(false);
 
   const toggleEditing = () => {
     setEditing(!editing);
   };
+
+  const handleDelete = () => {
+    dispatch(deleteReview(review.id));
+  };
+
   if (!review.author) {
     return null;
   }
@@ -29,7 +37,10 @@ const Review = ({ review, currentUserId }) => {
       </div>
       <div className="review-body">{review.body}</div>
       {review.author.id === currentUserId && (
-        <button onClick={toggleEditing}>Edit</button>
+        <div>
+          <button onClick={toggleEditing}>Edit</button>
+          <button onClick={handleDelete}>Delete</button>
+        </div>
       )}
     </div>
   );

@@ -38,6 +38,15 @@ export const createReview =
     if (response.status === 200 || response.status === 201) {
       const newReview = await response.json();
       dispatch(addReview(newReview));
+
+      // After adding the review, fetch all reviews again to update the state
+      const updatedReviewsResponse = await csrfFetch(
+        `/api/games/${gameId}/reviews`
+      );
+      if (updatedReviewsResponse.ok) {
+        const data = await updatedReviewsResponse.json();
+        dispatch(setReviews(data.reviews)); // I'm assuming data.reviews is the array of reviews. Adjust as needed.
+      }
     }
   };
 
