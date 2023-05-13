@@ -47,6 +47,9 @@ const GameShowPage = () => {
           <div className="ShowPageComponents">
             <GameShowCarousel key={game.id} game={game} />
             <GameShowInfo game={game} />
+            <div id="reviewForm1">
+              <ReviewForm gameId={game.id} user={user} gamename={game.name} />
+            </div>
             <div className="gameinfobuyBox">
               <AddToCartButton game={game} />
               <div className="gamesShowInfoDes">
@@ -59,7 +62,6 @@ const GameShowPage = () => {
             {game.id && (
               <div className="game-reviews">
                 <ReviewList gameId={game.id} currentUserId={user && user.id} />
-                <ReviewForm gameId={game.id} user={user} />
               </div>
             )}
           </div>

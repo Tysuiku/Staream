@@ -78,3 +78,21 @@
   flex-direction: column;
   /* margin-right: 1vw; */
 }
+
+#reviewForm1{
+  margin-top: 12vw;
+  margin-left: 13.85vw;
+}
+
+.game-reviews{
+  margin-left: 13.85vw;
+}
+
+.review-list h2::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 50vw;
+  background: linear-gradient(90deg, #3a6e8b 0, transparent);
+  margin-top: 1vw;
+}

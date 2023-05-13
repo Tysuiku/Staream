@@ -4,7 +4,8 @@
   padding: 2vw;
   margin-bottom: 2vw;
   border: none;
-  width: 36vw;
+  width: 64vw;
+  height: 22vw;
 }
 
 .review-form h3 {
@@ -12,8 +13,9 @@
 }
 
 .review-form textarea {
-  width: 90%;
-  min-height: 15vw;
+  width: 95%;
+  margin-top: 1vw;
+  min-height: 8vw;
   padding: 1vw;
   margin-bottom: 2vw;
   border: 1px solid #ccc;
@@ -54,6 +56,8 @@
 }
 
 .review-form button {
+  position: relative;
+  bottom: 4.5vw;
   padding: 0.6vw 1.2vw;
   border: none;
   border-radius: 4px;
@@ -61,6 +65,7 @@
   color: #67c1f5;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-left: 54.5vw;
 }
 
 .review-form button:hover {
@@ -73,10 +78,20 @@
   padding: 2vw;
   margin-bottom: 2vw;
   border: none;
-  width: 36vw;
-  height: 15vw;  
+  width: 64vw;
+  height: 5vw;  
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+#write-review{
+  font-size: 1.5vw;
+  color: #06BFFF;
+}
+
+#write-review-des{
+  font-size: 1vw;
+  color: #bfc1c2b4;
 }

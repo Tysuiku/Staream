@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { createReview } from "../../../store/reviews";
 import "./ReviewForm.css";
 
-const ReviewForm = ({ gameId, user }) => {
+const ReviewForm = ({ gameId, user, gamename }) => {
   const dispatch = useDispatch();
   const [body, setBody] = useState("");
   const [recommended, setRecommended] = useState(true);
@@ -68,8 +68,8 @@ const ReviewForm = ({ gameId, user }) => {
 
   return (
     <form className="review-form" onSubmit={handleSubmit}>
-      <h3>Write a review</h3>
-      <p>
+      <h3 id="write-review">Write a review for {gamename}</h3>
+      <p id="write-review-des">
         Please describe what you liked or disliked about this game and whether
         you recommend it to others. Please remember to be polite and follow the
         Rules and Guidelines.
