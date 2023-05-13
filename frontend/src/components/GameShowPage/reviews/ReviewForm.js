@@ -38,7 +38,7 @@ const ReviewForm = ({ gameId, user }) => {
     if (newOwnsGame !== userOwns) {
       setUserOwns(newOwnsGame);
     }
-  }, [user, gameId, cartItems, userOwns]);
+  }, [user, gameId, cartItems, userOwns, reviews]); // added 'reviews' to dependency array
 
   const handleSubmit = async (e) => {
     e.preventDefault();
