@@ -13,8 +13,9 @@ class ApplicationController < ActionController::API
   end
 
   def login!(user)
-    session[:session_token] = user.reset_session_token!
     @current_user = user
+    session[:session_token] = user.reset_session_token!
+    @current_user = User.includes(:owned_games).find(user.id) # Added this line
   end
 
   def logout!

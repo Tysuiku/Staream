@@ -6,12 +6,16 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resources :users, only: :create
     resource :session, only: [:show, :create, :destroy]
-    resources :games, only: [:index, :show]
+    resources :games, only: [:index, :show] do
+      resources :reviews, only: [:index, :create]
+    end
     resources :cart_items, only: [:create, :index, :destroy]
     post "/cart_items/checkout", to: "cart_items#checkout"
+
+    resources :reviews, only: [:update, :destroy]
   end
 
-  #config/routes.rb
+  # config/routes.rb
 
   get "*path", to: "static_pages#frontend_index"
 end

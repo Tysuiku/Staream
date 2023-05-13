@@ -31,6 +31,8 @@ export default function GameNavbar({ games }) {
           <div className="dropdown">
             {games
               .filter((game) => {
+                if (!game || !game.name) return false;
+
                 const searchTerm = value.toLowerCase();
                 const gameName = game.name.toLowerCase();
 

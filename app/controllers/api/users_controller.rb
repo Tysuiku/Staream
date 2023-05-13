@@ -6,12 +6,11 @@ class Api::UsersController < ApplicationController
 
     if @user.save
       login!(@user)
+      puts "Owned games in UsersController: #{@user.owned_games.inspect}"
       render :show
     else
       render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
     end
-
-    # render json: user_params
   end
 
   private
