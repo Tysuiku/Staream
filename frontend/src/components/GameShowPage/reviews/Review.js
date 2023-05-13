@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { deleteReview } from "../../../store/reviews";
 import EditReviewForm from "./EditReviewForm";
+import "./Review.css";
 
 const Review = ({ review, currentUserId }) => {
   const dispatch = useDispatch();
@@ -37,7 +38,7 @@ const Review = ({ review, currentUserId }) => {
       </div>
       <div className="review-body">{review.body}</div>
       {review.author.id === currentUserId && (
-        <div>
+        <div className="review-buttons-2">
           <button onClick={toggleEditing}>Edit</button>
           <button onClick={handleDelete}>Delete</button>
         </div>

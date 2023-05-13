@@ -1,0 +1,82 @@
+.review-form {
+  background-color: #16202d;
+  color: white;
+  padding: 2vw;
+  margin-bottom: 2vw;
+  border: none;
+  width: 36vw;
+}
+
+.review-form h3 {
+  margin-bottom: 1vw;
+}
+
+.review-form textarea {
+  width: 90%;
+  min-height: 15vw;
+  padding: 1vw;
+  margin-bottom: 2vw;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #111a24;
+}
+
+.review-recommendation2 {
+  margin-bottom: 2vw;
+}
+
+.review-recommendation2 input[type='radio'] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.review-recommendation2 label {
+  display: inline-block;
+  padding: 0.6vw 1.2vw;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(103,193,245,.2);
+  color: #67c1f5;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 1vw;
+}
+
+.review-recommendation2 input[type='radio']:checked + label {
+  background: linear-gradient(120deg, #06BFFF 20%, #2D73FF 80%);
+}
+
+.review-recommendation2 label:hover {
+  background: linear-gradient(120deg, #06BFFF 20%, #2D73FF 80%);
+}
+
+.review-form button {
+  padding: 0.6vw 1.2vw;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(103,193,245,.2);
+  color: #67c1f5;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.review-form button:hover {
+  background: linear-gradient(120deg, #06BFFF 20%, #2D73FF 80%);
+}
+
+.center-content-gameReview {
+  background-color: #16202d;
+  color: white;
+  padding: 2vw;
+  margin-bottom: 2vw;
+  border: none;
+  width: 36vw;
+  height: 15vw;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

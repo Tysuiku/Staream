@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { editReview } from "../../../store/reviews";
+import "./EditReviewForm.css";
 
 const EditReviewForm = ({ review, onFinishEditing }) => {
   const dispatch = useDispatch();
@@ -23,27 +24,26 @@ const EditReviewForm = ({ review, onFinishEditing }) => {
         placeholder="Edit your review here..."
         required
       />
-      <div className="review-recommendation">
-        <label>
-          <input
-            type="radio"
-            name="recommendation"
-            value="true"
-            checked={recommended}
-            onChange={() => setRecommended(true)}
-          />
-          Recommended
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="recommendation"
-            value="false"
-            checked={!recommended}
-            onChange={() => setRecommended(false)}
-          />
-          Not Recommended
-        </label>
+      <div className="review-recommendation-edit">
+        <input
+          id="recommend-yes"
+          type="radio"
+          name="recommendation"
+          value="true"
+          checked={recommended}
+          onChange={() => setRecommended(true)}
+        />
+        <label htmlFor="recommend-yes">Yes</label>
+
+        <input
+          id="recommend-no"
+          type="radio"
+          name="recommendation"
+          value="false"
+          checked={!recommended}
+          onChange={() => setRecommended(false)}
+        />
+        <label htmlFor="recommend-no">No</label>
       </div>
       <button type="submit">Save Changes</button>
       <button type="button" onClick={onFinishEditing}>

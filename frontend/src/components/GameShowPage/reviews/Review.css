@@ -1,0 +1,64 @@
+.review {
+    margin-bottom: 2vw;
+    background-color: #16202d;
+    color: white;
+    padding-bottom: 2vw;
+    width: 40vw;
+  }
+  
+  .review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .review-author {
+    font-weight: bold;
+    color: #ccc7c77e;
+    text-transform: capitalize;
+  }
+  
+  .review-recommendation {
+    margin-top: 0.5vw;
+    width: 25vw;
+    height: 1.8vw;
+    padding-top: 0.8vw;
+    color: #fff;
+    background-color: #111a24;
+  }
+  
+  .recommended .not-recommended {
+    color: rgba(245, 245, 245, 0.887);
+  }
+  
+  .review-body {
+    margin-top: 2vw;
+    margin-left: 15vw;
+    line-height: 1.5;
+    word-wrap: break-word;
+    padding-right: 1vw;
+  }
+  
+  .review button {
+    margin-top: 20px;
+    padding: 0.2vw 1vw;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(103,193,245,.2);
+    color: #67c1f5;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .review-buttons-2{
+    margin-left: 15vw;
+  }
+  
+  .review button:hover {
+    background: linear-gradient(120deg, #06BFFF 20%, #2D73FF 80%);
+  }
+  
+  .review button:first-child {
+    margin-right: 10px;
+  }
+  

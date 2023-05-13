@@ -47,7 +47,6 @@ const GameShowPage = () => {
           <div className="ShowPageComponents">
             <GameShowCarousel key={game.id} game={game} />
             <GameShowInfo game={game} />
-
             <div className="gameinfobuyBox">
               <AddToCartButton game={game} />
               <div className="gamesShowInfoDes">

@@ -18,11 +18,9 @@ const ReviewList = ({ gameId, currentUserId }) => {
     };
   }, [dispatch, gameId]);
 
-  console.log("reviews", reviews);
-
   return (
     <div className="review-list">
-      <h2>Customer Reviews</h2>
+      <h2>Most Helpful Reviews</h2>
       <div className="reviews">
         {reviews.map((review, index) => (
           <Review key={index} review={review} currentUserId={currentUserId} />

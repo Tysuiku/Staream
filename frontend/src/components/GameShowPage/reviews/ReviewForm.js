@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { createReview } from "../../../store/reviews";
+import "./ReviewForm.css";
 
 const ReviewForm = ({ gameId, user }) => {
   const dispatch = useDispatch();
@@ -50,43 +51,55 @@ const ReviewForm = ({ gameId, user }) => {
   };
 
   if (!userOwns) {
-    return <p>You need to own this game to write a review.</p>;
+    return (
+      <div className="center-content-gameReview">
+        <p>You need to own this game to write a review.</p>
+      </div>
+    );
   }
 
   if (userHasReviewed()) {
-    return <div>You have already reviewed this game.</div>;
+    return (
+      <div className="center-content-gameReview">
+        <div>You have already reviewed this game.</div>
+      </div>
+    );
   }
 
   return (
     <form className="review-form" onSubmit={handleSubmit}>
       <h3>Write a review</h3>
+      <p>
+        Please describe what you liked or disliked about this game and whether
+        you recommend it to others. Please remember to be polite and follow the
+        Rules and Guidelines.
+      </p>
       <textarea
         value={body}
         onChange={(e) => setBody(e.target.value)}
         placeholder="Write your review here..."
         required
       />
-      <div className="review-recommendation">
-        <label>
-          <input
-            type="radio"
-            name="recommendation"
-            value="true"
-            checked={recommended}
-            onChange={() => setRecommended(true)}
-          />
-          Recommended
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="recommendation"
-            value="false"
-            checked={!recommended}
-            onChange={() => setRecommended(false)}
-          />
-          Not Recommended
-        </label>
+      <div className="review-recommendation2">
+        <input
+          type="radio"
+          id="recommended"
+          name="recommendation"
+          value="true"
+          checked={recommended}
+          onChange={() => setRecommended(true)}
+        />
+        <label htmlFor="recommended">Yes</label>
+
+        <input
+          type="radio"
+          id="not-recommended"
+          name="recommendation"
+          value="false"
+          checked={!recommended}
+          onChange={() => setRecommended(false)}
+        />
+        <label htmlFor="not-recommended">No</label>
       </div>
       <button type="submit">Submit Review</button>
     </form>
