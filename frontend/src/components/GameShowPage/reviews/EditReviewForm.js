@@ -45,7 +45,10 @@ const EditReviewForm = ({ review, onFinishEditing }) => {
         />
         <label htmlFor="recommend-no">No</label>
       </div>
-      <button type="submit">Save Changes</button>
+      <button type="submit" className="save-changes-button">
+        Save Changes
+      </button>
+
       <button type="button" onClick={onFinishEditing}>
         Cancel
       </button>

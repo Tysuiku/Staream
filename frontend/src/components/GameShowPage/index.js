@@ -19,6 +19,11 @@ const GameShowPage = () => {
   const user = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
 
+  const holocureStyles = {
+    marginTop: "16vw",
+    marginLeft: "13.85vw",
+  };
+
   const games2 = useSelector((state) => {
     return Object.values(state.games);
   });
@@ -47,7 +52,10 @@ const GameShowPage = () => {
           <div className="ShowPageComponents">
             <GameShowCarousel key={game.id} game={game} />
             <GameShowInfo game={game} />
-            <div id="reviewForm1">
+            <div
+              id="reviewForm1"
+              style={game.name === "Holocure" ? holocureStyles : {}}
+            >
               <ReviewForm gameId={game.id} user={user} gamename={game.name} />
             </div>
             <div className="gameinfobuyBox">
