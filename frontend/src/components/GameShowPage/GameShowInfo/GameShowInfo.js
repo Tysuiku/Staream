@@ -14,7 +14,7 @@ const GameShowInfo = ({ game }) => {
 
         <div className="gamesDevPubRe">
           <p className="game-info-value">
-            <span className="info-label-dev">DEVELOPER:</span> {game.publisher}
+            <span className="info-label-dev">DEVELOPER:</span> {game.developer}
           </p>
           <p className="game-info-value">
             <span className="info-label-pub">PUBLISHER:</span> {game.publisher}
@@ -30,4 +30,4 @@ const GameShowInfo = ({ game }) => {
   );
 };
 
-export default GameShowInfo;
+export default React.memo(GameShowInfo);

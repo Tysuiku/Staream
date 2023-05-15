@@ -24,7 +24,26 @@ export default function GameShowCarousel({ game }) {
     return null;
   }
 
-  const { gameImage1, gameImage2, gameImage3, gameImage4 } = game;
+  const gameImages = [
+    game.gameImage1,
+    game.gameImage2,
+    game.gameImage3,
+    game.gameImage4,
+  ];
+
+  const renderSlides = (images, isThumb = false) => {
+    return images.map((image, index) => (
+      <SwiperSlide key={index}>
+        {isThumb ? (
+          <div className="thumb-container">
+            <img src={image} />
+          </div>
+        ) : (
+          <img src={image} className="main-carousel-img" />
+        )}
+      </SwiperSlide>
+    ));
+  };
 
   return (
     <>
@@ -37,18 +56,7 @@ export default function GameShowCarousel({ game }) {
           className="game-show-carousel"
           onSwiper={setSwiper}
         >
-          <SwiperSlide>
-            <img src={gameImage1} className="main-carousel-img" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={gameImage2} className="main-carousel-img" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={gameImage3} className="main-carousel-img" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={gameImage4} className="main-carousel-img" />
-          </SwiperSlide>
+          {renderSlides(gameImages)}
         </Swiper>
         <Swiper
           onSwiper={setThumbsSwiper}
@@ -59,26 +67,7 @@ export default function GameShowCarousel({ game }) {
           modules={[FreeMode, Navigation, Thumbs]}
           className="game-show-carousel-thumbs"
         >
-          <SwiperSlide>
-            <div className="thumb-container">
-              <img src={gameImage1} />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="thumb-container">
-              <img src={gameImage2} />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="thumb-container">
-              <img src={gameImage3} />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="thumb-container">
-              <img src={gameImage4} />
-            </div>
-          </SwiperSlide>
+          {renderSlides(gameImages, true)}
         </Swiper>
       </div>
     </>

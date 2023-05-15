@@ -3,24 +3,51 @@ import { NavLink } from "react-router-dom";
 import "./GameList.css";
 
 const GameList = ({ games }) => {
-  const [hoveredGame, setHoveredGame] = useState(games[0]);
+  // Create a new, smaller set of game data
+  const [gameData, setGameData] = useState([]);
 
   useEffect(() => {
     if (games.length > 0) {
-      setHoveredGame(games[0]);
+      // Only keep the properties we need
+      const newGameData = games.map(
+        ({
+          id,
+          mainImage,
+          name,
+          price,
+          gameImage1,
+          gameImage2,
+          gameImage3,
+          gameImage4,
+        }) => ({
+          id,
+          mainImage,
+          name,
+          price,
+          gameImage1,
+          gameImage2,
+          gameImage3,
+          gameImage4,
+        })
+      );
+
+      setGameData(newGameData);
+      setHoveredGame(newGameData[0]);
     }
   }, [games]);
+
+  const [hoveredGame, setHoveredGame] = useState(gameData[0]);
 
   const handleGameHover = (game) => {
     setHoveredGame(game);
   };
 
-  const totalHeight = games.length * 64;
+  const totalHeight = gameData.length * 64;
 
   return (
     <div className="homePageGameList">
       <div className="gameListContainer" style={{ height: `${totalHeight}px` }}>
-        {games.map((game) => (
+        {gameData.map((game) => (
           <NavLink
             key={game.id}
             to={`/games/${game.id}`}
