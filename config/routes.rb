@@ -7,6 +7,9 @@ Rails.application.routes.draw do
     resources :users, only: :create
     resource :session, only: [:show, :create, :destroy]
     resources :games, only: [:index, :show] do
+      collection do
+        get "random"
+      end
       resources :reviews, only: [:index, :create]
     end
     resources :cart_items, only: [:create, :index, :destroy]

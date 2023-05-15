@@ -15,7 +15,7 @@ import ReviewForm from "./reviews/ReviewForm";
 
 const GameShowPage = () => {
   const { id } = useParams();
-  const game = useSelector((state) => state.games[id]) || {};
+  const game = useSelector((state) => state.games.all[id]) || {};
   const user = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
 

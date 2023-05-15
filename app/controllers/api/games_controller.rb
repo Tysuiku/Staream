@@ -8,4 +8,9 @@ class Api::GamesController < ApplicationController
     @game = Game.find(params[:id])
     render "api/games/show"
   end
+
+  def random
+    @games = Game.order("RANDOM()").limit(10)
+    render "api/games/index"
+  end
 end
