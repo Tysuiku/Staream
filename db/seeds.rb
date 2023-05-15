@@ -148,32 +148,32 @@ puyo_puyo2.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.c
 puyo_puyo2.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4puyo.jpg"),
                               filename: "gameimage4puyo.jpg")
 
-vampire_survivors = Game.create!(
-  name: "Vampire Survivors",
-  price: 4.99,
-  genre: "Action Roguelike",
-  category: "Pixel Graphics",
-  developer: "poncle",
-  publisher: "poncle",
-  release_date: "Oct 20, 2022",
-  detail: "Mow down thousands of night creatures and survive until dawn! Vampire Survivors is a gothic horror casual game with rogue-lite elements, where your choices can allow you to quickly snowball against the hundreds of monsters that get thrown at you.",
-  description: "Vampire Survivors is a time survival game with minimalistic gameplay and roguelite elements.\n\nHell is empty, the devils are here, and there's no place to run or hide. All you can do is survive as long as you can until death inevitably puts an end to your struggles. Gather gold in each run to buy upgrades and help the next survivor.",
-)
+# vampire_survivors = Game.create!(
+#   name: "Vampire Survivors",
+#   price: 4.99,
+#   genre: "Action Roguelike",
+#   category: "Pixel Graphics",
+#   developer: "poncle",
+#   publisher: "poncle",
+#   release_date: "Oct 20, 2022",
+#   detail: "Mow down thousands of night creatures and survive until dawn! Vampire Survivors is a gothic horror casual game with rogue-lite elements, where your choices can allow you to quickly snowball against the hundreds of monsters that get thrown at you.",
+#   description: "Vampire Survivors is a time survival game with minimalistic gameplay and roguelite elements.\n\nHell is empty, the devils are here, and there's no place to run or hide. All you can do is survive as long as you can until death inevitably puts an end to your struggles. Gather gold in each run to buy upgrades and help the next survivor.",
+# )
 
-vampire_survivors.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainvampiresurvivors.jpeg"),
-                                    filename: "mainvampiresurvivors.jpeg")
+# vampire_survivors.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainvampiresurvivors.jpeg"),
+#                                     filename: "mainvampiresurvivors.jpeg")
 
-vampire_survivors.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1vamp.jpg"),
-                                     filename: "gameimage1vamp.jpg")
+# vampire_survivors.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1vamp.jpg"),
+#                                      filename: "gameimage1vamp.jpg")
 
-vampire_survivors.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2vamp.jpg"),
-                                     filename: "gameimage2vamp.jpg")
+# vampire_survivors.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2vamp.jpg"),
+#                                      filename: "gameimage2vamp.jpg")
 
-vampire_survivors.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3vamp.jpg"),
-                                     filename: "gameimage3vamp.jpg")
+# vampire_survivors.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3vamp.jpg"),
+#                                      filename: "gameimage3vamp.jpg")
 
-vampire_survivors.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4vamp.jpg"),
-                                     filename: "gameimage4vamp.jpg")
+# vampire_survivors.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4vamp.jpg"),
+#                                      filename: "gameimage4vamp.jpg")
 
 persona_5R = Game.create!(
   name: "Persona 5 Royal",
@@ -231,32 +231,32 @@ among_us.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com
 among_us.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4amongus.jpg"),
                             filename: "gameimage4amongus.jpg")
 
-phasmophobia = Game.create!(
-  name: "Phasmophobia",
-  price: 13.99,
-  genre: "Horror",
-  category: "Multiplayer",
-  developer: "Kinetic Games",
-  publisher: "Kinetic Games",
-  release_date: "Sep 18, 2020",
-  detail: "Phasmophobia is a 4 player online co-op psychological horror. Paranormal activity is on the rise and it’s up to you and your team to use all the ghost-hunting equipment at your disposal in order to gather as much evidence as you can.",
-  description: "Phasmophobia is a 4-player, online co-op, psychological horror game. You and your team of paranormal investigators will enter haunted locations filled with paranormal activity and try to gather as much evidence as you can. Use your ghost-hunting equipment to find and record evidence to sell on to a ghost removal team.",
-)
+# phasmophobia = Game.create!(
+#   name: "Phasmophobia",
+#   price: 13.99,
+#   genre: "Horror",
+#   category: "Multiplayer",
+#   developer: "Kinetic Games",
+#   publisher: "Kinetic Games",
+#   release_date: "Sep 18, 2020",
+#   detail: "Phasmophobia is a 4 player online co-op psychological horror. Paranormal activity is on the rise and it’s up to you and your team to use all the ghost-hunting equipment at your disposal in order to gather as much evidence as you can.",
+#   description: "Phasmophobia is a 4-player, online co-op, psychological horror game. You and your team of paranormal investigators will enter haunted locations filled with paranormal activity and try to gather as much evidence as you can. Use your ghost-hunting equipment to find and record evidence to sell on to a ghost removal team.",
+# )
 
-phasmophobia.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainphasmo.jpeg"),
-                               filename: "mainphasmo.jpeg")
+# phasmophobia.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainphasmo.jpeg"),
+#                                filename: "mainphasmo.jpeg")
 
-phasmophobia.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1phasmo.jpg"),
-                                filename: "gameimage1phasmo.jpg")
+# phasmophobia.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1phasmo.jpg"),
+#                                 filename: "gameimage1phasmo.jpg")
 
-phasmophobia.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2phasmo.jpg"),
-                                filename: "gameimage2phasmo.jpg")
+# phasmophobia.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2phasmo.jpg"),
+#                                 filename: "gameimage2phasmo.jpg")
 
-phasmophobia.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3phasmo.jpg"),
-                                filename: "gameimage3phasmo.jpg")
+# phasmophobia.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3phasmo.jpg"),
+#                                 filename: "gameimage3phasmo.jpg")
 
-phasmophobia.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4phasmo.jpg"),
-                                filename: "gameimage4phasmo.jpg")
+# phasmophobia.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4phasmo.jpg"),
+#                                 filename: "gameimage4phasmo.jpg")
 
 elden_ring = Game.create!(
   name: "ELDEN RING",
@@ -313,59 +313,59 @@ stardew_valley.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazona
 stardew_valley.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4stardew.jpg"),
                                   filename: "gameimage4stardew.jpg")
 
-destiny2 = Game.create!(
-  name: "Destiny 2",
-  price: 0,
-  genre: "FPS",
-  category: "MMORPG",
-  developer: "Bungie",
-  publisher: "Bungie",
-  release_date: "Oct 1, 2019",
-  detail: "Destiny 2 is an action MMO with a single evolving world that you and your friends can join anytime, anywhere, absolutely free.",
-  description: "Dive into the world of Destiny 2 to explore the mysteries of the solar system and experience responsive first-person shooter combat.\nUnlock powerful elemental abilities and collect unique gear to customize your Guardian's look and playstyle.\nEnjoy Destiny 2’s cinematic story, challenging co-op missions, and a variety of PvP modes alone or with friends.\nDownload for free today and write your legend in the stars.",
-)
+# destiny2 = Game.create!(
+#   name: "Destiny 2",
+#   price: 0,
+#   genre: "FPS",
+#   category: "MMORPG",
+#   developer: "Bungie",
+#   publisher: "Bungie",
+#   release_date: "Oct 1, 2019",
+#   detail: "Destiny 2 is an action MMO with a single evolving world that you and your friends can join anytime, anywhere, absolutely free.",
+#   description: "Dive into the world of Destiny 2 to explore the mysteries of the solar system and experience responsive first-person shooter combat.\nUnlock powerful elemental abilities and collect unique gear to customize your Guardian's look and playstyle.\nEnjoy Destiny 2’s cinematic story, challenging co-op missions, and a variety of PvP modes alone or with friends.\nDownload for free today and write your legend in the stars.",
+# )
 
-destiny2.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/maindestiny2.jpeg"),
-                           filename: "maindestiny2.jpeg")
+# destiny2.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/maindestiny2.jpeg"),
+#                            filename: "maindestiny2.jpeg")
 
-destiny2.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1destiny2.jpg"),
-                            filename: "gameimage1destiny2.jpg")
+# destiny2.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1destiny2.jpg"),
+#                             filename: "gameimage1destiny2.jpg")
 
-destiny2.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2destiny2.jpg"),
-                            filename: "gameimage2destiny2.jpg")
+# destiny2.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2destiny2.jpg"),
+#                             filename: "gameimage2destiny2.jpg")
 
-destiny2.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3destiny2.jpg"),
-                            filename: "gameimage3destiny2.jpg")
+# destiny2.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3destiny2.jpg"),
+#                             filename: "gameimage3destiny2.jpg")
 
-destiny2.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4destiny2.jpg"),
-                            filename: "gameimage4destiny2.jpg")
+# destiny2.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4destiny2.jpg"),
+#                             filename: "gameimage4destiny2.jpg")
 
-poe = Game.create!(
-  name: "Path of Exile",
-  price: 0,
-  genre: "Action RPG",
-  category: "RPG",
-  developer: "Grinding Gear Games",
-  publisher: "Grinding Gear Games",
-  release_date: "Oct 23, 2013",
-  detail: "You are an Exile, struggling to survive on the dark continent of Wraeclast, as you fight to earn power that will allow you to exact your revenge against those who wronged you. Created by hardcore gamers, Path of Exile is an online Action RPG set in a dark fantasy world.",
-  description: "You are an Exile, struggling to survive on the dark continent of Wraeclast, as you fight to earn power that will allow you to exact your revenge against those who wronged you. Created by hardcore gamers, Path of Exile is an online Action RPG set in a dark fantasy world. With a focus on visceral action combat, powerful items and deep character customization, Path of Exile is completely free and will never be pay-to-win.",
-)
+# poe = Game.create!(
+#   name: "Path of Exile",
+#   price: 0,
+#   genre: "Action RPG",
+#   category: "RPG",
+#   developer: "Grinding Gear Games",
+#   publisher: "Grinding Gear Games",
+#   release_date: "Oct 23, 2013",
+#   detail: "You are an Exile, struggling to survive on the dark continent of Wraeclast, as you fight to earn power that will allow you to exact your revenge against those who wronged you. Created by hardcore gamers, Path of Exile is an online Action RPG set in a dark fantasy world.",
+#   description: "You are an Exile, struggling to survive on the dark continent of Wraeclast, as you fight to earn power that will allow you to exact your revenge against those who wronged you. Created by hardcore gamers, Path of Exile is an online Action RPG set in a dark fantasy world. With a focus on visceral action combat, powerful items and deep character customization, Path of Exile is completely free and will never be pay-to-win.",
+# )
 
-poe.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainpathofexile.jpeg"),
-                      filename: "mainpathofexile.jpeg")
+# poe.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainpathofexile.jpeg"),
+#                       filename: "mainpathofexile.jpeg")
 
-poe.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1pathofexile.jpg"),
-                       filename: "gameimage1pathofexile.jpg")
+# poe.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1pathofexile.jpg"),
+#                        filename: "gameimage1pathofexile.jpg")
 
-poe.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2pathofexile.jpg"),
-                       filename: "gameimage2pathofexile.jpg")
+# poe.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2pathofexile.jpg"),
+#                        filename: "gameimage2pathofexile.jpg")
 
-poe.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3pathofexile.jpg"),
-                       filename: "gameimage3pathofexile.jpg")
+# poe.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3pathofexile.jpg"),
+#                        filename: "gameimage3pathofexile.jpg")
 
-poe.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4pathofexile.jpg"),
-                       filename: "gameimage4pathofexile.jpg")
+# poe.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4pathofexile.jpg"),
+#                        filename: "gameimage4pathofexile.jpg")
 
 miku = Game.create!(
   name: "Hatsune Miku: Project DIVA Mega Mix+",
@@ -479,61 +479,61 @@ hollowknight.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws
 hollowknight.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4hollowknight.jpg"),
                                 filename: "gameimage4hollowknight.jpg")
 
-theforest = Game.create!(
-  name: "The Forest",
-  price: 19.99,
-  genre: "Survival",
-  category: "Open World",
-  developer: "Endnight Games Ltd",
-  publisher: "Endnight Games Ltd",
-  release_date: "Apr 30, 2018",
-  detail: "As the lone survivor of a passenger jet crash, you find yourself in a mysterious forest battling to stay alive against a society of cannibalistic mutants. Build, explore, survive in this terrifying first person survival horror simulator.",
-  description: "As the lone survivor of a passenger jet crash, you find yourself in a mysterious forest battling to stay alive against a society of cannibalistic mutants.
+# theforest = Game.create!(
+#   name: "The Forest",
+#   price: 19.99,
+#   genre: "Survival",
+#   category: "Open World",
+#   developer: "Endnight Games Ltd",
+#   publisher: "Endnight Games Ltd",
+#   release_date: "Apr 30, 2018",
+#   detail: "As the lone survivor of a passenger jet crash, you find yourself in a mysterious forest battling to stay alive against a society of cannibalistic mutants. Build, explore, survive in this terrifying first person survival horror simulator.",
+#   description: "As the lone survivor of a passenger jet crash, you find yourself in a mysterious forest battling to stay alive against a society of cannibalistic mutants.
 
-    Build, explore, survive in this terrifying first person survival horror simulator.",
-)
+#     Build, explore, survive in this terrifying first person survival horror simulator.",
+# )
 
-theforest.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/maintheforest.jpeg"),
-                            filename: "maintheforest.jpeg")
+# theforest.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/maintheforest.jpeg"),
+#                             filename: "maintheforest.jpeg")
 
-theforest.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1theforest.jpg"),
-                             filename: "gameimage1theforest.jpg")
+# theforest.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1theforest.jpg"),
+#                              filename: "gameimage1theforest.jpg")
 
-theforest.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2theforest.jpg"),
-                             filename: "gameimage2theforest.jpg")
+# theforest.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2theforest.jpg"),
+#                              filename: "gameimage2theforest.jpg")
 
-theforest.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3theforest.jpg"),
-                             filename: "gameimage3theforest.jpg")
+# theforest.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3theforest.jpg"),
+#                              filename: "gameimage3theforest.jpg")
 
-theforest.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4theforest.jpg"),
-                             filename: "gameimage4theforest.jpg")
+# theforest.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4theforest.jpg"),
+#                              filename: "gameimage4theforest.jpg")
 
-lostark = Game.create!(
-  name: "Lost Ark",
-  price: 0,
-  genre: "Action RPG",
-  category: "MMORPG",
-  developer: "Smilegate RPG",
-  publisher: "Amazon Games",
-  release_date: "Feb 11, 2022",
-  detail: "Embark on an odyssey for the Lost Ark in a vast, vibrant world: explore new lands, seek out lost treasures, and test yourself in thrilling action combat in this action-packed free-to-play RPG.",
-  description: "Embark on an odyssey for the Lost Ark in a vast, vibrant world: explore new lands, seek out lost treasures, and test yourself in thrilling action combat. Define your fighting style with your class and advanced class, and customize your skills, weapons, and gear to bring your might to bear as you fight against hordes of enemies, colossal bosses, and dark forces seeking the power of the Ark in this action-packed free-to-play RPG.",
-)
+# lostark = Game.create!(
+#   name: "Lost Ark",
+#   price: 0,
+#   genre: "Action RPG",
+#   category: "MMORPG",
+#   developer: "Smilegate RPG",
+#   publisher: "Amazon Games",
+#   release_date: "Feb 11, 2022",
+#   detail: "Embark on an odyssey for the Lost Ark in a vast, vibrant world: explore new lands, seek out lost treasures, and test yourself in thrilling action combat in this action-packed free-to-play RPG.",
+#   description: "Embark on an odyssey for the Lost Ark in a vast, vibrant world: explore new lands, seek out lost treasures, and test yourself in thrilling action combat. Define your fighting style with your class and advanced class, and customize your skills, weapons, and gear to bring your might to bear as you fight against hordes of enemies, colossal bosses, and dark forces seeking the power of the Ark in this action-packed free-to-play RPG.",
+# )
 
-lostark.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainlostark.jpeg"),
-                          filename: "mainlostark.jpeg")
+# lostark.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainlostark.jpeg"),
+#                           filename: "mainlostark.jpeg")
 
-lostark.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1lostark.jpg"),
-                           filename: "gameimage1lostark.jpg")
+# lostark.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1lostark.jpg"),
+#                            filename: "gameimage1lostark.jpg")
 
-lostark.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2lostark.jpg"),
-                           filename: "gameimage2lostark.jpg")
+# lostark.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2lostark.jpg"),
+#                            filename: "gameimage2lostark.jpg")
 
-lostark.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3lostark.jpg"),
-                           filename: "gameimage3lostark.jpg")
+# lostark.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3lostark.jpg"),
+#                            filename: "gameimage3lostark.jpg")
 
-lostark.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4lostark.jpg"),
-                           filename: "gameimage4lostark.jpg")
+# lostark.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4lostark.jpg"),
+#                            filename: "gameimage4lostark.jpg")
 
 guiltygear = Game.create!(
   name: "GUILTY GEAR -STRIVE-",
@@ -564,59 +564,59 @@ guiltygear.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.c
 guiltygear.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4guiltygear.jpg"),
                               filename: "gameimage4guiltygear.jpg")
 
-escapesimulator = Game.create!(
-  name: "Escape Simulator",
-  price: 14.99,
-  genre: "Puzzle",
-  category: "Escape Room",
-  developer: "Pine Studio",
-  publisher: "Pine Studio",
-  release_date: "Oct 19, 2021",
-  detail: "First-person puzzler you can play solo or in an online co-op (best with 2-3 players, but playable with more). Explore a set of highly interactive escape rooms. Move furniture, pick up and examine everything, smash pots and break locks! Supports community rooms through the level editor.",
-  description: "Escape Simulator is a first-person puzzler you can play solo or in an online co-op. Explore a growing set of highly interactive escape rooms. Move furniture, pick up and examine everything, smash pots and break locks! Supports community-made rooms through the level editor.",
-)
+# escapesimulator = Game.create!(
+#   name: "Escape Simulator",
+#   price: 14.99,
+#   genre: "Puzzle",
+#   category: "Escape Room",
+#   developer: "Pine Studio",
+#   publisher: "Pine Studio",
+#   release_date: "Oct 19, 2021",
+#   detail: "First-person puzzler you can play solo or in an online co-op (best with 2-3 players, but playable with more). Explore a set of highly interactive escape rooms. Move furniture, pick up and examine everything, smash pots and break locks! Supports community rooms through the level editor.",
+#   description: "Escape Simulator is a first-person puzzler you can play solo or in an online co-op. Explore a growing set of highly interactive escape rooms. Move furniture, pick up and examine everything, smash pots and break locks! Supports community-made rooms through the level editor.",
+# )
 
-escapesimulator.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainescapesimulator.jpeg"),
-                                  filename: "mainescapesimulator.jpeg")
+# escapesimulator.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainescapesimulator.jpeg"),
+#                                   filename: "mainescapesimulator.jpeg")
 
-escapesimulator.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1escapesimulator.jpg"),
-                                   filename: "gameimage1escapesimulator.jpg")
+# escapesimulator.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1escapesimulator.jpg"),
+#                                    filename: "gameimage1escapesimulator.jpg")
 
-escapesimulator.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2escapesimulator.jpg"),
-                                   filename: "gameimage2escapesimulator.jpg")
+# escapesimulator.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2escapesimulator.jpg"),
+#                                    filename: "gameimage2escapesimulator.jpg")
 
-escapesimulator.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3escapesimulator.jpg"),
-                                   filename: "gameimage3escapesimulator.jpg")
+# escapesimulator.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3escapesimulator.jpg"),
+#                                    filename: "gameimage3escapesimulator.jpg")
 
-escapesimulator.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4escapesimulator.jpg"),
-                                   filename: "gameimage4escapesimulator.jpg")
+# escapesimulator.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4escapesimulator.jpg"),
+#                                    filename: "gameimage4escapesimulator.jpg")
 
-tabletop = Game.create!(
-  name: "Tabletop Simulator",
-  price: 19.99,
-  genre: "Tabletop",
-  category: "Multiplayer",
-  developer: "Berserk Games",
-  publisher: "Berserk Games",
-  release_date: "Jun 5, 2015",
-  detail: "Tabletop Simulator is the only simulator where you can let your aggression out by flipping the table! There are no rules to follow: just you, a physics sandbox, and your friends. Make your own online board games or play the thousands of community created mods. Unlimited gaming possibilities!",
-  description: "Create your own original games, import custom assets, automate games with scripting, set up complete RPG dungeons, manipulate the physics, create hinges & joints, and of course flip the table when you are losing the game. All with an easy to use system integrated with Steam Workshop. You can do anything you want in Tabletop Simulator. The possibilities are endless!",
-)
+# tabletop = Game.create!(
+#   name: "Tabletop Simulator",
+#   price: 19.99,
+#   genre: "Tabletop",
+#   category: "Multiplayer",
+#   developer: "Berserk Games",
+#   publisher: "Berserk Games",
+#   release_date: "Jun 5, 2015",
+#   detail: "Tabletop Simulator is the only simulator where you can let your aggression out by flipping the table! There are no rules to follow: just you, a physics sandbox, and your friends. Make your own online board games or play the thousands of community created mods. Unlimited gaming possibilities!",
+#   description: "Create your own original games, import custom assets, automate games with scripting, set up complete RPG dungeons, manipulate the physics, create hinges & joints, and of course flip the table when you are losing the game. All with an easy to use system integrated with Steam Workshop. You can do anything you want in Tabletop Simulator. The possibilities are endless!",
+# )
 
-tabletop.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/maintabletop.jpeg"),
-                           filename: "maintabletop.jpeg")
+# tabletop.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/maintabletop.jpeg"),
+#                            filename: "maintabletop.jpeg")
 
-tabletop.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1tabletop.jpg"),
-                            filename: "gameimage1tabletop.jpg")
+# tabletop.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1tabletop.jpg"),
+#                             filename: "gameimage1tabletop.jpg")
 
-tabletop.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2tabletop.jpg"),
-                            filename: "gameimage2tabletop.jpg")
+# tabletop.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2tabletop.jpg"),
+#                             filename: "gameimage2tabletop.jpg")
 
-tabletop.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3tabletop.jpg"),
-                            filename: "gameimage3tabletop.jpg")
+# tabletop.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3tabletop.jpg"),
+#                             filename: "gameimage3tabletop.jpg")
 
-tabletop.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4tabletop.jpg"),
-                            filename: "gameimage4tabletop.jpg")
+# tabletop.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4tabletop.jpg"),
+#                             filename: "gameimage4tabletop.jpg")
 
 golfwfriends = Game.create!(
   name: "Golf With Your Friends",
@@ -786,32 +786,32 @@ terraria.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com
 terraria.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4terraria.jpg"),
                             filename: "gameimage4terraria.jpg")
 
-pummel = Game.create!(
-  name: "Pummel Party",
-  price: 14.99,
-  genre: "Funny",
-  category: "Multplayer",
-  developer: "Rebuilt Games",
-  publisher: "Rebuilt Games",
-  release_date: "Sep 20, 2018",
-  detail: "Pummel Party is a 4-8 player online and local-multiplayer party game. Pummel friends or AI using a wide array of absurd items in the board mode and compete to destroy friendships in the unique collection of minigames.",
-  description: "Pummel Party is a 4-8 player online and local-multiplayer party game. Pummel friends or AI using a wide array of absurd items in the board mode and compete to destroy friendships in the entertaining collection of minigames.",
-)
+# pummel = Game.create!(
+#   name: "Pummel Party",
+#   price: 14.99,
+#   genre: "Funny",
+#   category: "Multplayer",
+#   developer: "Rebuilt Games",
+#   publisher: "Rebuilt Games",
+#   release_date: "Sep 20, 2018",
+#   detail: "Pummel Party is a 4-8 player online and local-multiplayer party game. Pummel friends or AI using a wide array of absurd items in the board mode and compete to destroy friendships in the unique collection of minigames.",
+#   description: "Pummel Party is a 4-8 player online and local-multiplayer party game. Pummel friends or AI using a wide array of absurd items in the board mode and compete to destroy friendships in the entertaining collection of minigames.",
+# )
 
-pummel.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainpummelparty.jpeg"),
-                         filename: "mainpummelparty.jpeg")
+# pummel.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainpummelparty.jpeg"),
+#                          filename: "mainpummelparty.jpeg")
 
-pummel.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1pummel.jpg"),
-                          filename: "gameimage1pummel.jpg")
+# pummel.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1pummel.jpg"),
+#                           filename: "gameimage1pummel.jpg")
 
-pummel.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2pummel.jpg"),
-                          filename: "gameimage2pummel.jpg")
+# pummel.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2pummel.jpg"),
+#                           filename: "gameimage2pummel.jpg")
 
-pummel.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3pummel.jpg"),
-                          filename: "gameimage3pummel.jpg")
+# pummel.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3pummel.jpg"),
+#                           filename: "gameimage3pummel.jpg")
 
-pummel.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4pummel.jpg"),
-                          filename: "gameimage4pummel.jpg")
+# pummel.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4pummel.jpg"),
+#                           filename: "gameimage4pummel.jpg")
 
 dokidoki = Game.create!(
   name: "Doki Doki Literature Club!",
@@ -853,33 +853,33 @@ dokidoki.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com
 dokidoki.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4dokidoki.jpg"),
                             filename: "gameimage4dokidoki.jpg")
 
-aimlab = Game.create!(
-  name: "Aim Lab",
-  price: 0,
-  genre: "FPS",
-  category: "Shooter",
-  developer: "Statespace",
-  publisher: "Statespace",
-  release_date: "Feb 7, 2018",
-  detail: "Aim Lab is the aim trainer of choice for over 20 Million players, from beginners to esports pros. Our unique aim analysis optimizes your gameplay, targets your weaknesses & builds key skills for any FPS/TPS game, all for free! Time to warm up with our unlimited scenarios & rank up in-game!",
-  description: "Looking to improve as an FPS player?
-    Aim Lab has been developed as your personal trainer to help you get better - in more games - through curated aim training scenarios, improving your core FPS skills including flicking, tracking, speed, perception & cognition through detailed aim analysis feedback which guides you on quick improvements. Aim Lab is regularly updated with new features to support more games and is a must for any players, from beginner to pro, to gain a competitive edge.",
-)
+# aimlab = Game.create!(
+#   name: "Aim Lab",
+#   price: 0,
+#   genre: "FPS",
+#   category: "Shooter",
+#   developer: "Statespace",
+#   publisher: "Statespace",
+#   release_date: "Feb 7, 2018",
+#   detail: "Aim Lab is the aim trainer of choice for over 20 Million players, from beginners to esports pros. Our unique aim analysis optimizes your gameplay, targets your weaknesses & builds key skills for any FPS/TPS game, all for free! Time to warm up with our unlimited scenarios & rank up in-game!",
+#   description: "Looking to improve as an FPS player?
+#     Aim Lab has been developed as your personal trainer to help you get better - in more games - through curated aim training scenarios, improving your core FPS skills including flicking, tracking, speed, perception & cognition through detailed aim analysis feedback which guides you on quick improvements. Aim Lab is regularly updated with new features to support more games and is a must for any players, from beginner to pro, to gain a competitive edge.",
+# )
 
-aimlab.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainaimlab.jpeg"),
-                         filename: "mainaimlab.jpeg")
+# aimlab.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainaimlab.jpeg"),
+#                          filename: "mainaimlab.jpeg")
 
-aimlab.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1aimlab.jpg"),
-                          filename: "gameimage1aimlab.jpg")
+# aimlab.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1aimlab.jpg"),
+#                           filename: "gameimage1aimlab.jpg")
 
-aimlab.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2aimlab.jpg"),
-                          filename: "gameimage2aimlab.jpg")
+# aimlab.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2aimlab.jpg"),
+#                           filename: "gameimage2aimlab.jpg")
 
-aimlab.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3aimlab.jpg"),
-                          filename: "gameimage3aimlab.jpg")
+# aimlab.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3aimlab.jpg"),
+#                           filename: "gameimage3aimlab.jpg")
 
-aimlab.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4aimlab.jpg"),
-                          filename: "gameimage4aimlab.jpg")
+# aimlab.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4aimlab.jpg"),
+#                           filename: "gameimage4aimlab.jpg")
 
 residentevil2 = Game.create!(
   name: "Resident Evil 2",
@@ -1005,32 +1005,32 @@ residentevilvillage.game_image3.attach(io: URI.open("https://staream-seeds.s3.am
 residentevilvillage.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4residentevilvillage.jpg"),
                                        filename: "gameimage4residentevilvillage.jpg")
 
-back4blood = Game.create!(
-  name: "Back 4 Blood",
-  price: 59.99,
-  genre: "Shooter",
-  category: "Multiplayer",
-  developer: "Turtle Rock Studios",
-  publisher: "Warner Bros. Games",
-  release_date: "Oct 12, 2021",
-  detail: "Back 4 Blood is a thrilling cooperative first-person shooter from the creators of the critically acclaimed Left 4 Dead franchise. Experience the intense 4 player co-op narrative campaign, competitive multiplayer as human or Ridden, and frenetic gameplay that keeps you in the action.",
-  description: "Back 4 Blood is a thrilling cooperative first-person shooter from the creators of the critically acclaimed Left 4 Dead franchise. You are at the center of a war against the Ridden. These once-human hosts of a deadly parasite have turned into terrifying creatures bent on devouring what remains of civilization. With humanity's extinction on the line, it's up to you and your friends to take the fight to the enemy, eradicate the Ridden, and reclaim the world.",
-)
+# back4blood = Game.create!(
+#   name: "Back 4 Blood",
+#   price: 59.99,
+#   genre: "Shooter",
+#   category: "Multiplayer",
+#   developer: "Turtle Rock Studios",
+#   publisher: "Warner Bros. Games",
+#   release_date: "Oct 12, 2021",
+#   detail: "Back 4 Blood is a thrilling cooperative first-person shooter from the creators of the critically acclaimed Left 4 Dead franchise. Experience the intense 4 player co-op narrative campaign, competitive multiplayer as human or Ridden, and frenetic gameplay that keeps you in the action.",
+#   description: "Back 4 Blood is a thrilling cooperative first-person shooter from the creators of the critically acclaimed Left 4 Dead franchise. You are at the center of a war against the Ridden. These once-human hosts of a deadly parasite have turned into terrifying creatures bent on devouring what remains of civilization. With humanity's extinction on the line, it's up to you and your friends to take the fight to the enemy, eradicate the Ridden, and reclaim the world.",
+# )
 
-back4blood.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainback4blood.jpeg"),
-                             filename: "mainback4blood.jpeg")
+# back4blood.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainback4blood.jpeg"),
+#                              filename: "mainback4blood.jpeg")
 
-back4blood.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1back4blood.jpg"),
-                              filename: "gameimage1back4blood.jpg")
+# back4blood.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1back4blood.jpg"),
+#                               filename: "gameimage1back4blood.jpg")
 
-back4blood.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2back4blood.jpg"),
-                              filename: "gameimage2back4blood.jpg")
+# back4blood.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2back4blood.jpg"),
+#                               filename: "gameimage2back4blood.jpg")
 
-back4blood.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3back4blood.jpg"),
-                              filename: "gameimage3back4blood.jpg")
+# back4blood.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3back4blood.jpg"),
+#                               filename: "gameimage3back4blood.jpg")
 
-back4blood.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4back4blood.jpg"),
-                              filename: "gameimage4back4blood.jpg")
+# back4blood.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4back4blood.jpg"),
+#                               filename: "gameimage4back4blood.jpg")
 
 gunfirereborn = Game.create!(
   name: "Gunfire Reborn",
@@ -1123,72 +1123,72 @@ codevein.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com
 codevein.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4codevein.jpg"),
                             filename: "gameimage4codevein.jpg")
 
-sekiro = Game.create!(
-  name: "Sekiro™: Shadows Die Twice - GOTY Edition",
-  price: 59.99,
-  genre: "Souls-like",
-  category: "Singleplayer",
-  developer: "FromSoftware",
-  publisher: "Activision",
-  release_date: "Mar 21, 2019",
-  detail: "Game of the Year - The Game Awards 2019 Best Action Game of 2019 - IGN Carve your own clever path to vengeance in the award winning adventure from developer FromSoftware, creators of Bloodborne and the Dark Souls series. Take Revenge. Restore Your Honor. Kill Ingeniously.",
-  description: "This Game of the Year Edition now includes bonus content*:
+# sekiro = Game.create!(
+#   name: "Sekiro™: Shadows Die Twice - GOTY Edition",
+#   price: 59.99,
+#   genre: "Souls-like",
+#   category: "Singleplayer",
+#   developer: "FromSoftware",
+#   publisher: "Activision",
+#   release_date: "Mar 21, 2019",
+#   detail: "Game of the Year - The Game Awards 2019 Best Action Game of 2019 - IGN Carve your own clever path to vengeance in the award winning adventure from developer FromSoftware, creators of Bloodborne and the Dark Souls series. Take Revenge. Restore Your Honor. Kill Ingeniously.",
+#   description: "This Game of the Year Edition now includes bonus content*:
 
-    - Reflection and Gauntlet of Strength - new boss challenge modes
-    - Remnants - leave messages and recordings of your actions that other players can view and rate
-    - 3 unlockable cosmetic skins
-    
-    Game of the Year - The Game Awards 2019
-    Best Action Game of 2019 - IGN
-    Over 50 awards and nominations
-    
-    Carve your own clever path to vengeance in the critically acclaimed adventure from developer FromSoftware, creators of the Dark Souls series.
-    
-    In Sekiro™: Shadows Die Twice you are the 'one-armed wolf', a disgraced and disfigured warrior rescued from the brink of death. Bound to protect a young lord who is the descendant of an ancient bloodline, you become the target of many vicious enemies, including the dangerous Ashina clan. When the young lord is captured, nothing will stop you on a perilous quest to regain your honor, not even death itself.",
-)
+#     - Reflection and Gauntlet of Strength - new boss challenge modes
+#     - Remnants - leave messages and recordings of your actions that other players can view and rate
+#     - 3 unlockable cosmetic skins
 
-sekiro.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainsekiro.jpeg"),
-                         filename: "mainsekiro.jpeg")
+#     Game of the Year - The Game Awards 2019
+#     Best Action Game of 2019 - IGN
+#     Over 50 awards and nominations
 
-sekiro.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1sekiro.jpg"),
-                          filename: "gameimage1sekiro.jpg")
+#     Carve your own clever path to vengeance in the critically acclaimed adventure from developer FromSoftware, creators of the Dark Souls series.
 
-sekiro.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2sekiro.jpg"),
-                          filename: "gameimage2sekiro.jpg")
+#     In Sekiro™: Shadows Die Twice you are the 'one-armed wolf', a disgraced and disfigured warrior rescued from the brink of death. Bound to protect a young lord who is the descendant of an ancient bloodline, you become the target of many vicious enemies, including the dangerous Ashina clan. When the young lord is captured, nothing will stop you on a perilous quest to regain your honor, not even death itself.",
+# )
 
-sekiro.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3sekiro.jpg"),
-                          filename: "gameimage3sekiro.jpg")
+# sekiro.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainsekiro.jpeg"),
+#                          filename: "mainsekiro.jpeg")
 
-sekiro.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4sekiro.jpg"),
-                          filename: "gameimage4sekiro.jpg")
+# sekiro.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1sekiro.jpg"),
+#                           filename: "gameimage1sekiro.jpg")
 
-riskofrain2 = Game.create!(
-  name: "Risk of Rain 2",
-  price: 24.99,
-  genre: "Action Roguelike",
-  category: "Multiplayer",
-  developer: "Hopoo Games",
-  publisher: "Gearbox Publishing",
-  release_date: "Aug 11, 2020",
-  detail: "Escape a chaotic alien planet by fighting through hordes of frenzied monsters – with your friends, or on your own. Combine loot in surprising ways and master each character until you become the havoc you feared upon your first crash landing.",
-  description: "SURVIVE AN ALIEN PLANET
-    Over a dozen handcrafted locales await, each packed with challenging monsters and enormous bosses that oppose your continued existence. Fight your way to the final boss and escape or continue your run indefinitely to see just how long you can survive. A unique scaling system means both you and your foes limitlessly increase in power over the course of a game.",
-)
+# sekiro.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2sekiro.jpg"),
+#                           filename: "gameimage2sekiro.jpg")
 
-riskofrain2.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainriskofrain2.jpeg"),
-                              filename: "mainriskofrain2.jpeg")
+# sekiro.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3sekiro.jpg"),
+#                           filename: "gameimage3sekiro.jpg")
 
-riskofrain2.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1riskofrain2.jpg"),
-                               filename: "gameimage1riskofrain2.jpg")
+# sekiro.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4sekiro.jpg"),
+#                           filename: "gameimage4sekiro.jpg")
 
-riskofrain2.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2riskofrain2.jpg"),
-                               filename: "gameimage2riskofrain2.jpg")
+# riskofrain2 = Game.create!(
+#   name: "Risk of Rain 2",
+#   price: 24.99,
+#   genre: "Action Roguelike",
+#   category: "Multiplayer",
+#   developer: "Hopoo Games",
+#   publisher: "Gearbox Publishing",
+#   release_date: "Aug 11, 2020",
+#   detail: "Escape a chaotic alien planet by fighting through hordes of frenzied monsters – with your friends, or on your own. Combine loot in surprising ways and master each character until you become the havoc you feared upon your first crash landing.",
+#   description: "SURVIVE AN ALIEN PLANET
+#     Over a dozen handcrafted locales await, each packed with challenging monsters and enormous bosses that oppose your continued existence. Fight your way to the final boss and escape or continue your run indefinitely to see just how long you can survive. A unique scaling system means both you and your foes limitlessly increase in power over the course of a game.",
+# )
 
-riskofrain2.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3riskofrain2.jpg"),
-                               filename: "gameimage3riskofrain2.jpg")
+# riskofrain2.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainriskofrain2.jpeg"),
+#                               filename: "mainriskofrain2.jpeg")
 
-riskofrain2.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4riskofrain2.jpg"),
-                               filename: "gameimage4riskofrain2.jpg")
+# riskofrain2.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1riskofrain2.jpg"),
+#                                filename: "gameimage1riskofrain2.jpg")
+
+# riskofrain2.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2riskofrain2.jpg"),
+#                                filename: "gameimage2riskofrain2.jpg")
+
+# riskofrain2.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3riskofrain2.jpg"),
+#                                filename: "gameimage3riskofrain2.jpg")
+
+# riskofrain2.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4riskofrain2.jpg"),
+#                                filename: "gameimage4riskofrain2.jpg")
 
 raft = Game.create!(
   name: "Raft",
@@ -1294,40 +1294,40 @@ finalfantasy.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws
 finalfantasy.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4finalfantasy.jpg"),
                                 filename: "gameimage4finalfantasy.jpg")
 
-monsterhunter = Game.create!(
-  name: "Monster Hunter: World",
-  price: 29.99,
-  genre: "RPG",
-  category: "Open World",
-  developer: "CAPCOM Co., Ltd.",
-  publisher: "CAPCOM Co., Ltd.",
-  release_date: "Aug 9, 2018",
-  detail: "Welcome to a new world! In Monster Hunter: World, the latest installment in the series, you can enjoy the ultimate hunting experience, using everything at your disposal to hunt monsters in a new world teeming with surprises and excitement.",
-  description: "Welcome to a new world! Take on the role of a hunter and slay ferocious monsters in a living, breathing ecosystem where you can use the landscape and its diverse inhabitants to get the upper hand. Hunt alone or in co-op with up to three other players, and use materials collected from fallen foes to craft new gear and take on even bigger, badder beasts!
-    INTRODUCTION
-    Overview
-    Battle gigantic monsters in epic locales.
-    
-    As a hunter, you'll take on quests to hunt monsters in a variety of habitats.
-    Take down these monsters and receive materials that you can use to create stronger weapons and armor in order to hunt even more dangerous monsters.
-    
-    In Monster Hunter: World, the latest installment in the series, you can enjoy the ultimate hunting experience, using everything at your disposal to hunt monsters in a new world teeming with surprises and excitement.",
-)
+# monsterhunter = Game.create!(
+#   name: "Monster Hunter: World",
+#   price: 29.99,
+#   genre: "RPG",
+#   category: "Open World",
+#   developer: "CAPCOM Co., Ltd.",
+#   publisher: "CAPCOM Co., Ltd.",
+#   release_date: "Aug 9, 2018",
+#   detail: "Welcome to a new world! In Monster Hunter: World, the latest installment in the series, you can enjoy the ultimate hunting experience, using everything at your disposal to hunt monsters in a new world teeming with surprises and excitement.",
+#   description: "Welcome to a new world! Take on the role of a hunter and slay ferocious monsters in a living, breathing ecosystem where you can use the landscape and its diverse inhabitants to get the upper hand. Hunt alone or in co-op with up to three other players, and use materials collected from fallen foes to craft new gear and take on even bigger, badder beasts!
+#     INTRODUCTION
+#     Overview
+#     Battle gigantic monsters in epic locales.
 
-monsterhunter.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainmonsterhunter.jpeg"),
-                                filename: "mainmonsterhunter.jpeg")
+#     As a hunter, you'll take on quests to hunt monsters in a variety of habitats.
+#     Take down these monsters and receive materials that you can use to create stronger weapons and armor in order to hunt even more dangerous monsters.
 
-monsterhunter.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1monsterhunter.jpg"),
-                                 filename: "gameimage1monsterhunter.jpg")
+#     In Monster Hunter: World, the latest installment in the series, you can enjoy the ultimate hunting experience, using everything at your disposal to hunt monsters in a new world teeming with surprises and excitement.",
+# )
 
-monsterhunter.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2monsterhunter.jpg"),
-                                 filename: "gameimage2monsterhunter.jpg")
+# monsterhunter.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainmonsterhunter.jpeg"),
+#                                 filename: "mainmonsterhunter.jpeg")
 
-monsterhunter.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3monsterhunter.jpg"),
-                                 filename: "gameimage3monsterhunter.jpg")
+# monsterhunter.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1monsterhunter.jpg"),
+#                                  filename: "gameimage1monsterhunter.jpg")
 
-monsterhunter.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4monsterhunter.jpg"),
-                                 filename: "gameimage4monsterhunter.jpg")
+# monsterhunter.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2monsterhunter.jpg"),
+#                                  filename: "gameimage2monsterhunter.jpg")
+
+# monsterhunter.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3monsterhunter.jpg"),
+#                                  filename: "gameimage3monsterhunter.jpg")
+
+# monsterhunter.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4monsterhunter.jpg"),
+#                                  filename: "gameimage4monsterhunter.jpg")
 
 persona4 = Game.create!(
   name: "Persona 4 Golden",
@@ -1385,129 +1385,129 @@ persona3.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com
 persona3.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4persona3.jpg"),
                             filename: "gameimage4persona3.jpg")
 
-battlefield = Game.create!(
-  name: "Battlefield™ V",
-  price: 49.99,
-  genre: "FPS",
-  category: "Multiplayer",
-  developer: "DICE",
-  publisher: "Electronic Arts",
-  release_date: "Nov 9, 2018",
-  detail: "This is the ultimate Battlefield V experience. Enter mankind’s greatest conflict with the complete arsenal of weapons, vehicles, and gadgets plus the best customization content of Year 1 and 2.",
-  description: "This is the ultimate Battlefield V experience. Enter mankind’s greatest conflict across land, air, and sea with all gameplay content unlocked from the get-go. Choose from the complete arsenal of weapons, vehicles, and gadgets, and immerse yourself in the hard-fought battles of World War II. Stand out on the battlefield with the complete roster of Elites and the best customization content of Year 1 and Year 2.",
-)
+# battlefield = Game.create!(
+#   name: "Battlefield™ V",
+#   price: 49.99,
+#   genre: "FPS",
+#   category: "Multiplayer",
+#   developer: "DICE",
+#   publisher: "Electronic Arts",
+#   release_date: "Nov 9, 2018",
+#   detail: "This is the ultimate Battlefield V experience. Enter mankind’s greatest conflict with the complete arsenal of weapons, vehicles, and gadgets plus the best customization content of Year 1 and 2.",
+#   description: "This is the ultimate Battlefield V experience. Enter mankind’s greatest conflict across land, air, and sea with all gameplay content unlocked from the get-go. Choose from the complete arsenal of weapons, vehicles, and gadgets, and immerse yourself in the hard-fought battles of World War II. Stand out on the battlefield with the complete roster of Elites and the best customization content of Year 1 and Year 2.",
+# )
 
-battlefield.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainbattlefield.jpeg"),
-                              filename: "mainbattlefield.jpeg")
+# battlefield.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainbattlefield.jpeg"),
+#                               filename: "mainbattlefield.jpeg")
 
-battlefield.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1battlefield.jpg"),
-                               filename: "gameimage1battlefield.jpg")
+# battlefield.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1battlefield.jpg"),
+#                                filename: "gameimage1battlefield.jpg")
 
-battlefield.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2battlefield.jpg"),
-                               filename: "gameimage2battlefield.jpg")
+# battlefield.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2battlefield.jpg"),
+#                                filename: "gameimage2battlefield.jpg")
 
-battlefield.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3battlefield.jpg"),
-                               filename: "gameimage3battlefield.jpg")
+# battlefield.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3battlefield.jpg"),
+#                                filename: "gameimage3battlefield.jpg")
 
-battlefield.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4battlefield.jpg"),
-                               filename: "gameimage4battlefield.jpg")
+# battlefield.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4battlefield.jpg"),
+#                                filename: "gameimage4battlefield.jpg")
 
-ittakestwo = Game.create!(
-  name: "It Takes Two",
-  price: 39.99,
-  genre: "Split Screen",
-  category: "Multiplayer",
-  developer: "Hazelight",
-  publisher: "Electronic Arts",
-  release_date: "Mar 26, 2021",
-  detail: "Embark on the craziest journey of your life in It Takes Two. Invite a friend to join for free with Friend’s Pass and work together across a huge variety of gleefully disruptive gameplay challenges. Winner of GAME OF THE YEAR at the Game Awards 2021.",
-  description: "Embark on the craziest journey of your life in It Takes Two, a genre-bending platform adventure created purely for co-op. Invite a friend to join for free with Friend’s Pass and work together across a huge variety of gleefully disruptive gameplay challenges. Play as the clashing couple Cody and May, two humans turned into dolls by a magic spell. Together, trapped in a fantastical world where the unpredictable hides around every corner, they are reluctantly challenged with saving their fractured relationship.
+# ittakestwo = Game.create!(
+#   name: "It Takes Two",
+#   price: 39.99,
+#   genre: "Split Screen",
+#   category: "Multiplayer",
+#   developer: "Hazelight",
+#   publisher: "Electronic Arts",
+#   release_date: "Mar 26, 2021",
+#   detail: "Embark on the craziest journey of your life in It Takes Two. Invite a friend to join for free with Friend’s Pass and work together across a huge variety of gleefully disruptive gameplay challenges. Winner of GAME OF THE YEAR at the Game Awards 2021.",
+#   description: "Embark on the craziest journey of your life in It Takes Two, a genre-bending platform adventure created purely for co-op. Invite a friend to join for free with Friend’s Pass and work together across a huge variety of gleefully disruptive gameplay challenges. Play as the clashing couple Cody and May, two humans turned into dolls by a magic spell. Together, trapped in a fantastical world where the unpredictable hides around every corner, they are reluctantly challenged with saving their fractured relationship.
 
-    Master unique and connected character abilities in every new level. Help each other across an abundance of unexpected obstacles and laugh-out-loud moments. Kick gangster squirrels’ furry tails, pilot a pair of underpants, DJ a buzzing night club, and bobsleigh through a magical snow globe. Embrace a heartfelt and hilarious story where narrative and gameplay weave into a uniquely metaphorical experience.
-    
-    It Takes Two is developed by the award-winning studio Hazelight, the industry leader of cooperative play. They’re about to take you on a wild and wondrous ride where only one thing is for certain: we’re better together.",
-)
+#     Master unique and connected character abilities in every new level. Help each other across an abundance of unexpected obstacles and laugh-out-loud moments. Kick gangster squirrels’ furry tails, pilot a pair of underpants, DJ a buzzing night club, and bobsleigh through a magical snow globe. Embrace a heartfelt and hilarious story where narrative and gameplay weave into a uniquely metaphorical experience.
 
-ittakestwo.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainittakestwo.jpeg"),
-                             filename: "mainittakestwo.jpeg")
+#     It Takes Two is developed by the award-winning studio Hazelight, the industry leader of cooperative play. They’re about to take you on a wild and wondrous ride where only one thing is for certain: we’re better together.",
+# )
 
-ittakestwo.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1ittakestwo.jpg"),
-                              filename: "gameimage1ittakestwo.jpg")
+# ittakestwo.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainittakestwo.jpeg"),
+#                              filename: "mainittakestwo.jpeg")
 
-ittakestwo.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2ittakestwo.jpg"),
-                              filename: "gameimage2ittakestwo.jpg")
+# ittakestwo.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1ittakestwo.jpg"),
+#                               filename: "gameimage1ittakestwo.jpg")
 
-ittakestwo.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3ittakestwo.jpg"),
-                              filename: "gameimage3ittakestwo.jpg")
+# ittakestwo.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2ittakestwo.jpg"),
+#                               filename: "gameimage2ittakestwo.jpg")
 
-ittakestwo.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4ittakestwo.jpg"),
-                              filename: "gameimage4ittakestwo.jpg")
+# ittakestwo.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3ittakestwo.jpg"),
+#                               filename: "gameimage3ittakestwo.jpg")
 
-vrising = Game.create!(
-  name: "V Rising",
-  price: 19.99,
-  genre: "Vampire",
-  category: "Open World",
-  developer: "Stunlock Studios",
-  publisher: "Stunlock Studios",
-  release_date: "May 17, 2022",
-  detail: "Awaken as a vampire. Hunt for blood in nearby settlements to regain your strength and evade the scorching sun to survive. Raise your castle and thrive in an ever-changing open world full of mystery. Gain allies online and conquer the land of the living.",
-  description: "A Vampire Survival Experience
+# ittakestwo.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4ittakestwo.jpg"),
+#                               filename: "gameimage4ittakestwo.jpg")
 
-    Awaken as a weakened vampire after centuries of slumber. Hunt for blood to regain your strength while hiding from the scorching sun to survive. Rebuild your castle and convert humans into your loyal servants in a quest to raise your vampire empire. Make allies or enemies online or play solo locally, fend off holy soldiers, and wage war in a world of conflict.
-    
-    Will you become the next Dracula?
-    A Gothic Open-World
-    Explore a vast world teeming with mythical horrors and danger. Travel through lush forests, open countryside, and dark caverns to discover valuable resources, meeting friends and foes alike along the way. Traverse the world with vampire comrades or hunt solo as you pillage villages, raid bandits, and delve into the domains of supernatural beasts.",
-)
+# vrising = Game.create!(
+#   name: "V Rising",
+#   price: 19.99,
+#   genre: "Vampire",
+#   category: "Open World",
+#   developer: "Stunlock Studios",
+#   publisher: "Stunlock Studios",
+#   release_date: "May 17, 2022",
+#   detail: "Awaken as a vampire. Hunt for blood in nearby settlements to regain your strength and evade the scorching sun to survive. Raise your castle and thrive in an ever-changing open world full of mystery. Gain allies online and conquer the land of the living.",
+#   description: "A Vampire Survival Experience
 
-vrising.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainvrising.jpeg"),
-                          filename: "mainvrising.jpeg")
+#     Awaken as a weakened vampire after centuries of slumber. Hunt for blood to regain your strength while hiding from the scorching sun to survive. Rebuild your castle and convert humans into your loyal servants in a quest to raise your vampire empire. Make allies or enemies online or play solo locally, fend off holy soldiers, and wage war in a world of conflict.
 
-vrising.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1vrising.jpg"),
-                           filename: "gameimage1vrising.jpg")
+#     Will you become the next Dracula?
+#     A Gothic Open-World
+#     Explore a vast world teeming with mythical horrors and danger. Travel through lush forests, open countryside, and dark caverns to discover valuable resources, meeting friends and foes alike along the way. Traverse the world with vampire comrades or hunt solo as you pillage villages, raid bandits, and delve into the domains of supernatural beasts.",
+# )
 
-vrising.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2vrising.jpg"),
-                           filename: "gameimage2vrising.jpg")
+# vrising.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainvrising.jpeg"),
+#                           filename: "mainvrising.jpeg")
 
-vrising.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3vrising.jpg"),
-                           filename: "gameimage3vrising.jpg")
+# vrising.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1vrising.jpg"),
+#                            filename: "gameimage1vrising.jpg")
 
-vrising.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4vrising.jpg"),
-                           filename: "gameimage4vrising.jpg")
+# vrising.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2vrising.jpg"),
+#                            filename: "gameimage2vrising.jpg")
 
-huntshowdown = Game.create!(
-  name: "Hunt: Showdown",
-  price: 39.99,
-  genre: "Atmospheric",
-  category: "Open World",
-  developer: "Crytek",
-  publisher: "Crytek",
-  release_date: "Aug 27, 2019",
-  detail: "Hunt: Showdown is a high-stakes, tactical PvPvE first-person shooter. Hunt for bounties in the infested Bayou, kill nightmarish monsters and outwit competing hunters - alone or in a group - with your glory, gear, and gold on the line.",
-  description: "HUNT TOGETHER. DIE ALONE.
+# vrising.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3vrising.jpg"),
+#                            filename: "gameimage3vrising.jpg")
 
-    The year is 1895, and you are a Hunter tasked with eliminating the savage, nightmarish monsters that have infested the Louisiana Bayou. Play alone or in teams of two or three, as you search for clues to help you track your target and compete against other Hunters who are after the same reward. Kill and banish your target, collect the bounty, and then get ready for the showdown; once the bounty is in your hands every other Hunter on the map will be after your prize. Show no mercy as you fight through a dark, ruthless world with brutal, period-inspired weapons, as you level up, unlock gear, and collect experience and gold for your Bloodline.
-    
-    HIGH-RISK, HIGH-REWARD, HIGH-TENSION GAMEPLAY
-    
-    Competitive, match-based gameplay combines PvP and PvE elements to create a uniquely tense PvEvP experience where your character and your gear are always on the line. Succeed, and you will be rewarded handsomely but remember – a single mistake could cost you your Hunter – and any gear they were carrying.",
-)
+# vrising.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4vrising.jpg"),
+#                            filename: "gameimage4vrising.jpg")
 
-huntshowdown.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainhuntshowdown.jpeg"),
-                               filename: "mainhuntshowdown.jpeg")
+# huntshowdown = Game.create!(
+#   name: "Hunt: Showdown",
+#   price: 39.99,
+#   genre: "Atmospheric",
+#   category: "Open World",
+#   developer: "Crytek",
+#   publisher: "Crytek",
+#   release_date: "Aug 27, 2019",
+#   detail: "Hunt: Showdown is a high-stakes, tactical PvPvE first-person shooter. Hunt for bounties in the infested Bayou, kill nightmarish monsters and outwit competing hunters - alone or in a group - with your glory, gear, and gold on the line.",
+#   description: "HUNT TOGETHER. DIE ALONE.
 
-huntshowdown.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1huntshowdown.jpg"),
-                                filename: "gameimage1huntshowdown.jpg")
+#     The year is 1895, and you are a Hunter tasked with eliminating the savage, nightmarish monsters that have infested the Louisiana Bayou. Play alone or in teams of two or three, as you search for clues to help you track your target and compete against other Hunters who are after the same reward. Kill and banish your target, collect the bounty, and then get ready for the showdown; once the bounty is in your hands every other Hunter on the map will be after your prize. Show no mercy as you fight through a dark, ruthless world with brutal, period-inspired weapons, as you level up, unlock gear, and collect experience and gold for your Bloodline.
 
-huntshowdown.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2huntshowdown.jpg"),
-                                filename: "gameimage2huntshowdown.jpg")
+#     HIGH-RISK, HIGH-REWARD, HIGH-TENSION GAMEPLAY
 
-huntshowdown.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3huntshowdown.jpg"),
-                                filename: "gameimage3huntshowdown.jpg")
+#     Competitive, match-based gameplay combines PvP and PvE elements to create a uniquely tense PvEvP experience where your character and your gear are always on the line. Succeed, and you will be rewarded handsomely but remember – a single mistake could cost you your Hunter – and any gear they were carrying.",
+# )
 
-huntshowdown.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4huntshowdown.jpg"),
-                                filename: "gameimage4huntshowdown.jpg")
+# huntshowdown.main_image.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/mainhuntshowdown.jpeg"),
+#                                filename: "mainhuntshowdown.jpeg")
+
+# huntshowdown.game_image1.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage1huntshowdown.jpg"),
+#                                 filename: "gameimage1huntshowdown.jpg")
+
+# huntshowdown.game_image2.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage2huntshowdown.jpg"),
+#                                 filename: "gameimage2huntshowdown.jpg")
+
+# huntshowdown.game_image3.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage3huntshowdown.jpg"),
+#                                 filename: "gameimage3huntshowdown.jpg")
+
+# huntshowdown.game_image4.attach(io: URI.open("https://staream-seeds.s3.amazonaws.com/gameimage4huntshowdown.jpg"),
+#                                 filename: "gameimage4huntshowdown.jpg")
 
 #  = Game.create!(
 #   name: ,

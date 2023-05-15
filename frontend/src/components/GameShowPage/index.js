@@ -19,9 +19,23 @@ const GameShowPage = () => {
   const user = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
 
-  const holocureStyles = {
-    marginTop: "16vw",
-    marginLeft: "13.85vw",
+  const reviewFormStyles = {
+    Holocure: {
+      marginTop: "16vw",
+      marginLeft: "13.85vw",
+    },
+    "Among Us": {
+      marginTop: "15vw",
+      marginLeft: "13.85vw",
+    },
+    Terraria: {
+      marginTop: "14vw",
+      marginLeft: "13.85vw",
+    },
+    "Destiny 2": {
+      marginTop: "14vw",
+      marginLeft: "13.85vw",
+    },
   };
 
   // const games2 = useSelector((state) => {
@@ -52,10 +66,7 @@ const GameShowPage = () => {
           <div className="ShowPageComponents">
             <GameShowCarousel key={game.id} game={game} />
             <GameShowInfo game={game} />
-            <div
-              id="reviewForm1"
-              style={game.name === "Holocure" ? holocureStyles : {}}
-            >
+            <div id="reviewForm1" style={reviewFormStyles[game.name] || {}}>
               <ReviewForm gameId={game.id} user={user} gamename={game.name} />
             </div>
             <div className="gameinfobuyBox">
