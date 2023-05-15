@@ -15,7 +15,11 @@ import ReviewForm from "./reviews/ReviewForm";
 
 const GameShowPage = () => {
   const { id } = useParams();
-  const game = useSelector((state) => state.games.all[id]) || {};
+  const game =
+    useSelector((state) =>
+      state.games && state.games.all ? state.games.all[id] : {}
+    ) || {};
+
   const user = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
 
@@ -61,29 +65,38 @@ const GameShowPage = () => {
             <GameNavbar />
           </div>
 
-          <h1 className="gameNameShowPage">{game.name}</h1>
+          {game && <h1 className="gameNameShowPage">{game.name}</h1>}
 
-          <div className="ShowPageComponents">
-            <GameShowCarousel key={game.id} game={game} />
-            <GameShowInfo game={game} />
-            <div id="reviewForm1" style={reviewFormStyles[game.name] || {}}>
-              <ReviewForm gameId={game.id} user={user} gamename={game.name} />
-            </div>
-            <div className="gameinfobuyBox">
-              <AddToCartButton game={game} />
-              <div className="gamesShowInfoDes">
-                <h1>ABOUT THIS GAME</h1>
-                <p>{game.description}</p>
+          {game && (
+            <div className="ShowPageComponents">
+              <GameShowCarousel key={game.id} game={game} />
+              <GameShowInfo game={game} />
+              <div id="reviewForm1" style={reviewFormStyles[game.name] || {}}>
+                {game && user && (
+                  <ReviewForm
+                    gameId={game.id}
+                    user={user}
+                    gamename={game.name}
+                  />
+                )}
               </div>
-            </div>
+              <div className="gameinfobuyBox">
+                <AddToCartButton game={game} />
+                {game && (
+                  <div className="gamesShowInfoDes">
+                    <h1>ABOUT THIS GAME</h1>
+                    <p>{game.description}</p>
+                  </div>
+                )}
+              </div>
 
-            {/* Add the Review components below */}
-            {game.id && (
-              <div className="game-reviews">
-                <ReviewList gameId={game.id} currentUserId={user && user.id} />
-              </div>
-            )}
-          </div>
+              {game && game.id && user && (
+                <div className="game-reviews">
+                  <ReviewList gameId={game.id} currentUserId={user.id} />
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
       <div className="showPageFooter">
