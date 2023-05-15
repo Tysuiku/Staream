@@ -11,7 +11,7 @@ import {
 import { useHistory } from "react-router-dom";
 import "./cartpage.css";
 import GameNavbar from "../HomePage/GameNavbar/GameNavbar";
-import { fetchGames } from "../../store/games";
+// import { fetchGames } from "../../store/games";
 import Footer from "../Footer";
 
 const CartPage = () => {
@@ -21,12 +21,12 @@ const CartPage = () => {
 
   useEffect(() => {
     dispatch(fetchCartItems());
-    dispatch(fetchGames());
+    // dispatch(fetchGames());
   }, [dispatch]);
 
-  const games2 = useSelector((state) => {
-    return Object.values(state.games);
-  });
+  // const games2 = useSelector((state) => {
+  //   return Object.values(state.games);
+  // });
 
   const handleRemoveCartItem = (cartItemId) => {
     dispatch(deleteCartItem(cartItemId));
@@ -58,7 +58,7 @@ const CartPage = () => {
     <div>
       <div className="cartPageItemsBox">
         <div className="cartPageNavbar">
-          <GameNavbar games={games2} />
+          <GameNavbar />
         </div>
         <h2 className="youShopCart">YOUR SHOPPING CART</h2>
         <div className="cartVisualEffect"></div>

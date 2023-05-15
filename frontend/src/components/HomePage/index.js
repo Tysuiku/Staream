@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchGames } from "../../store/games";
 import GameList from "./GameList/GameList";
@@ -12,19 +12,28 @@ const HomePage = () => {
   document.title = "Welcome to Staream";
   const dispatch = useDispatch();
 
-  const games = useSelector((state) => {
-    const gameArr = Object.values(state.games);
-    gameArr.sort(() => Math.random() - 0.5);
-    return gameArr.slice(0, 10);
-  });
+  const gamesFromStore = useSelector((state) => Object.values(state.games));
 
-  const games2 = useSelector((state) => {
-    return Object.values(state.games);
-  });
+  const [games, setGames] = useState([]);
+  const [randomGames, setRandomGames] = useState([]);
+
+  useEffect(() => {
+    if (gamesFromStore.length > 0) {
+      setGames(gamesFromStore);
+      let randomGames = [...gamesFromStore].sort(() => Math.random() - 0.5);
+      setRandomGames(randomGames.slice(0, 10));
+    }
+  }, [gamesFromStore.length]);
 
   useEffect(() => {
     dispatch(fetchGames());
   }, [dispatch]);
+
+  // const simplifiedGames = games.map((game) => ({
+  //   id: game.id,
+  //   name: game.name,
+  //   mainImage: game.mainImage,
+  // }));
 
   return (
     <div className="homePageShowPageBox">
@@ -33,13 +42,13 @@ const HomePage = () => {
           <NavLink to={"/cart"}>
             <p className="indexCart">Cart</p>
           </NavLink>
-          <GameNavbar games={games2} />
+          <GameNavbar />
         </div>
         <div id="GameCarouselHome">
-          <GameCarousel games={games} />
+          <GameCarousel games={randomGames} />
         </div>
         <div id="GameListHome">
-          <GameList games={games} />
+          <GameList games={randomGames} />
         </div>
       </div>
 
