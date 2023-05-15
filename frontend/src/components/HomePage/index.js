@@ -10,7 +10,7 @@ import Footer from "../Footer";
 
 const HomePage = () => {
   document.title = "Welcome to Staream";
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const gamesFromStore = useSelector((state) => Object.values(state.games));
 
