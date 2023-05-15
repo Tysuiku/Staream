@@ -36,6 +36,10 @@ const GameShowPage = () => {
         marginTop: "14vw",
         marginLeft: "13.85vw",
       },
+      "Destiny 2": {
+        marginTop: "15vw",
+        marginLeft: "13.85vw",
+      },
     },
     []
   );
