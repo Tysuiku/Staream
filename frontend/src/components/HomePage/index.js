@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchGames } from "../../store/games";
+// import { fetchGames } from "../../store/games";
 import GameList from "./GameList/GameList";
 import "./HomePage.css";
 import GameCarousel from "./GameCarousel/GameCarousel";
@@ -25,9 +25,9 @@ const HomePage = () => {
     }
   }, [gamesFromStore.length]);
 
-  useEffect(() => {
-    dispatch(fetchGames());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchGames());
+  // }, [dispatch]);
 
   // const simplifiedGames = games.map((game) => ({
   //   id: game.id,
