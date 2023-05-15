@@ -5,7 +5,7 @@ import GameShowCarousel from "./GameShowCarousel/GameShowCarousel";
 import GameShowInfo from "./GameShowInfo/GameShowInfo";
 import AddToCartButton from "./AddToCartButton";
 import { fetchGame } from "../../store/games";
-import { fetchGames } from "../../store/games";
+// import { fetchGames } from "../../store/games";
 import "./ShowPage.css";
 import GameNavbar from "../HomePage/GameNavbar/GameNavbar";
 import { NavLink } from "react-router-dom";
@@ -24,17 +24,17 @@ const GameShowPage = () => {
     marginLeft: "13.85vw",
   };
 
-  const games2 = useSelector((state) => {
-    return Object.values(state.games);
-  });
+  // const games2 = useSelector((state) => {
+  //   return Object.values(state.games);
+  // });
 
   useEffect(() => {
     dispatch(fetchGame(id));
   }, [dispatch, id]);
 
-  useEffect(() => {
-    dispatch(fetchGames());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchGames());
+  // }, [dispatch]);
 
   return (
     <div className="showPageMainBox">
@@ -44,7 +44,7 @@ const GameShowPage = () => {
         </NavLink>
         <div className="allgameshowpageItems">
           <div className="gameNavBarShowPage">
-            <GameNavbar games={games2} />
+            <GameNavbar />
           </div>
 
           <h1 className="gameNameShowPage">{game.name}</h1>

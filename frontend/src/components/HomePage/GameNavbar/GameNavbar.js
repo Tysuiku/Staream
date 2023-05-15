@@ -1,14 +1,50 @@
-import { useState } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { debounce } from "lodash";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchGames } from "../../../store/games";
 import badapple from "./touhou badapple.jpeg";
 import "./GameNavbar.css";
 
-export default function GameNavbar({ games }) {
+export default function GameNavbar() {
   const [value, setValue] = useState("");
+  const [filteredGames, setFilteredGames] = useState([]);
+  const dispatch = useDispatch();
+
+  const games = useSelector((state) => Object.values(state.games));
+
+  useEffect(() => {
+    dispatch(fetchGames());
+  }, [dispatch]);
 
   const onChange = (event) => {
     setValue(event.target.value);
   };
+
+  const debouncedSearch = useMemo(
+    () =>
+      debounce((searchValue) => {
+        const lowercasedValue = searchValue.toLowerCase();
+        const filtered = games.filter((game) => {
+          if (!game || !game.name) return false;
+
+          const gameName = game.name.toLowerCase();
+
+          return (
+            lowercasedValue &&
+            gameName.startsWith(lowercasedValue) &&
+            gameName !== lowercasedValue
+          );
+        });
+
+        setFilteredGames(filtered.slice(0, 5));
+      }, 300),
+    [games]
+  );
+
+  useEffect(() => {
+    debouncedSearch(value);
+  }, [value, debouncedSearch]);
 
   return (
     <div className="GameNavbarBox">
@@ -29,31 +65,17 @@ export default function GameNavbar({ games }) {
             />
           </div>
           <div className="dropdown">
-            {games
-              .filter((game) => {
-                if (!game || !game.name) return false;
-
-                const searchTerm = value.toLowerCase();
-                const gameName = game.name.toLowerCase();
-
-                return (
-                  searchTerm &&
-                  gameName.startsWith(searchTerm) &&
-                  gameName !== searchTerm
-                );
-              })
-              .slice(0, 5)
-              .map((game) => (
-                <NavLink
-                  to={`/games/${game.id}`}
-                  className="dropdown-row"
-                  key={game.id}
-                  onClick={() => setValue(game.name)}
-                >
-                  <img src={game.mainImage} alt={game.name} />
-                  {game.name}
-                </NavLink>
-              ))}
+            {filteredGames.map((game) => (
+              <NavLink
+                to={`/games/${game.id}`}
+                className="dropdown-row"
+                key={game.id}
+                onClick={() => setValue(game.name)}
+              >
+                <img src={game.mainImage} alt={game.name} />
+                {game.name}
+              </NavLink>
+            ))}
           </div>
         </div>
       </div>
