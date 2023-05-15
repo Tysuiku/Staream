@@ -11,7 +11,7 @@ export default function GameNavbar() {
   const [filteredGames, setFilteredGames] = useState([]);
   const dispatch = useDispatch();
 
-  const games = useSelector((state) => Object.values(state.games));
+  const games = useSelector((state) => Object.values(state.games.all));
 
   useEffect(() => {
     dispatch(fetchGames());
