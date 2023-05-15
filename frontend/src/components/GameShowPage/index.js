@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import GameShowCarousel from "./GameShowCarousel/GameShowCarousel";
 import GameShowInfo from "./GameShowInfo/GameShowInfo";
 import AddToCartButton from "./AddToCartButton";
 import { fetchGame } from "../../store/games";
-// import { fetchGames } from "../../store/games";
 import "./ShowPage.css";
 import GameNavbar from "../HomePage/GameNavbar/GameNavbar";
 import { NavLink } from "react-router-dom";
@@ -23,36 +22,27 @@ const GameShowPage = () => {
   const user = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
 
-  const reviewFormStyles = {
-    Holocure: {
-      marginTop: "16vw",
-      marginLeft: "13.85vw",
+  const reviewFormStyles = useCallback(
+    {
+      Holocure: {
+        marginTop: "16vw",
+        marginLeft: "13.85vw",
+      },
+      "Among Us": {
+        marginTop: "15vw",
+        marginLeft: "13.85vw",
+      },
+      Terraria: {
+        marginTop: "14vw",
+        marginLeft: "13.85vw",
+      },
     },
-    "Among Us": {
-      marginTop: "15vw",
-      marginLeft: "13.85vw",
-    },
-    Terraria: {
-      marginTop: "14vw",
-      marginLeft: "13.85vw",
-    },
-    "Destiny 2": {
-      marginTop: "14vw",
-      marginLeft: "13.85vw",
-    },
-  };
-
-  // const games2 = useSelector((state) => {
-  //   return Object.values(state.games);
-  // });
+    []
+  );
 
   useEffect(() => {
     dispatch(fetchGame(id));
   }, [dispatch, id]);
-
-  // useEffect(() => {
-  //   dispatch(fetchGames());
-  // }, [dispatch]);
 
   return (
     <div className="showPageMainBox">
@@ -69,11 +59,11 @@ const GameShowPage = () => {
 
           {game && (
             <div className="ShowPageComponents">
-              <GameShowCarousel key={game.id} game={game} />
-              <GameShowInfo game={game} />
+              <MemoizedGameShowCarousel key={game.id} game={game} />
+              <MemoizedGameShowInfo game={game} />
               <div id="reviewForm1" style={reviewFormStyles[game.name] || {}}>
                 {game && user && (
-                  <ReviewForm
+                  <MemoizedReviewForm
                     gameId={game.id}
                     user={user}
                     gamename={game.name}
@@ -92,7 +82,10 @@ const GameShowPage = () => {
 
               {game && game.id && user && (
                 <div className="game-reviews">
-                  <ReviewList gameId={game.id} currentUserId={user.id} />
+                  <MemoizedReviewList
+                    gameId={game.id}
+                    currentUserId={user.id}
+                  />
                 </div>
               )}
             </div>
@@ -105,5 +98,10 @@ const GameShowPage = () => {
     </div>
   );
 };
+
+const MemoizedGameShowCarousel = React.memo(GameShowCarousel);
+const MemoizedGameShowInfo = React.memo(GameShowInfo);
+const MemoizedReviewForm = React.memo(ReviewForm);
+const MemoizedReviewList = React.memo(ReviewList);
 
 export default GameShowPage;

@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -10,6 +11,34 @@ import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper/core";
 SwiperCore.use([Autoplay, Navigation, Pagination]);
 
 export default function GameCarousel({ games }) {
+  const [gameData, setGameData] = useState([]);
+
+  useEffect(() => {
+    if (games.length > 0) {
+      // Only keep the properties we need
+      const newGameData = games.map(
+        ({
+          id,
+          mainImage,
+          name,
+          gameImage1,
+          gameImage2,
+          gameImage3,
+          gameImage4,
+        }) => ({
+          id,
+          mainImage,
+          name,
+          gameImage1,
+          gameImage2,
+          gameImage3,
+          gameImage4,
+        })
+      );
+
+      setGameData(newGameData);
+    }
+  }, [games]);
   return (
     <div className="allGameCarouselBox">
       <h1 className="featured">FEATURED & RECOMMENDED</h1>
@@ -34,7 +63,7 @@ export default function GameCarousel({ games }) {
           }}
           className="mySwiper"
         >
-          {games.map((game) => (
+          {gameData.map((game) => (
             <SwiperSlide key={game.id}>
               <div className="game-slide">
                 <NavLink to={`/games/${game.id}`} key={game.id}>
