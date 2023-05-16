@@ -6,11 +6,14 @@ async function csrfFetch(url, options = {}) {
     options.headers["Content-Type"] =
       options.headers["Content-Type"] || "application/json";
     options.headers["X-CSRF-Token"] = sessionStorage.getItem("X-CSRF-Token");
-    console.log(sessionStorage.getItem("X-CSRF-Token"));
   }
 
   const res = await fetch(url, options);
   if (res.status >= 400) throw res;
+
+  // Store the CSRF token after each request, not just non-GET requests
+  storeCSRFToken(res);
+
   return res;
 }
 
