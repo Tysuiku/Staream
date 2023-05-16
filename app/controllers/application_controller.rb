@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::API
   include ActionController::RequestForgeryProtection
-  protect_from_forgery with: :exception
+  protect_from_forgery with: :null_session
 
   rescue_from StandardError, with: :unhandled_error
   rescue_from ActionController::InvalidAuthenticityToken,
