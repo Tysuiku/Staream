@@ -36,6 +36,8 @@ export const restoreSession = () => async (dispatch) => {
 };
 export const login = (user) => async (dispatch) => {
   const { credential, password } = user;
+
+  // The csrfFetch function is asynchronous, so you need to wait for it to complete
   const res = await csrfFetch("/api/session", {
     method: "POST",
     body: JSON.stringify({
@@ -43,9 +45,14 @@ export const login = (user) => async (dispatch) => {
       password,
     }),
   });
+
+  // Once the csrfFetch promise has resolved, you can read the response data
   const data = await res.json();
+
+  // Store the user data and dispatch the action
   storeCurrentUser(data.user);
   dispatch(receiveUser(data.user));
+
   return res;
 };
 
