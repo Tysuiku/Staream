@@ -25,11 +25,15 @@
 
 .loginSignupLink{
     color: #b8b6b4;
+    font-size: 1vw;
+    padding: 1vw;
 }
 
 .loginSignupDivder{
     color: #b8b6b4;
     text-decoration: none;
+    font-size: 1vw;
+    padding: 1vw;
 }
 
 .supscript {
