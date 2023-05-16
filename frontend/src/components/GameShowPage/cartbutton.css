@@ -11,6 +11,7 @@
     cursor: pointer;
     border-radius: 2px;
     width: 6vw;
+    padding: 0.4vw;
     font-weight: bold;
     position: relative;
     left: 38vw;
@@ -27,7 +28,7 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    padding: 0.7vh;
+    padding: 0.4vw;
     /* margin: 4px 2px; */
     cursor: pointer;
     border-radius: 2px;
@@ -43,7 +44,7 @@
     background: linear-gradient(#799905 5%,#536904 95%);
     border: none;
     color: #d2efa9;
-    padding: 0.7vh;
+    padding: 0.4vw;
     text-align: center;
     text-decoration: none;
     display: inline-block;

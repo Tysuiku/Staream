@@ -20,7 +20,7 @@ export const clearReviews = () => ({
 export const fetchReviews = (gameId) => async (dispatch) => {
   const response = await csrfFetch(`/api/games/${gameId}/reviews`);
   const data = await response.json();
-  console.log("Fetched reviews:", data);
+  // console.log("Fetched reviews:", data);
 
   dispatch(setReviews(data.reviews)); // Access the array using the key 'reviews'
 };

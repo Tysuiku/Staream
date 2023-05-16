@@ -31,6 +31,7 @@ export default function Footer() {
           <span className="plainText"> AWS S3</span> |
           <span className="plainText"> Ruby on Rails</span> |
           <span className="plainText"> PostgreSQL</span> |
+          <span className="plainText"> JavaScript</span> |
         </span>
         <span>
           <p className="titleTextFoot">Find Me</p>
