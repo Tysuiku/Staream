@@ -1,7 +1,7 @@
 
 .thumb-container {
     /* position: relative; */
-    border: 0.2vh solid transparent;
+    border: 0.12vw solid transparent;
     /* padding: 2px; */
     transition: all 0.2s ease;
   }
@@ -14,25 +14,31 @@
     .game-show-carousel {
       position: relative;
       max-width: 45vw;
+      padding-bottom: 0.5vw;
+      padding-left: 0.1vw;
+      padding-right: 0.1vw;
       height: 51.2vh;
-      bottom: 7vh;
+      bottom: 5.95vh;
     }
   
     .game-show-carousel-thumbs {
       max-width: 45vw;
       height: 11.5vh;
       bottom: 11.9vh;
+      padding-top: 0.1vw;
+      padding-left: 0.15vw;
+      padding-right: 0.05vw;
     }
   
     .gameShowCarouselBox {
       position: relative;
-      right: 21.9vw;
+      right: 21.8vw;
       /* margin-right: 22.8vw; */
     }
   
     .game-show-carousel-thumbs img {
       width: 10.5vw;
-      height: 11vh;
+      height: 5.5vw;
     }
 
     .gameShowCarouselBox .swiper .main-carousel-img{

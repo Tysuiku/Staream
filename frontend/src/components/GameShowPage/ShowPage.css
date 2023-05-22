@@ -23,7 +23,8 @@
 .gamesShowInfoDes{
   position: relative;
   /* top: 45.5vh; */
-  left: 13.8vw;
+  top: 2vw;
+  left: 13.9vw;
   display: flex;
   flex-direction: column;
   gap: 1vw;
