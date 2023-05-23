@@ -4,7 +4,7 @@ Hi! Welcome to Staream, my clone of steam.
 
 To create Staream(star-powered), I utilized React for the frontend and Ruby on Rails for the backend. With this application, users have the ability to browse for different types of games, search for them based on games title, and even add games to cart and purchase them.
 
-Staream can be viewed from <b>[Live-Link](https://staream.onrender.com)
+Staream can be viewed from <b>[Live-Link](https://starpowered.store/)
 Please give render a moment to load for it is not very fast. Thanks!
 
 ## Screenshots
