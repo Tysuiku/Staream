@@ -13,11 +13,12 @@
     font-size: 11x;
     color: #c6d4df;
     line-height: 1.1;
+    
   }
   
   .gamesGenreCat p{
     position: relative;
-    top: 4.5vw;
+    top: 3.5vw;
     display: inline-block;
     line-height: 1.3vw;
     padding: 0 0.2vw;

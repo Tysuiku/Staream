@@ -73,17 +73,20 @@
 }
 
 .center-content-gameReview {
+  position: relative;
+  top: 1vw;
   background-color: #16202d;
   color: white;
   padding: 2vw;
   margin-bottom: 2vw;
   border: none;
   width: 64vw;
-  height: 5vw;  
+  height: 4.5vw;  
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  
 }
 
 #write-review{
