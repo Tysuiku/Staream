@@ -1,14 +1,14 @@
 .GameShowInfoBox {
     display: flex;
     flex-direction: column;
-    gap: 2vh;
+    gap: 1vw;
     text-overflow: ellipsis;
     max-width: 21.1vw;
     position: relative;
-    top: 15.79vh;
+    top: 12.78vw;
     left: 5.34vw;
     background: linear-gradient(to right, rgba(0,0,0,0) ,rgba(0,0,0,0.4) 90%);
-    padding-bottom: 13.9vh;
+    padding-bottom: 12vw;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 11x;
     color: #c6d4df;
@@ -17,9 +17,9 @@
   
   .gamesGenreCat p{
     position: relative;
-    top: 9.5vh;
+    top: 4.5vw;
     display: inline-block;
-    line-height: 2.6vh;
+    line-height: 1.3vw;
     padding: 0 0.2vw;
     color: #67c1f5;
     background-color: rgba( 103, 193, 245, 0.23 );
@@ -54,7 +54,7 @@
   .gamesDevPubRe {
     display: flex;
     flex-direction: column;
-    gap: 0.2vh;
+    gap: 0.1vw;
   }
   
   .info-label-pub {
@@ -96,7 +96,7 @@
   @media (min-width: 14in) and (max-width: 24in) {
     .GameShowInfoBox {
       margin-left: 55.45vw;
-      margin-top: -86vh;
+      margin-top: -49vw;
     }
     .gamesShowInfoDes {
       max-width: 45vw;

@@ -10,24 +10,25 @@
     border-color: #fff;
   }
   
-  @media (min-width: 14in) and (max-width: 24in) {
+  @media (min-width: 14in) and (max-width: 24in){
     .game-show-carousel {
       position: relative;
       max-width: 45vw;
       padding-bottom: 0.5vw;
       padding-left: 0.1vw;
       padding-right: 0.1vw;
-      height: 51.2vh;
-      bottom: 5.95vh;
+      height: 26.5vw;
+      bottom: 2.95vw;
     }
   
     .game-show-carousel-thumbs {
       max-width: 45vw;
-      height: 11.5vh;
-      bottom: 11.9vh;
+      height: 5.5vw;
+      bottom: 6vw;
       padding-top: 0.1vw;
       padding-left: 0.15vw;
       padding-right: 0.05vw;
+      padding-bottom: 0.4vw;
     }
   
     .gameShowCarouselBox {
@@ -43,7 +44,7 @@
 
     .gameShowCarouselBox .swiper .main-carousel-img{
       width: 45vw;
-      height: 46vh;
+      height: 24vw;
       /* margin-left: 5vw; */
     } 
     
